@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OcvrDemoDaySite</title>
+  <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <%= javascript_include_tag 'application' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+	<ul class='btn_links animated' id='nav_list'>
+		<li class='nav_btn nav_btn_border reverse_parallelogram'>
+			<div class='nav_btn nav_btn_body'>
+				<p class='nav_btn_label parallelogram'>About</p>
+			</div>
+		</li>
+		<li class='nav_btn nav_btn_border reverse_parallelogram'>
+			<div class='nav_btn nav_btn_body'>
+				<p class='nav_btn_label parallelogram'>Expo</p>
+			</div>
+		</li>
+		<li class='invisible animated logo' id='logo'>
+			<img class='logo_img' src='assets/ocvr.png' />
+		</li>
+		<li class='nav_btn nav_btn_border parallelogram'>
+			<div class='nav_btn nav_btn_body'>
+				<p class='nav_btn_label reverse_parallelogram'>Exhibitors</p>
+			</div>
+		</li>
+		<li class='nav_btn nav_btn_border parallelogram'>
+			<div class='nav_btn nav_btn_body'>
+				<p class='nav_btn_label reverse_parallelogram'>Learn</p>
+			</div>
+		</li>
+	</ul>
+	<div class='nav_reveal_cont hidden animated' id='nav_reveal_cont'>
+		<div class='nav_reveal circle' id='nav_reveal'>
+			<i class="nav_reveal_arrow fa fa-arrow-up"></i>
+		</div>
+	</div>
+</nav>
+
+
+<%= yield %>
+
+</body>
+</html>
