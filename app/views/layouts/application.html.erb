@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OcvrDemoDaySite</title>
+  <title>OCVR Demo Day Site</title>
   <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -24,7 +24,9 @@
 			</div>
 		</li>
 		<li class='invisible animated logo' id='logo'>
-			<img class='logo_img' src='assets/ocvr.png' />
+			<%= link_to root_path do %>
+				<img class='logo_img' src='assets/ocvr.png' />
+			<% end %>
 		</li>
 		<li class='nav_btn nav_btn_border parallelogram'>
 			<div class='nav_btn nav_btn_body'>
@@ -44,8 +46,38 @@
 	</div>
 </nav>
 
-
 <%= yield %>
+
+<footer class='foot'>
+	<ul class='social_media_links'>
+		<li class='nav_btn'>
+			<a href='/'>
+				<img class='foot_btn_img' src='assets/Twitter_bird_icon.png' />
+			</a>
+		</li>
+		<li class='nav_btn'>
+			<a href='/'>
+				<img class='foot_btn_img' src='assets/square-facebook-512.png' />
+			</a>
+		</li>
+		<li class='nav_btn'>
+			<a href='/'>
+				<img class='foot_btn_img' src='assets/Instagram-icon.png' />
+			</a>
+		</li>
+		<li class='nav_btn'>
+			<a href='/'>
+				<img class='foot_btn_img' src='assets/Youtube_Icon.png' />
+			</a>
+		</li>
+		<li class='nav_btn'>
+			<a href='/'>
+				<img class='foot_btn_img' src='assets/RSS-feed-icon.png' />
+			</a>
+		</li>
+	</ul>
+	<p class='contact_email'>email@email.com</p>
+</footer>
 
 </body>
 </html>

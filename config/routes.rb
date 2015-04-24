@@ -1,5 +1,25 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/destroy'
+
+  get 'user/new'
+
+  get 'user/create'
+
+  get 'user/edit'
+
+  get 'user/update'
+
+  get 'user/destroy'
+
   root 'homes#home'
 
   # The priority is based upon order of creation: first created -> highest priority.

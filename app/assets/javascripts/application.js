@@ -39,7 +39,6 @@ $(document).ready(function(){
 
 		// Class Manipulation for navbar animations
 		// Scroll Down
-		console.log($(this).scrollTop());
 		if ($(this).scrollTop() < 440 && $reveal.hasClass('hidden') == false) {
 			revealNav();
 		}
@@ -69,22 +68,6 @@ $(document).ready(function(){
 	// Reveals the NavBar again when scrolled down on the page
 	$('#nav_reveal').click(function() {
 		revealNav();
-	});
-
-	// NavBar button hover effects. Didn't put them on the CSS because needed to grab the parent and
-	// child node of the hovered element.
-	$('.nav_btn_body').mouseenter(function() {
-		$(this).css('background-color', '#FFF');
-		$($(this).children()[0]).css('color', '#511616');
-		$($(this).children()[0]).css('font-weight', 700);
-		$($(this).parent()[0]).css('border', '1px solid #FFF');
-	});
-	
-	$('.nav_btn_body').mouseleave(function() {
-		$(this).css('background-color', '#FF8933');
-		$($(this).children()[0]).css('color', '#FFF');
-		$($(this).children()[0]).css('font-weight', 400);
-		$($(this).parent()[0]).css('border', '1px solid #FF8933');
 	});
 
 });
