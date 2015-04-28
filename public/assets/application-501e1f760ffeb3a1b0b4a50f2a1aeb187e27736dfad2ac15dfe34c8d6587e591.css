@@ -1,3 +1,199 @@
+/* ==~~~== Header ==~~~== */
+/* line 7, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+header {
+  position: fixed;
+  width: 100%;
+  height: 400px;
+  top: -50px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* line 16, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.title {
+  position: relative;
+  margin-top: 225px;
+  font-weight: 900;
+  font-size: 225%;
+  color: #FFF;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* line 26, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.title_span {
+  color: #F1703D;
+  font-weight: 100;
+}
+
+/* line 31, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.header_bg {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  -webkit-filter: blur(2px) brightness(0.9) sepia(0.2);
+  -moz-filter: blur(2px) brightness(0.9) sepia(0.2);
+  -o-filter: blur(2px) brightness(0.9) sepia(0.2);
+  filter: blur(2px) brightness(0.9) sepia(0.2);
+}
+
+@media (min-width: 40rem) {
+  /* line 44, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  header {
+    height: 450px;
+    top: -25px;
+  }
+
+  /* line 49, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  .title {
+    font-size: 350%;
+    margin-top: 215px;
+  }
+}
+@media (min-width: 64rem) {
+  /* line 56, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  header {
+    height: 500px;
+    top: 0px;
+  }
+
+  /* line 61, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  .title {
+    font-size: 500%;
+    margin-top: 190px;
+  }
+}
+/* ==~~~== Main Body ==~~~== */
+/* line 69, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+#home_cont {
+  margin-top: 400px;
+  background-color: #FFF;
+  z-index: 0;
+}
+
+/* line 75, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+#home_subscription_cont {
+  margin-top: -50px;
+  text-align: center;
+  padding-top: 100px;
+  z-index: 0;
+}
+
+/* line 82, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.home_subscription_title {
+  font-weight: 100;
+}
+
+/* line 86, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.home_subscription_text {
+  color: #444;
+  font-size: 0.7em;
+}
+
+/* line 91, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.home_subscription_form {
+  margin-top: 40px;
+}
+
+/* line 95, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.home_subscription_form_input {
+  margin-right: 5px;
+  width: 200px;
+}
+
+/* line 100, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+#home_exhibitor_cont {
+  position: relative;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: -50px;
+  z-index: 0;
+}
+
+/* line 108, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+#exhibitor_signup {
+  display: block;
+  width: 250px;
+  padding: 1em 2em;
+  margin: 0 auto;
+  border: 1px solid #FF8933;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.7em;
+  color: #FFF;
+  background: #FF8933;
+  cursor: pointer;
+}
+
+/* line 122, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.home_exhibitor_title {
+  font-weight: 900;
+  text-align: center;
+  font-size: 150%;
+}
+
+/* line 128, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.exhibitor_block {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #888;
+}
+
+/* line 136, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+#bronze {
+  border: none;
+}
+
+/* line 140, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.exhibitor_block_title {
+  text-align: center;
+  font-weight: 100;
+  color: #333;
+}
+
+/* line 146, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.exhibitor_img {
+  display: block;
+  margin: 10px auto;
+  height: 100px;
+  max-width: 100%;
+}
+
+/* line 153, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+#fss_img {
+  height: auto;
+}
+
+@media (min-width: 40rem) {
+  /* line 158, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  #home_cont {
+    margin-top: 450px;
+  }
+
+  /* line 162, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  .home_subscription_form_input {
+    width: 275px;
+  }
+
+  /* line 166, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  #exhibitor_signup {
+    width: 325px;
+  }
+
+  /* line 170, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  .home_exhibitor_title {
+    font-size: 225%;
+  }
+}
+@media (min-width: 64rem) {
+  /* line 176, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  #home_cont {
+    margin-top: 500px;
+  }
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -10,8 +206,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
 
  /* ==~~~== OCVR Colors ==~~~==
@@ -22,6 +218,7 @@
 
 /* ==~~~== Responsive Design Setup ==~~~== */
 /* Small screens (default) */
+
 html { 
 	font-size: 100%;
 }

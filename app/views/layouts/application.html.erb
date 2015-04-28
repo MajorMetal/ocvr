@@ -2,75 +2,101 @@
 <html>
 <head>
   <title>OCVR Demo Day Site</title>
-  <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+  <link rel='stylesheet' src='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' />
   <%= stylesheet_link_tag 'application', media: 'all' %>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
   <%= javascript_include_tag 'application' %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<nav>
-	<ul class='btn_links animated' id='nav_list'>
-		<li class='nav_btn nav_btn_border reverse_parallelogram'>
-			<div class='nav_btn nav_btn_body'>
+<nav class='navbar_web'>
+	<ul class='nav_list_web animated' id='nav_list_web'>
+		<li class='nav_btn_web nav_btn_border reverse_parallelogram'>
+			<div class='nav_btn_web nav_btn_body'>
 				<p class='nav_btn_label parallelogram'>About</p>
 			</div>
 		</li>
-		<li class='nav_btn nav_btn_border reverse_parallelogram'>
-			<div class='nav_btn nav_btn_body'>
+		<li class='nav_btn_web nav_btn_border reverse_parallelogram'>
+			<div class='nav_btn_web nav_btn_body'>
 				<p class='nav_btn_label parallelogram'>Expo</p>
 			</div>
 		</li>
-		<li class='invisible animated logo' id='logo'>
+		<li class='nav_btn_web logo animated invisible' id='logo'>
 			<%= link_to root_path do %>
 				<img class='logo_img' src='<%= asset_path('ocvr.png') %>' />
 			<% end %>
 		</li>
-		<li class='nav_btn nav_btn_border parallelogram'>
-			<div class='nav_btn nav_btn_body'>
+		<li class='nav_btn_web nav_btn_border parallelogram'>
+			<div class='nav_btn_web nav_btn_body'>
 				<p class='nav_btn_label reverse_parallelogram'>Exhibitors</p>
 			</div>
 		</li>
-		<li class='nav_btn nav_btn_border parallelogram'>
-			<div class='nav_btn nav_btn_body'>
+		<li class='nav_btn_web nav_btn_border parallelogram'>
+			<div class='nav_btn_web nav_btn_body'>
 				<p class='nav_btn_label reverse_parallelogram'>Learn</p>
 			</div>
 		</li>
 	</ul>
-	<div class='nav_reveal_cont hidden animated' id='nav_reveal_cont'>
-		<div class='nav_reveal circle' id='nav_reveal'>
-			<i class="nav_reveal_arrow fa fa-arrow-up"></i>
-		</div>
+	<div class='nav_reveal circle hidden animated' id='nav_reveal_web'>
+		<i class="nav_reveal_bars fa fa-bars"></i>
+	</div>
+</nav>
+
+<nav class='navbar_mobile'>
+	<ul class='nav_list_mobile animated hidden' id='nav_list_mobile'>
+		<li class='nav_btn_mobile'>
+			<p class='nav_btn_label'>Expo</p>
+		</li>
+		<li class='nav_btn_mobile'>
+			<p class='nav_btn_label'>Exhibitors</p>
+		</li>
+		<li class='nav_btn_mobile'>
+			<p class='nav_btn_label'>About</p>
+		</li>
+		<li class='nav_btn_mobile'>
+			<p class='nav_btn_label'>Learn</p>
+		</li>
+		<%= link_to root_path do %>
+			<li class='nav_btn_mobile'>
+				<p class='nav_btn_label'>Home</p>
+			</li>
+		<% end %>
+		<li class='nav_btn_mobile' id='last_btn'>
+			<i class='nav_btn_label fa fa-arrow-left' id='nav_mobile_close'></i>
+		</li>
+	</ul>
+	<div class='nav_reveal circle nav_reveal_mobile animated fadeInLeft' id='nav_reveal_mobile'>
+		<i class="nav_reveal_bars fa fa-bars"></i>
 	</div>
 </nav>
 
 <%= yield %>
 
-<footer class='foot'>
+<footer>
 	<ul class='social_media_links'>
-		<li class='nav_btn'>
+		<li class='nav_btn_web'>
 			<a href='/'>
 				<img class='foot_btn_img' src='<%= asset_path('Twitter_bird_icon.png') %>' />
 			</a>
 		</li>
-		<li class='nav_btn'>
+		<li class='nav_btn_web'>
 			<a href='/'>
 				<img class='foot_btn_img' src='<%= asset_path('square-facebook-512.png') %>' />
 			</a>
 		</li>
-		<li class='nav_btn'>
+		<li class='nav_btn_web'>
 			<a href='/'>
 				<img class='foot_btn_img' src='<%= asset_path('Instagram-icon.png') %>' />
 			</a>
 		</li>
-		<li class='nav_btn'>
+		<li class='nav_btn_web'>
 			<a href='/'>
 				<img class='foot_btn_img' src='<%= asset_path('Youtube_Icon.png') %>' />
 			</a>
 		</li>
-		<li class='nav_btn'>
+		<li class='nav_btn_web'>
 			<a href='/'>
 				<img class='foot_btn_img' src='<%= asset_path('RSS-feed-icon.png') %>' />
 			</a>

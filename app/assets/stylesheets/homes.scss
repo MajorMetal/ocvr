@@ -20,15 +20,14 @@ header {
 	color: #FFF;
 	text-align: center;
 	opacity: 0.9;
-	z-index: 0;
 }
 
-.title_oc {
+.title_span {
 	color: #F1703D;
 	font-weight: 100;
 }
 
-.header_img {
+.header_bg {
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -66,110 +65,114 @@ header {
 
 
 /* ==~~~== Main Body ==~~~== */
-#home_main {
+#home_cont {
 	margin-top: 400px;
 	background-color: #FFF;
+	z-index: 0;
 }
 
-#subs_cont {
-	margin-top: 50px;
+#home_subscription_cont {
+	margin-top: -50px;
 	text-align: center;
-	padding-top: 75px;
+	padding-top: 100px;
+	z-index: 0;
 }
 
-#subs_title {
+.home_subscription_title {
 	font-weight: 100;
 }
 
-#subs_para {
+.home_subscription_text {
 	color: #444;
 	font-size: 0.7em;
 }
 
-#subs_form {
+.home_subscription_form {
 	margin-top: 40px;
 }
 
-#subs_form_input {
+.home_subscription_form_input {
 	margin-right: 5px;
 	width: 200px;
 }
 
-#exhibitor_cont {
+#home_exhibitor_cont {
 	position: relative;
 	margin-top: 100px;
 	padding-bottom: 100px;
 	margin-bottom: -50px;
+	z-index: 0;
 }
 
-#submission {
+#exhibitor_signup {
 	display: block;
 	width: 250px;
+	padding: 1em 2em;
+  margin: 0 auto;
 	border: 1px solid #FF8933;
   border-radius: 5px;
-  padding: 1em 2em;
-  margin: 0 auto;
   text-align: center;
-  text-decoration: none;
   font-size: 0.7em;
   color: #FFF;
   background: #FF8933;
   cursor: pointer;
-  outline: none;
 }
 
-#exhibitor_title {
+.home_exhibitor_title {
 	font-weight: 900;
 	text-align: center;
 	font-size: 150%;
 }
 
-.exhibitor_img {
+.exhibitor_block {
 	position: relative;
 	display: block;
 	width: 100%;
-	height: auto;
 	padding-bottom: 30px;
 	border-bottom: 2px solid #888;
-}
-
-.exhibitor_img_title {
-	text-align: center;
-	font-weight: 100;
-	color: #333;
-}
-
-.sponsor_img {
-	display: block;
-	margin: 10px auto;
-	height: 100px;
-	max-width: 100%;
 }
 
 #bronze {
 	border: none;
 }
 
+.exhibitor_block_title {
+	text-align: center;
+	font-weight: 100;
+	color: #333;
+}
+
+.exhibitor_img {
+	display: block;
+	margin: 10px auto;
+	height: 100px;
+	max-width: 100%;
+}
+
+#fss_img {
+	height: auto;
+}
+
 @media (min-width: 40rem) {
-	#home_main {
+	#home_cont {
 		margin-top: 450px;
 	}
 
-	#subs_form_input {
+	.home_subscription_form_input {
 		width: 275px;
 	}
 
-	#submission {
+	#exhibitor_signup {
 		width: 325px;
 	}
 
-	#exhibitor_title {
+	.home_exhibitor_title {
 		font-size: 225%;
 	}
 }
 
 @media (min-width: 64rem) {
-	#home_main {
+	#home_cont {
 		margin-top: 500px;
 	}
 }
