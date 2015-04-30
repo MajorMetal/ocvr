@@ -23,7 +23,7 @@
 				<p class='nav_btn_label parallelogram'>Expo</p>
 			</div>
 		</li>
-		<li class='nav_btn_web logo animated invisible' id='logo'>
+		<li class='nav_btn_web logo' id='logo'>
 			<%= link_to root_path do %>
 				<img class='logo_img' src='<%= asset_path('ocvr.png') %>' />
 			<% end %>
@@ -40,12 +40,17 @@
 		</li>
 	</ul>
 	<div class='nav_reveal circle hidden animated' id='nav_reveal_web'>
-		<i class="nav_reveal_bars fa fa-bars"></i>
+		<span></span>
 	</div>
 </nav>
 
 <nav class='navbar_mobile'>
 	<ul class='nav_list_mobile animated hidden' id='nav_list_mobile'>
+		<li class='logo_img_mobile'>
+			<%= link_to root_path do %>
+				<img src='<%= asset_path('ocvr2.png') %>' />
+			<% end %>
+		</li>
 		<li class='nav_btn_mobile'>
 			<p class='nav_btn_label'>Expo</p>
 		</li>
@@ -55,22 +60,19 @@
 		<li class='nav_btn_mobile'>
 			<p class='nav_btn_label'>About</p>
 		</li>
-		<li class='nav_btn_mobile'>
+		<li class='nav_btn_mobile' id='last_btn'>
 			<p class='nav_btn_label'>Learn</p>
 		</li>
-		<%= link_to root_path do %>
-			<li class='nav_btn_mobile'>
-				<p class='nav_btn_label'>Home</p>
-			</li>
-		<% end %>
-		<li class='nav_btn_mobile' id='last_btn'>
-			<i class='nav_btn_label fa fa-arrow-left' id='nav_mobile_close'></i>
-		</li>
 	</ul>
-	<div class='nav_reveal circle nav_reveal_mobile animated fadeInLeft' id='nav_reveal_mobile'>
-		<i class="nav_reveal_bars fa fa-bars"></i>
+	<div class='nav_reveal circle nav_reveal_mobile animated fadeInDown' id='nav_reveal_mobile'>
+		<span></span>
 	</div>
 </nav>
+
+<div class='cover'>
+	<div class='hidden' id='cover'>
+	</div>
+</div>
 
 <%= yield %>
 

@@ -602,23 +602,19 @@ input, textarea {
 
 .nav_reveal {
 	position: fixed;
-	width: 80px;
-	height: 80px;
-	top: -40px;
-	left: -40px;
+	width: 40px;
+	height: 40px;
+	top: 0px;
+	left: 0px;
+  padding-left: 7px;
 	background-color: #FF8933;
 	opacity: 0.9;
 	cursor: pointer;
   z-index: 5;
 }
 
-.nav_reveal_bars {
-	margin: 44px 0 0 45px;
-	color: #FFF;
-	font-size: 12px;
-}
-
 .navbar_mobile {
+  position: fixed;
 	display: block;
 	z-index: 5;
 }
@@ -626,12 +622,18 @@ input, textarea {
 .nav_list_mobile {
 	position: fixed;
 	width: 50%;
+  height: 100vh;
 	top: 0px;
-	padding: 0;
+	padding: 35px 0 0 0;
 	margin: 0;
 	background-color: #222;
 	opacity: 0.9;
   z-index: 5;
+}
+
+.logo_img_mobile {
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .nav_btn_mobile {
@@ -648,15 +650,53 @@ input, textarea {
 	border: none;
 }
 
-#nav_mobile_close {
-	display: block;
-	margin: 0 auto;
-}
-
 #nav_reveal_mobile {
 	display: block;
 	cursor: pointer;
 	font-size: 20px;
+  z-index: 5;
+}
+
+/* ==~~~== Mobile Hamburger Menu Animations ==~~~== */
+.nav_reveal span, .nav_reveal span:before, .nav_reveal span:after {
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 18px;
+  top: 9px;
+  border-radius: 1px;
+  background: white;
+  content: '';
+}
+
+.nav_reveal span:before {
+  top: 5px;
+}
+
+.nav_reveal span:after {
+  top: 10px; 
+}
+
+.nav_reveal, .nav_reveal span, .nav_reveal span:before, .nav_reveal span:after {
+  transition: all 500ms ease-in-out;
+}
+
+.nav_reveal.active, .nav_reveal.active span {
+  background-color: transparent;
+}
+
+.nav_reveal.active span:before, .nav_reveal.active span:after {
+  top: 5px;
+}
+
+.nav_reveal.active span:before {
+  transform: rotate(45deg);
+  background: #FF6927;
+}
+
+.nav_reveal.active span:after {
+  transform: rotate(-45deg);
+  background: #FF6927;
 }
 
 .parallelogram {
@@ -674,10 +714,10 @@ input, textarea {
 }
 
 .circle {
-	-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
-			-o-border-radius: 50%;
-				border-radius: 50%;
+	-webkit-border-radius: 0 0 80px 0;
+		-moz-border-radius: 0 0 80px 0;
+			-o-border-radius: 0 0 80px 0;
+				border-radius: 0 0 80px 0;
 }
 
 @media (min-width: 40rem) {
@@ -688,6 +728,27 @@ input, textarea {
 	.navbar_mobile {
 		display: none;
 	}
+}
+
+.cover {
+  display: block;
+}
+
+#cover {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 4;
+}
+
+@media (min-width: 40rem) {
+  .cover {
+    display: none;
+  }
 }
 
 

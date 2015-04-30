@@ -26,23 +26,6 @@ $(document).ready(function(){
 	$(window).scroll(function () {
 		// Website Navbar Scroll Animations. Only works if the browser width is > 640px
 		if ($(this).width() > 640) {
-			// Class Manipulation for the Navbar Logo animations.
-			// Scroll Down
-			if ( ($(this).width() < 1024 && $(this).scrollTop() < 200 && $logo.hasClass('invisible') == false) ||
-					 ($(this).width() > 1024 && $(this).scrollTop() < 240 && $logo.hasClass('invisible') == false) ) {
-				$logo.addClass('fadeOutUp');
-				$logo.removeClass('fadeInDown');
-				setTimeout(function() {
-    	  		$logo.addClass('invisible');
-				}, 500);
-			}
-			// Scroll Up
-			if ( ($(this).width() < 1024 && $(this).scrollTop() > 200) ||
-					 ($(this).width() > 1024 && $(this).scrollTop() > 240) ) {
-				$logo.removeClass('invisible fadeOutUp');
-				$logo.addClass('fadeInDown');
-			}
-
 			// Class Manipulation for Navbar animations
 			// Scroll Down
 			if ( ($(this).width() < 1024 && $(this).scrollTop() < 340 && $revealWeb.hasClass('hidden') == false) ||
@@ -81,24 +64,20 @@ $(document).ready(function(){
 
 	// Opens the Mobile Navbar
 	$revealMobile.click(function() {
-		$revealMobile.removeClass('fadeInLeft');
-		$revealMobile.addClass('fadeOutLeft');
-		setTimeout(function() {
-     	$revealMobile.addClass('hidden');
-     	$navMobile.removeClass('hidden fadeOutLeft');
-     	$navMobile.addClass('fadeInLeft');
-		}, 250);
-	})
-
-	// Closes the Mobile Navbar
-	$('#nav_mobile_close').click(function() {
-		$navMobile.removeClass('fadeInLeft');
-		$navMobile.addClass('fadeOutLeft');
-		setTimeout(function() {
-     	$navMobile.addClass('hidden');
-     	$revealMobile.removeClass('hidden fadeOutLeft');
-     	$revealMobile.addClass('fadeInLeft');
-		}, 250);
-	})
+		$revealMobile.toggleClass('active');
+		$('#cover').toggleClass('hidden');
+		if($revealMobile.hasClass('active') == true) {
+			$revealMobile.removeClass('fadeInLeft');
+    	$navMobile.removeClass('hidden fadeOutLeft');
+    	$navMobile.addClass('fadeInLeft');
+    }
+    else if ($revealMobile.hasClass('active') == false) {
+    	$navMobile.removeClass('fadeInLeft');
+			$navMobile.addClass('fadeOutLeft');
+			setTimeout(function() {
+    	 	$navMobile.addClass('hidden');
+			}, 250);
+    }
+	});
 
 });
