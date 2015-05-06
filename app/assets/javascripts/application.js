@@ -16,68 +16,82 @@
 
 $(document).ready(function(){
 	// HTML Elements
-	var $logo = $('#logo');
-	var $navWeb = $('#nav_list_web');
-	var $revealWeb = $('#nav_reveal_web');
+	var $html = $('html');
 	var $navMobile = $('#nav_list_mobile');
-	var $revealMobile = $('#nav_reveal_mobile');
+	var $revealMobile = $('#nav_reveal');
+	var $modal = $('.modal');
+	var $openModal = $('#sub_nav_btn');
+	var $closeModal = $('.modal_exit');
+	var $mobileBG = $('#mobile_cover');
+	var $webBG = $('#web_cover');
+
+	var curPos;
 
 	// Scroll Manipulations
 	$(window).scroll(function () {
 		// Website Navbar Scroll Animations. Only works if the browser width is > 640px
 		if ($(this).width() > 640) {
-			// Class Manipulation for Navbar animations
-			// Scroll Down
-			if ( ($(this).width() < 1024 && $(this).scrollTop() < 340 && $revealWeb.hasClass('hidden') == false) ||
-					 ($(this).width() > 1024 && $(this).scrollTop() < 395 && $revealWeb.hasClass('hidden') == false) ) {
-				revealNav();
+			if ($(this).scrollTop() >= 400) {
+				$('#title_web').addClass('hidden');
+				$('#title_bar_fixed').removeClass('hidden');
 			}
-			// Scroll Up
-			if ( ($(this).width() < 1024 && $(this).scrollTop() > 400 && $navWeb.hasClass('hidden') == false) ||
-					 ($(this).width() > 1024 && $(this).scrollTop() > 450 && $navWeb.hasClass('hidden') == false) ) {
-				$revealWeb.removeClass('hidden fadeOutUp');
-    		$revealWeb.addClass('fadeInDown');
-				$navWeb.addClass('fadeOutUp');
-				$navWeb.removeClass('fadeInDown');
-				setTimeout(function() {
-    			$navWeb.addClass('hidden');
-				}, 250);
+			if ($(this).scrollTop() < 400) {
+				$('#title_bar_fixed').addClass('hidden');
+				$('#title_web').removeClass('hidden');
 			}
 		}
 	});
 
-	// Wrapped this section in a function because it's called again on click of the '$revealWeb' button
-	function revealNav() {
-		$navWeb.removeClass('hidden fadeOutUp');
-		$navWeb.addClass('fadeInDown');
-		$revealWeb.addClass('fadeOutUp');
-		$revealWeb.removeClass('fadeInDown');
-		setTimeout(function() {
-     	$revealWeb.addClass('hidden');
-		}, 250);
-	}
-
-	// Reveals the Navbar again when scrolled down on the page
-	$revealWeb.click(function() {
-		revealNav();
-	});
-
-	// Opens the Mobile Navbar
+	// Toggles the Mobile Navbar
 	$revealMobile.click(function() {
+		if ($revealMobile.hasClass('active')) { scrollUnlock(); }
+		else { scrollLock(); }
 		$revealMobile.toggleClass('active');
-		$('#cover').toggleClass('hidden');
-		if($revealMobile.hasClass('active') == true) {
-			$revealMobile.removeClass('fadeInLeft');
-    	$navMobile.removeClass('hidden fadeOutLeft');
-    	$navMobile.addClass('fadeInLeft');
-    }
-    else if ($revealMobile.hasClass('active') == false) {
-    	$navMobile.removeClass('fadeInLeft');
-			$navMobile.addClass('fadeOutLeft');
-			setTimeout(function() {
-    	 	$navMobile.addClass('hidden');
-			}, 250);
-    }
+		$navMobile.toggleClass('active');
+		$mobileBG.toggleClass('hidden');
 	});
+
+	$openModal.click(function() {
+		curPos = Math.floor($(window).scrollTop());
+		$modal.css('top', (curPos + 100) + 'px');
+		$modal.addClass('active');
+		$webBG.removeClass('hidden');
+		scrollLock();
+	});
+
+	$closeModal.click(function() {
+		$modal.removeClass('active');
+		$modal.css('top', '-350px');
+		$webBG.addClass('hidden');
+		scrollUnlock();
+	})
+
+	function scrollLock() {
+		// self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft ||
+		var scrollPosition = [ $(window).scrollLeft(), $(window).scrollTop() ];
+		$html.data('scroll-position', scrollPosition);
+    $html.data('previous-overflow', $html.css('overflow'));
+    $html.css('overflow', 'hidden');
+    // $(window).scrollTo({left: scrollPosition[0] + 'px', top: scrollPosition[1] + 'px'}, 800);
+	};
+
+	function scrollUnlock() {
+    // var scrollPosition = $html.data('scroll-position');
+    $html.css('overflow', $html.data('previous-overflow'));
+    // $(window).scrollTo({left: scrollPosition[0] + 'px', top: scrollPosition[1]+ 'px'}, 800);
+	};
+
+	// var disableScroll = false;
+	// function disableScrolling() {
+	//     disableScroll = true;
+	// }
+	// function enableScrolling() {
+	//     disableScroll = false;
+	// }
+	// document.ontouchmove = function(e){
+	//    if(disableScroll){
+	//      e.preventDefault();
+	//    } 
+	// }
 
 });

@@ -1,44 +1,29 @@
 <header>
-	<h1 class='title animated flipInX'><span class='title_span'>Orange County</span> VR</h1>
 	<img class='header_bg' src="<%= asset_path('sunset.png') %>" />
 </header>
 
 <main class='main' id='home_cont'>
+	<div class='container user_links'>
+		<div class='column half'>
+			<h3 class='home_section_title'>WANT TO ATTEND?</h3>
+			<a class='signup' id='attendee_signup' href='#' target='_blank'>PURCHASE TICKETS</a>
+		</div>
+		<div class='column half'>
+			<h3 class='home_section_title'>WANT TO EXHIBIT?</h3>
+			<a class='signup' href='http://goo.gl/forms/yX7IELD6iR' target='_blank'>SUMMER EXPO EXHIBITOR FORM
+		</a>
+		</div>
+	</div>
 	<div class='container' id='home_subscription_cont'>
-		<h3 class='home_subscription_title'>SUBSCRIBE</h3>
-		<p class='home_subscription_text'>Sign up with your email address to receive news about the latest OCVR events.</p>
-
-		<form class='home_subscription_form'>
-			<input class='home_subscription_form_input' type='text' placeholder='Email' />
-			<input type='submit' value='Sign Up' />
-		</form>
+		<h3 class='home_section_title'>SUBSCRIBE</h3>
+		<%= render 'homes/subscription_form' %>
 	</div>
 	<div class='container' id='home_exhibitor_cont'>
-		<a id='exhibitor_signup' href='http://goo.gl/forms/yX7IELD6iR' target='_blank'>SUMMER EXPO SUBMISSION FORM
-		</a>
-
-		<h1 class='home_exhibitor_title'>OCVR thanks our sponsors:</h1>
+		<h3 class='home_section_title'>SPONSORS</h3>
 		<!-- Platinum Sponsors -->
-		<div class='exhibitor_block clearfix' id='platinum'>
-			<h5 class='exhibitor_block_title'>PLATINUM SPONSORS</h5>
-			<div class='column half'>
+		<div class='exhibitor_block clearfix'>
+			<div class='column full'>
 				<img class='exhibitor_img' id='fss_img' src="<%= asset_path('FastStart-Studio-Logo.png') %>" />
 			</div>
-		</div>
-		<!-- Gold Sponsors -->
-		<div class='exhibitor_block clearfix' id='gold'>
-			<h5 class='exhibitor_block_title'>GOLD SPONSORS</h5>
-			
-		</div>
-		<!-- Silver Sponsors -->
-		<div class='exhibitor_block clearfix' id='silver'>
-			<h5 class='exhibitor_block_title'>SILVER SPONSORS</h5>
-			
-		</div>
-		<!-- Bronze Sponsors -->
-		<div class='exhibitor_block clearfix' id='bronze'>
-			<h5 class='exhibitor_block_title'>BRONZE SPONSORS</h5>
-			
-		</div>
 	</div>
 </main>

@@ -12,69 +12,66 @@
 <body>
 
 <nav class='navbar_web'>
-	<ul class='nav_list_web animated' id='nav_list_web'>
-		<li class='nav_btn_web nav_btn_border reverse_parallelogram'>
-			<div class='nav_btn_web nav_btn_body'>
-				<p class='nav_btn_label parallelogram'>About</p>
-			</div>
-		</li>
-		<li class='nav_btn_web nav_btn_border reverse_parallelogram'>
-			<div class='nav_btn_web nav_btn_body'>
-				<p class='nav_btn_label parallelogram'>Expo</p>
-			</div>
-		</li>
+	<ul class='nav_list_web' id='nav_list_web'>
 		<li class='nav_btn_web logo' id='logo'>
 			<%= link_to root_path do %>
 				<img class='logo_img' src='<%= asset_path('ocvr.png') %>' />
 			<% end %>
 		</li>
-		<li class='nav_btn_web nav_btn_border parallelogram'>
-			<div class='nav_btn_web nav_btn_body'>
-				<p class='nav_btn_label reverse_parallelogram'>Exhibitors</p>
-			</div>
+		<li class='nav_btn_web'>
+			<p class='nav_btn'>Expo</p>
 		</li>
-		<li class='nav_btn_web nav_btn_border parallelogram'>
-			<div class='nav_btn_web nav_btn_body'>
-				<p class='nav_btn_label reverse_parallelogram'>Learn</p>
-			</div>
+		<li class='nav_btn_web'>
+			<p class='nav_btn' id='sub_nav_btn'>Subscribe</p>
 		</li>
 	</ul>
-	<div class='nav_reveal circle hidden animated' id='nav_reveal_web'>
-		<span></span>
+	<div class='title_bar_fixed hidden' id='title_bar_fixed'>
+		<p class='title_fixed'>SoCal Virtual Reality Conference</p>
 	</div>
 </nav>
 
 <nav class='navbar_mobile'>
-	<ul class='nav_list_mobile animated hidden' id='nav_list_mobile'>
+	<ul class='nav_list_mobile' id='nav_list_mobile'>
 		<li class='logo_img_mobile'>
 			<%= link_to root_path do %>
 				<img src='<%= asset_path('ocvr2.png') %>' />
 			<% end %>
 		</li>
 		<li class='nav_btn_mobile'>
-			<p class='nav_btn_label'>Expo</p>
-		</li>
-		<li class='nav_btn_mobile'>
-			<p class='nav_btn_label'>Exhibitors</p>
-		</li>
-		<li class='nav_btn_mobile'>
-			<p class='nav_btn_label'>About</p>
-		</li>
-		<li class='nav_btn_mobile' id='last_btn'>
-			<p class='nav_btn_label'>Learn</p>
+			<p>Expo</p>
 		</li>
 	</ul>
-	<div class='nav_reveal circle nav_reveal_mobile animated fadeInDown' id='nav_reveal_mobile'>
+	<div class='nav_reveal' id='nav_reveal'>
 		<span></span>
 	</div>
 </nav>
 
-<div class='cover'>
-	<div class='hidden' id='cover'>
+<div class='title_bar' id='title_bar'>
+	<p class='title_mobile'>SoCal VR Con</p>
+	<p class='title_web' id='title_web'>SoCal Virtual Reality Conference</p>
+</div>
+
+<div class='modal'>
+	<div class='modal_exit'>
+		<i class='fa fa-times'></i>
+	</div>
+	<h1 class='modal_title'>SoCal VR Con</h1>
+	<div class='modal_subscription_form'>
+		<%= render 'homes/subscription_form' %>
 	</div>
 </div>
 
 <%= yield %>
+
+<div class='mobile_bg'>
+	<div class='cover hidden' id='mobile_cover'>
+	</div>
+</div>
+
+<div class='web_bg'>
+	<div class='cover hidden' id='web_cover'>
+	</div>
+</div>
 
 <footer>
 	<ul class='social_media_links'>
