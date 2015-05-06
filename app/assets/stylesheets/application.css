@@ -100,15 +100,18 @@ input[type=submit] {
       -o-transition: 250ms ease-in-out;
         transition: 250ms ease-in-out;
 }
-input[type=submit]:hover {
-  background: #FD8F3E;
-  border: 1px solid #FD8F3E;
-}
 a { text-decoration: none; }
 ul { list-style-type: none; }
 input, textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+}
+
+@media (min-width: 40rem) {
+  input[type=submit]:hover {
+    background: #FD8F3E;
+    border: 1px solid #FD8F3E;
+  }
 }
 
 
@@ -211,12 +214,7 @@ input, textarea {
 	cursor: pointer;
   text-align: center;
   color: #FFF;
-  -webkit-transition: 250ms ease-in-out;
-    -moz-transition: 250ms ease-in-out;
-      -o-transition: 250ms ease-in-out;
-        transition: 250ms ease-in-out;
 }
-.nav_btn_mobile:hover { background-color: #333; }
 .title_bar_fixed {
   position: fixed;
   width: 100%;
@@ -254,7 +252,6 @@ input, textarea {
   left: 0px;
   padding-left: 7px;
   background-color: #FF6927;
-  opacity: 0.9;
   cursor: pointer;
   z-index: 5;
 }
@@ -269,7 +266,6 @@ input, textarea {
       -o-transition: 250ms ease-in-out;
         transition: 250ms ease-in-out;
 }
-.nav_reveal:hover { background-color: #FD8F3E; }
 .nav_reveal span, .nav_reveal span:before, .nav_reveal span:after {
   position: absolute;
   display: block;
@@ -304,7 +300,6 @@ input, textarea {
       -o-transform: rotate(-45deg);
         transform: rotate(-45deg);
 }
-.nav_reveal.active:hover span:before, .nav_reveal.active:hover span:after { background: #FFF; }
 .nav_list_mobile.active { left: 0px; }
 
 
@@ -375,8 +370,6 @@ input, textarea {
   right: -10px;
   text-align: center;
   background: #FFF;
-}
-.modal_exit:hover {
   cursor: pointer;
 }
 .modal.active {
@@ -416,13 +409,14 @@ footer {
 	z-index: 1;
 }
 .social_media_links {
-	width: 172px;
+	width: 198px;
 	height: 30px;
 	margin: 0 auto;
 	padding: 20px 0;
 }
 .foot_btn_img {
   height: 30px;
+  padding: 0 3px;
 }
 .contact_email {
 	padding-top: 20px;
@@ -434,7 +428,13 @@ footer {
 }
 
 
+@media (min-width: 40rem) {
+  .social_media_links { width: 200px; }
+}
+
+
 @media (min-width: 64rem) {
+  .social_media_links { width: 202px; }
   .foot_btn_img {
 	  -webkit-filter: grayscale(1);
 	  	-moz-filter: grayscale(1);
