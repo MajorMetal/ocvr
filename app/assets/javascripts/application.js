@@ -26,6 +26,7 @@ $(document).ready(function(){
 	var $webBG = $('#web_cover');
 
 	var curPos;
+	var disableScroll = false;
 
 	// Scroll Manipulations
 	$(window).scroll(function () {
@@ -72,26 +73,19 @@ $(document).ready(function(){
 		$html.data('scroll-position', scrollPosition);
     $html.data('previous-overflow', $html.css('overflow'));
     $html.css('overflow', 'hidden');
+    disableScroll = true;
     // $(window).scrollTo({left: scrollPosition[0] + 'px', top: scrollPosition[1] + 'px'}, 800);
 	};
 
 	function scrollUnlock() {
     // var scrollPosition = $html.data('scroll-position');
     $html.css('overflow', $html.data('previous-overflow'));
+    disableScroll = false;
     // $(window).scrollTo({left: scrollPosition[0] + 'px', top: scrollPosition[1]+ 'px'}, 800);
 	};
 
-	// var disableScroll = false;
-	// function disableScrolling() {
-	//     disableScroll = true;
-	// }
-	// function enableScrolling() {
-	//     disableScroll = false;
-	// }
-	// document.ontouchmove = function(e){
-	//    if(disableScroll){
-	//      e.preventDefault();
-	//    } 
-	// }
+	document.ontouchmove = function(e) {
+	  if (disableScroll) { e.preventDefault(); } 
+	};
 
 });
