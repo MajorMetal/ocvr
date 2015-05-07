@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
   <%= javascript_include_tag 'application' %>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <%= csrf_meta_tags %>
 </head>
@@ -18,9 +19,11 @@
 				<img class='logo_img' src='<%= asset_path('ocvr.png') %>' />
 			<% end %>
 		</li>
-		<li class='nav_btn_web'>
-			<p class='nav_btn'>Expo</p>
-		</li>
+		<%= link_to expo_path do %>
+			<li class='nav_btn_web'>
+				<p class='nav_btn'>Expo</p>
+			</li>
+		<% end %>
 		<li class='nav_btn_web'>
 			<p class='nav_btn' id='sub_nav_btn'>Subscribe</p>
 		</li>
@@ -37,9 +40,11 @@
 				<img src='<%= asset_path('ocvr2.png') %>' />
 			<% end %>
 		</li>
-		<li class='nav_btn_mobile'>
-			<p>Expo</p>
-		</li>
+		<%= link_to expo_path do %>
+			<li class='nav_btn_mobile'>
+				<p>Expo</p>
+			</li>
+		<% end %>
 	</ul>
 	<div class='nav_reveal' id='nav_reveal'>
 		<span></span>
@@ -101,9 +106,8 @@
 			</a>
 		</li>
 	</ul>
-	<p class='contact_email'>placeholder@email.com</p>
+	<p class='contact_email'>Contact Us</p>
 </footer>
-<div class='overflow'></div>
 
 </body>
 </html>

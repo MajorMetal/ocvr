@@ -1,0 +1,76 @@
+<header data-scroll-speed="3">
+	<img class='header_bg' src="<%= asset_path('sunset.png') %>" />
+</header>
+
+<main class='main clearfix' id='expo_cont'>
+	<div class='container clearfix expo_info'>
+		<div class='column full clearfix'>
+			<h3 class='section_title' id='expo_title'>SUMMER EXPO</h3>
+			<h3 class='section_title expo_loc'>July 12th, 2015</h3>
+			<h3 class='section_title expo_loc'>UCI Innovations</h3>
+			<h3 class='section_title expo_loc'>1541 California Ave. Irvine, CA</h3>
+			<p class='section_text'>Bacon ipsum dolor amet ham frankfurter chicken turducken, bresaola andouille tongue
+				doner jerky porchetta cow kevin swine drumstick beef ribs. Pork loin pastrami tenderloin kevin pork rump spare ribs. Brisket bresaola spare ribs pig. Strip steak hamburger flank tongue shankle, pork belly ground round filet mignon t-bone venison frankfurter. Salami picanha ham beef ribs kielbasa sirloin. Alcatra shankle pork loin kielbasa pork. Meatloaf strip steak ribeye biltong. Tri-tip kevin drumstick fatback beef t-bone. Ham alcatra flank meatball swine pancetta pork drumstick.</p>
+		</div>
+	</div>
+  <div class='map_cont'>
+  	<div id="panel">
+    	<input id='start' type='text' placeholder='Directions' onchange='calcRoute();'>
+  	</div>
+		<div class='column full' id='map-canvas'></div>
+		<div class='map_cover'></div>
+		<div id="directions-panel"></div>
+	</div>
+</main>
+
+<script>
+	var directionsDisplay;
+	var directionsService = new google.maps.DirectionsService();
+	var map;
+	var marker;
+
+	function initialize() {
+		directionsDisplay = new google.maps.DirectionsRenderer();
+		var myLatlng = new google.maps.LatLng(33.6405,-117.8541);
+    var mapOptions = {
+      center: {lat: 33.6405, lng: -117.8541},
+      zoom: 14
+    };
+
+    // var infowindow = new google.maps.InfoWindow({
+    //   content: contentString
+  	// });
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById('directions-panel'));
+
+  	marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map
+  	});
+  };
+
+  	// google.maps.event.addListener(marker, 'click', function() {
+    // 	infowindow.open(map,marker);
+  	// });
+
+	function calcRoute() {
+		marker.setMap(map);
+		if (!$('#directions-panel').hasClass('active')) { $('#directions-panel').addClass('active') };
+	  var start = document.getElementById('start').value;
+	  var end = '1541 California Ave. Irvine, CA';
+	  var request = {
+	      origin:start,
+	      destination:end,
+	      travelMode: google.maps.TravelMode.DRIVING
+	  };
+	  directionsService.route(request, function (response, status) {
+	    if (status == google.maps.DirectionsStatus.OK) {
+	      directionsDisplay.setDirections(response);
+	    }
+	  });
+	};
+  
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>

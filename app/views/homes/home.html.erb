@@ -1,25 +1,25 @@
-<header>
+<header data-scroll-speed="3">
 	<img class='header_bg' src="<%= asset_path('sunset.png') %>" />
 </header>
 
-<main class='main' id='home_cont'>
+<main class='main clearfix' id='home_cont'>
 	<div class='container user_links'>
 		<div class='column half'>
-			<h3 class='home_section_title'>WANT TO ATTEND?</h3>
+			<h3 class='section_title'>WANT TO ATTEND?</h3>
 			<a class='signup' id='attendee_signup' href='#' target='_blank'>PURCHASE TICKETS</a>
 		</div>
 		<div class='column half'>
-			<h3 class='home_section_title'>WANT TO EXHIBIT?</h3>
+			<h3 class='section_title'>WANT TO EXHIBIT?</h3>
 			<a class='signup' href='http://goo.gl/forms/yX7IELD6iR' target='_blank'>SUMMER EXPO EXHIBITOR FORM
 		</a>
 		</div>
 	</div>
 	<div class='container' id='home_subscription_cont'>
-		<h3 class='home_section_title'>SUBSCRIBE</h3>
+		<h3 class='section_title'>SUBSCRIBE</h3>
 		<%= render 'homes/subscription_form' %>
 	</div>
 	<div class='container' id='home_exhibitor_cont'>
-		<h3 class='home_section_title'>SPONSORS</h3>
+		<h3 class='section_title'>SPONSORS</h3>
 		<!-- Platinum Sponsors -->
 		<div class='exhibitor_block clearfix'>
 			<div class='column full'>
