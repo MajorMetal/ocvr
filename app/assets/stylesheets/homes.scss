@@ -23,7 +23,7 @@ header {
 }
 
 
-@media (min-width: 40rem) {
+@media (min-width: 740px) {
 	header {
 		height: 475px;
 		top: 0px;
@@ -31,7 +31,7 @@ header {
 }
 
 
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
 	header {
 		height: 500px;
 		top: 25px;
@@ -104,7 +104,7 @@ header {
 }
 #fss_img { height: auto; }
 
-@media (min-width: 40rem) {
+@media (min-width: 740px) {
 	#home_cont { margin-top: 0px; }
 	.user_links {
 		height: 185px;
@@ -119,6 +119,6 @@ header {
 	#home_exhibitor_cont { padding: 75px 0; }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
 	.signup { width: 280px; }
 }
