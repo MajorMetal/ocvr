@@ -10,33 +10,54 @@ header {
 }
 
 /* line 15, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
-.header_bg {
-  position: absolute;
+.carousel_cont {
+  position: relative;
+  margin: 0 auto;
   top: 0px;
-  right: -5px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 24, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.carousel_slide {
+  cursor: move;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 33, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+.header_bg {
+  margin-left: -5px;
+  padding-left: 5px;
   z-index: -1;
-  -webkit-filter: blur(2px) brightness(0.9) sepia(0.2);
-  -moz-filter: blur(2px) brightness(0.9) sepia(0.2);
-  -o-filter: blur(2px) brightness(0.9) sepia(0.2);
-  filter: blur(2px) brightness(0.9) sepia(0.2);
+  -webkit-filter: brightness(0.9) sepia(0.2);
+  -moz-filter: brightness(0.9) sepia(0.2);
+  -o-filter: brightness(0.9) sepia(0.2);
+  filter: brightness(0.9) sepia(0.2);
 }
 
 @media (min-width: 740px) {
-  /* line 26, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 43, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   header {
     height: 475px;
     top: 0px;
   }
 }
 @media (min-width: 1024px) {
-  /* line 32, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 49, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   header {
     height: 500px;
     top: 25px;
   }
 }
 /* ==~~~== Main Body ==~~~== */
-/* line 40, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 57, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .main {
   margin-top: 350px;
   background-color: #FFF;
@@ -44,12 +65,12 @@ header {
   z-index: 0;
 }
 
-/* line 46, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 63, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .section_title {
   font-weight: 100;
 }
 
-/* line 47, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 64, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .section_text {
   color: #444;
   font-size: 0.8em;
@@ -57,24 +78,24 @@ header {
 }
 
 @media (min-width: 740px) {
-  /* line 53, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 70, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   .main {
     margin-top: 0;
   }
 }
 /* ==~~~== Home Page Main Body ==~~~== */
-/* line 58, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 75, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .user_links {
   padding-top: 50px;
 }
 
-/* line 59, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 76, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .section_text > span {
   color: #FF6927;
   font-weight: 900;
 }
 
-/* line 63, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 80, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .signup {
   display: block;
   width: 250px;
@@ -93,13 +114,13 @@ header {
   transition: 250ms ease-in-out;
 }
 
-/* line 80, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 97, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 #attendee_signup {
   width: 200px;
   margin-bottom: 50px;
 }
 
-/* line 84, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 101, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 #home_subscription_cont {
   display: block;
   text-align: center;
@@ -107,21 +128,21 @@ header {
   z-index: 0;
 }
 
-/* line 90, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 107, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 #home_exhibitor_cont {
   position: relative;
   padding: 50px 0;
   z-index: 0;
 }
 
-/* line 95, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 112, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .exhibitor_block {
   position: relative;
   display: block;
   width: 100%;
 }
 
-/* line 100, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 117, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .exhibitor_img {
   display: block;
   margin: 10px auto;
@@ -129,63 +150,63 @@ header {
   max-width: 100%;
 }
 
-/* line 106, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 123, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 #fss_img {
   height: auto;
 }
 
 @media (min-width: 740px) {
-  /* line 108, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 125, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   .user_links {
     height: 185px;
     padding-top: 75px;
   }
 
-  /* line 112, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 129, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   .signup {
     width: 265px;
   }
 
-  /* line 113, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 130, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   .signup:hover {
     background: #FD8F3E;
     border: 1px solid #FD8F3E;
   }
 
-  /* line 117, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 134, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   #home_subscription_cont {
     display: none;
   }
 
-  /* line 118, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 135, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   #home_exhibitor_cont {
     padding: 75px 0;
   }
 }
 @media (min-width: 1024px) {
-  /* line 121, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 138, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   .signup {
     width: 280px;
   }
 }
 /* ==~~~== Expo Page Main Body ==~~~== */
-/* line 126, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 143, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .expo_info {
   padding: 50px 0;
 }
 
-/* line 127, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 144, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 #expo_title {
   font-weight: 900;
   font-size: 1.5em;
 }
 
-/* line 131, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 148, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .expo_loc {
   margin-top: -15px;
 }
 
-/* line 132, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 149, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 #map-canvas {
   position: relative;
   height: 300px;
@@ -193,7 +214,7 @@ header {
   z-index: 1;
 }
 
-/* line 138, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 155, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 .map_cover {
   position: relative;
   height: 300px;
@@ -203,7 +224,7 @@ header {
   z-index: 2;
 }
 
-/* line 146, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 163, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 #panel {
   position: relative;
   text-align: left;
@@ -215,13 +236,13 @@ header {
   background: transparent;
 }
 
-/* line 156, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 173, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 #start {
   width: 300px;
   padding: 5px;
 }
 
-/* line 160, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 177, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 #directions-panel {
   position: relative;
   display: block;
@@ -234,18 +255,18 @@ header {
   transition: 250ms ease-in;
 }
 
-/* line 171, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+/* line 188, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
 #directions-panel.active {
   margin-top: 0;
 }
 
 @media (min-width: 740px) {
-  /* line 177, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 194, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   .map_cover {
     margin-top: 0;
   }
 
-  /* line 178, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 195, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   #directions-panel {
     height: 300px;
     width: 0px;
@@ -254,7 +275,7 @@ header {
     z-index: 3;
   }
 
-  /* line 185, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
+  /* line 202, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss */
   #directions-panel.active {
     width: 390px;
     margin-top: -300px;

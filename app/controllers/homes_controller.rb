@@ -5,5 +5,8 @@ class HomesController < ApplicationController
 
 	def expo
 	end
+
+	def jssor
+	end
 	
 end
