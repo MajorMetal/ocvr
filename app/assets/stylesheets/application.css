@@ -32,7 +32,7 @@ html, body {
   font-size: 100%;
   margin: 0;
   padding: 0;
-  font-family: arial;
+  font-family: 'Istok Web', arial, sans-serif;
 }
 @media (min-width: 740px) { 
   html { font-size: 112%; }
@@ -81,8 +81,8 @@ html, body {
 input[type=text] {
   border: 1px solid #AAA;
   border-radius: 5px;
-  padding: 1em;
-  font-size: 0.7em;
+  padding: 0.75em 1em;
+  font-size: 0.8em;
   color: #222;
 }
 input[type=text]:focus {
@@ -92,9 +92,9 @@ input[type=text]:focus {
 input[type=submit] {
   border: 1px solid #FF6927;
   border-radius: 5px;
-  padding: 1em 2em;
+  padding: 0.75em 1.5em;
   margin: 0 auto;
-  font-size: 0.7em;
+  font-size: 0.8em;
   color: #FFF;
   background: #FF6927;
   outline: none;
@@ -177,12 +177,15 @@ input, textarea {
   font-size: 20px;
   font-weight: 900;
   color: #222;
+  font-family: 'Montserrat', arial, sans-serif;
 	cursor: pointer;
 }
 #sub_nav_btn {
   position: absolute;
   top: 16px;
 	right: 25px;
+  width: auto;
+  padding: 5px 10px;
   border: 3px solid #222;
   -webkit-transition: 250ms ease-in-out;
     -moz-transition: 250ms ease-in-out;
@@ -217,6 +220,7 @@ input, textarea {
 	padding: 5px;
 	cursor: pointer;
   text-align: center;
+  font-family: 'Montserrat', arial, sans-serif;
   color: #FFF;
 }
 .title_bar_fixed {
@@ -231,6 +235,7 @@ input, textarea {
 .title_fixed {
   margin: 0px;
   text-align: center;
+  font-family: 'Montserrat', arial, sans-serif;
   font-size: 40px;
 }
 
@@ -315,6 +320,7 @@ input, textarea {
   top: 0;
   left: 0;
   background-color: #FFF;
+  font-family: 'Montserrat', arial, sans-serif;
   z-index: 1;
 }
 .title_mobile {
@@ -390,6 +396,7 @@ input, textarea {
   top: 100px;
 }
 .modal_title {
+  font-family: 'Montserrat', arial, sans-serif;
   padding-top: 20px;
 }
 .modal_subscription_form {
@@ -423,7 +430,7 @@ footer {
 	z-index: 1;
 }
 .social_media_links {
-	width: 198px;
+	width: 202px;
 	height: 30px;
 	margin: 0 auto;
 	padding: 20px 0;
@@ -432,8 +439,12 @@ footer {
   height: 30px;
   padding: 0 3px;
 }
+.contact_cont {
+  padding-top: 30px;
+  width: 100px;
+  margin: 0 auto;
+}
 .contact_email {
-	padding-top: 20px;
 	color: #888;
 	font-size: 1em;
 	text-align: center;
@@ -447,12 +458,12 @@ footer {
 
 
 @media (min-width: 740px) {
-  .social_media_links { width: 202px; }
+  .social_media_links { width: 204px; }
 }
 
 
 @media (min-width: 1024px) {
-  .social_media_links { width: 202px; }
+  .social_media_links { width: 206px; }
   .foot_btn_img {
 	  -webkit-filter: grayscale(1);
 	  	-moz-filter: grayscale(1);

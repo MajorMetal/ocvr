@@ -1,12 +1,11 @@
 class HomesController < ApplicationController
 
 	def home
+		@users = User.new
 	end
 
 	def expo
-	end
-
-	def jssor
+		@users = User.new
 	end
 	
 end

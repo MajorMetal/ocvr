@@ -1,5 +1,7 @@
 <p class='section_text'>Sign up with your email address to receive news about the latest <span>SoCal VR</span> events.</p>
-<form class='home_subscription_form'>
-	<input class='home_subscription_form_input' type='text' placeholder='Email' />
-	<input type='submit' value='Sign Up' />
-</form>
+<div class='home_subscription_form'>
+	<%= form_for(@users) do |f| %>
+		<%= f.text_field :email, class: 'home_subscription_form_input', placeholder: 'Email' %>
+		<%= f.submit 'Sign Up' %>
+	<% end %>
+</div>
