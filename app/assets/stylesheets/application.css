@@ -104,7 +104,10 @@ input[type=submit] {
       -o-transition: 250ms ease-in-out;
         transition: 250ms ease-in-out;
 }
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+  color: #000;
+}
 ul { list-style-type: none; }
 input, textarea {
   -webkit-appearance: none;
@@ -149,15 +152,15 @@ input, textarea {
 /*  ==~~~== Navbars ==~~~== */
 .navbar_web {
 	position: fixed;
-	display: none;
-	height: 75px;
+	height: 80px;
 	width: 100%;
-	top: 0px;
+	top: 0;
   background-color: #FFF;
-  z-index: 5;
+  z-index: 6;
 }
 .nav_list_web {
   width: 100%;
+  display: none;
 	margin: 10px auto;
 	padding: 0;
 	font-size: 0.8em;
@@ -182,24 +185,21 @@ input, textarea {
 }
 #sub_nav_btn {
   position: absolute;
-  top: 16px;
+  top: 130px;
 	right: 25px;
   width: auto;
   padding: 5px 10px;
+  background: #FFF;
   border: 3px solid #222;
   -webkit-transition: 250ms ease-in-out;
     -moz-transition: 250ms ease-in-out;
       -o-transition: 250ms ease-in-out;
         transition: 250ms ease-in-out;
 }
-#sub_nav_btn:hover {
-  color: #FF6927;
-  border: 3px solid #FF6927;
-}
 .navbar_mobile {
   position: fixed;
 	display: block;
-	z-index: 7;
+	z-index: 8;
 }
 .nav_list_mobile {
 	position: fixed;
@@ -210,7 +210,7 @@ input, textarea {
 	padding: 35px 0 0 0;
 	margin: 0;
 	background-color: #222;
-  z-index: 5;
+  z-index: 7;
 }
 .logo_img_mobile {
   text-align: center;
@@ -223,25 +223,30 @@ input, textarea {
   font-family: 'Montserrat', arial, sans-serif;
   color: #FFF;
 }
-.title_bar_fixed {
-  position: fixed;
+.title_bar {
+  position: relative;
   width: 100%;
-  height: 50px;
-  top: 75px;
-  left: 0;
+  height: auto;
+  margin: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+        transform: translateY(-50%);
   background-color: #FFF;
   z-index: 5;
 }
-.title_fixed {
-  margin: 0px;
-  text-align: center;
+.title {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
   font-family: 'Montserrat', arial, sans-serif;
-  font-size: 40px;
 }
 
 
 @media (min-width: 740px) {
-  .navbar_web { display: block; }
+  .navbar_web { height: 120px; }
+  .nav_list_web { display: block; }
   .navbar_mobile { display: none; }
 }
 
@@ -262,14 +267,14 @@ input, textarea {
   padding-left: 7px;
   background-color: #FF6927;
   cursor: pointer;
-  z-index: 5;
+  z-index: 6;
 }
 #nav_reveal {
 	display: block;
 	cursor: pointer;
 	font-size: 20px;
   border-radius: 0 0 80px 0;
-  z-index: 5;
+  z-index: 7;
   -webkit-transition: 250ms ease-in-out;
     -moz-transition: 250ms ease-in-out;
       -o-transition: 250ms ease-in-out;
@@ -312,54 +317,14 @@ input, textarea {
 .nav_list_mobile.active { left: 0px; }
 
 
-/* ==~~~== Title Bar ==~~~== */
-.title_bar {
-  position: fixed;
-  width: 100%;
-  height: 40px;
-  top: 0;
-  left: 0;
-  background-color: #FFF;
-  font-family: 'Montserrat', arial, sans-serif;
-  z-index: 1;
-}
-.title_mobile {
-  margin: 0;
-  padding-top: 3px;
-  text-align: center;
-  font-size: 30px;
-}
-.title_web {
-  display: none;
-  padding-top: 4px;
-  text-align: center;
-  font-size: 40px;
-}
-
-
-@media (min-width: 740px) {
-  .title_bar {
-    position: relative;
-    margin-top: 475px;
-    height: 50px;
-  }
-  .title_mobile {
-    display: none;
-  }
-  .title_web {
-    display: block;
-  }
-}
-
-
 /* ==~~~== Modal ==~~~== */
 .modal {
   position: absolute;
   display: none;
   width: 400px;
-  height: 300px;
+  height: 400px;
   margin: 0 auto;
-  top: -350px;
+  top: -400px;
   left: 0;
   right: 0;
   background: #FFF;
@@ -430,7 +395,7 @@ footer {
 	z-index: 1;
 }
 .social_media_links {
-	width: 202px;
+	width: 98px;
 	height: 30px;
 	margin: 0 auto;
 	padding: 20px 0;
@@ -458,12 +423,12 @@ footer {
 
 
 @media (min-width: 740px) {
-  .social_media_links { width: 204px; }
+  .social_media_links { width: 88px; }
 }
 
 
 @media (min-width: 1024px) {
-  .social_media_links { width: 206px; }
+  .social_media_links { width: 88px; }
   .foot_btn_img {
 	  -webkit-filter: grayscale(1);
 	  	-moz-filter: grayscale(1);

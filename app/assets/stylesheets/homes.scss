@@ -27,20 +27,24 @@ header {
   height: 100%;
   overflow: hidden;
 }
-.header_bg {
-	min-height: 500px;
-}
+#img1 { margin-top: -40px; }
+
+
 @media (min-width: 740px) {
 	header {
 		height: 475px;
-		top: 0px;
+		top: 100px;
 	}
+	#img1 { margin-top: -40px; }
 }
 @media (min-width: 1024px) {
 	header {
 		height: 500px;
-		top: 25px;
+		top: 100px;
 	}
+	#img1 { margin-top: -80px; }
+	#img2 { margin-top: 10px; }
+	#img4 { margin-top: 150px; }
 }
 
 
@@ -61,7 +65,7 @@ header {
 	margin-top: -5px;
 }
 @media (min-width: 740px) {
-	.main { margin-top: 0; }
+	.main { margin-top: 525px; }
 }
 
 
@@ -115,7 +119,6 @@ header {
 @media (min-width: 740px) {
 	.user_links {
 		height: 185px;
-		padding-top: 75px;
 	}
 	.signup { width: 190px; }
 	.signup:hover {
@@ -131,7 +134,7 @@ header {
 
 
 /* ==~~~== Expo Page Main Body ==~~~== */
-.expo_info { padding: 50px 0; }
+.expo_info { padding: 50px 0 75px 0; }
 #expo_title {
 	font-weight: 900;
 	font-size: 1.5em;

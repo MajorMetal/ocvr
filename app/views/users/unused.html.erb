@@ -1,0 +1,27 @@
+<!-- Sponsors Container -->
+<div class='container' id='home_exhibitor_cont'>
+	<h3 class='section_title'>SPONSORS</h3>
+	<div class='exhibitor_block clearfix'>
+		<div class='column half'>
+			<img class='exhibitor_img' id='fss_img' src="<%= asset_path('FastStart-Studio-Logo.png') %>" />
+		</div>
+</div>
+
+<!-- Mobile NavBar -->
+<nav class='navbar_mobile'>
+	<ul class='nav_list_mobile' id='nav_list_mobile'>
+		<li class='logo_img_mobile'>
+			<%= link_to root_path do %>
+				<img src='<%= asset_path('ocvr2.png') %>' />
+			<% end %>
+		</li>
+		<%= link_to expo_path do %>
+			<li class='nav_btn_mobile'>
+				<p>Expo</p>
+			</li>
+		<% end %>
+	</ul>
+	<div class='nav_reveal' id='nav_reveal'>
+		<span></span>
+	</div>
+</nav>

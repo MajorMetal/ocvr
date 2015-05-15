@@ -16,48 +16,25 @@
 <body>
 
 <nav class='navbar_web'>
+	<div class='title_bar' id='title_bar'>
+		<img class='title' src='<%= asset_path('SocalLogoSkinny2.png') %>' />
+	</div>
 	<ul class='nav_list_web' id='nav_list_web'>
-		<li class='nav_btn_web logo' id='logo'>
-			<%= link_to root_path do %>
-				<img class='logo_img' src='<%= asset_path('ocvr.png') %>' />
-			<% end %>
-		</li>
-		<%= link_to expo_path do %>
-			<li class='nav_btn_web'>
-				<p class='nav_btn'>Expo</p>
-			</li>
-		<% end %>
+		<!-- <li class='nav_btn_web logo' id='logo'> -->
+			<%#= link_to root_path do %>
+				<!-- <img class='logo_img' src='<%= asset_path('ocvr.png') %>' /> -->
+			<%# end %>
+		<!-- </li> -->
+		<%#= link_to expo_path do %>
+			<!-- <li class='nav_btn_web'> -->
+				<!-- <p class='nav_btn'>Expo</p> -->
+			<!-- </li> -->
+		<%# end %>
 		<li class='nav_btn_web'>
 			<p class='nav_btn' id='sub_nav_btn'>Subscribe</p>
 		</li>
 	</ul>
-	<div class='title_bar_fixed hidden' id='title_bar_fixed'>
-		<p class='title_fixed'>SoCal Virtual Reality Conference</p>
-	</div>
 </nav>
-
-<nav class='navbar_mobile'>
-	<ul class='nav_list_mobile' id='nav_list_mobile'>
-		<li class='logo_img_mobile'>
-			<%= link_to root_path do %>
-				<img src='<%= asset_path('ocvr2.png') %>' />
-			<% end %>
-		</li>
-		<%= link_to expo_path do %>
-			<li class='nav_btn_mobile'>
-				<p>Expo</p>
-			</li>
-		<% end %>
-	</ul>
-	<div class='nav_reveal' id='nav_reveal'>
-		<span></span>
-	</div>
-</nav>
-
-<div class='title_bar' id='title_bar'>
-	<p class='title_mobile'>SoCal VR Con</p>
-	<p class='title_web' id='title_web'>SoCal Virtual Reality Conference</p>
-</div>
 
 <div class='modal'>
 	<div class='modal_exit'>
@@ -84,28 +61,13 @@
 <footer>
 	<ul class='social_media_links'>
 		<li class='nav_btn_web'>
-			<a href='/'>
+			<a href='https://twitter.com/socalvr' target='_blank'>
 				<img class='foot_btn_img' src='<%= asset_path('Twitter_bird_icon.png') %>' />
 			</a>
 		</li>
 		<li class='nav_btn_web'>
-			<a href='/'>
+			<a href='https://www.facebook.com/SocalVR' target='_blank'>
 				<img class='foot_btn_img' src='<%= asset_path('square-facebook-512.png') %>' />
-			</a>
-		</li>
-		<li class='nav_btn_web'>
-			<a href='/'>
-				<img class='foot_btn_img' src='<%= asset_path('Instagram-icon.png') %>' />
-			</a>
-		</li>
-		<li class='nav_btn_web'>
-			<a href='/'>
-				<img class='foot_btn_img' src='<%= asset_path('Youtube_Icon.png') %>' />
-			</a>
-		</li>
-		<li class='nav_btn_web'>
-			<a href='/'>
-				<img class='foot_btn_img' src='<%= asset_path('RSS-feed-icon.png') %>' />
 			</a>
 		</li>
 	</ul>

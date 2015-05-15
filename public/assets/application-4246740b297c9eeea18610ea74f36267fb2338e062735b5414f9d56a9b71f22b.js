@@ -13637,16 +13637,6 @@ $(document).ready(function(){
 	$window.scroll(function () {
 		// Website Navbar Scroll Animations.
 		var scrollTop = $window.scrollTop();
-		if ($window.scrollTop() >= 400) {
-			$('#title_web').addClass('hidden');
-			$('#title_bar_fixed').removeClass('hidden');
-			$('header').addClass('hidden');
-		}
-		if ($window.scrollTop() < 400) {
-			$('#title_bar_fixed').addClass('hidden');
-			$('#title_web').removeClass('hidden');
-			$('header').removeClass('hidden');
-		}
 
 		parallax.each(function(){
       var $this = $(this),
@@ -13675,7 +13665,7 @@ $(document).ready(function(){
 
 	$closeModal.click(function() {
 		$modal.removeClass('active');
-		$modal.css('top', '-350px');
+		$modal.css('top', '-400px');
 		$webBG.addClass('hidden');
 		scrollUnlock();
 	})
