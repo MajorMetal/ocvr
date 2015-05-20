@@ -70,7 +70,6 @@ $(document).ready(function(){
 
 	function scrollLock() {
 		var scrollPosition = [ $window.scrollLeft(), $window.scrollTop() ];
-		console.log(scrollPosition);
 		$html.data('scroll-position', scrollPosition);
     $html.data('previous-overflow', $html.css('overflow'));
     $html.css('overflow', 'hidden');
@@ -106,6 +105,10 @@ $(document).ready(function(){
   _CaptionTransitions["MCLIP|L"] = { $Duration: 900, $Clip: 1, $Move: true, $Easing: { $Clip: $JssorEasing$.$EaseInOutCubic} };
   _CaptionTransitions["MCLIP|R"] = { $Duration: 900, $Clip: 2, $Move: true, $Easing: { $Clip: $JssorEasing$.$EaseInOutCubic} };
   
+  var header = document.getElementById('header');
+  var bodyWidth = document.body.clientWidth;
+  header.style.height = (bodyWidth / 3) + 'px';
+
   var options = {
     $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
     $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
@@ -115,8 +118,8 @@ $(document).ready(function(){
     $SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
     $SlideDuration: 800,                               	//[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
     $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-    //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-    //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+    // $SlideWidth: bodyWidth,                          //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+    // $SlideHeight: (bodyWidth / 2),                   //[Optional] Height of every slide in pixels, default value is height of 'slides' container
     $SlideSpacing: 0, 					                				//[Optional] Space between each slide in pixels, default value is 0
     $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
     $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
@@ -146,21 +149,27 @@ $(document).ready(function(){
       $Steps: 1                                       	//[Optional] Steps to go for each navigation request, default value is 1
     }
   };
+
   var jssor_slider1 = new $JssorSlider$("slider1_container", options);
 
   // responsive code begin
   // you can remove responsive code if you don't want the slider scales while window resizes
-  // function ScaleSlider() {
-  //   var bodyWidth = document.body.clientWidth;
-  //   if (bodyWidth)
-  //     jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
-  //   else
-  //     window.setTimeout(ScaleSlider, 30);
-  // }
-  // ScaleSlider();
-  // $(window).bind("load", ScaleSlider);
-  // $(window).bind("resize", ScaleSlider);
-  // $(window).bind("orientationchange", ScaleSlider);
+  function ScaleSlider() {
+    bodyWidth = document.body.clientWidth;
+    header.style.height = (bodyWidth / 3) + 'px';
+
+    if (bodyWidth) {
+      jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
+      jssor_slider1.$ScaleHeight(Math.min((bodyWidth / 3), 640));
+    }
+    else {
+      window.setTimeout(ScaleSlider, 30);
+    }
+  }
+  ScaleSlider();
+  $(window).bind("load", ScaleSlider);
+  $(window).bind("resize", ScaleSlider);
+  $(window).bind("orientationchange", ScaleSlider);
   //responsive code end
 
 });

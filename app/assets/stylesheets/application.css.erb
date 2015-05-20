@@ -22,7 +22,8 @@
  /*
   Phone = 0px - 736px
   Tablet = 768px - 1600px
-  Laptops = 1200px - 1600px
+  Computers = 1200px - 1600px
+  Large Computers = 1600px - 1920px
 */
 
 
@@ -33,12 +34,16 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Istok Web', arial, sans-serif;
+  z-index: -1;
 }
 @media (min-width: 740px) { 
   html { font-size: 112%; }
 }
-@media (min-width: 1024px) { 
+@media (min-width: 1025px) { 
   html { font-size: 120%; }
+}
+@media (min-width: 1300px) {
+  html { font-size: 125%; }
 }
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -185,11 +190,12 @@ input, textarea {
 }
 #sub_nav_btn {
   position: absolute;
-  top: 130px;
-	right: 25px;
+  top: 115px;
+	right: 30px;
   width: auto;
   padding: 5px 10px;
   background: #FFF;
+  color: #222;
   border: 3px solid #222;
   -webkit-transition: 250ms ease-in-out;
     -moz-transition: 250ms ease-in-out;
@@ -245,15 +251,20 @@ input, textarea {
 
 
 @media (min-width: 740px) {
-  .navbar_web { height: 120px; }
+  .navbar_web { height: 100px; }
   .nav_list_web { display: block; }
   .navbar_mobile { display: none; }
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
+  .navbar_web { height: 120px; }
   .logo { margin: 0 0 0 40px; }
-  #sub_nav_btn { right: 40px; }
+  #sub_nav_btn { top: 150px; }
+}
+
+@media (min-width: 1601px) {
+  .navbar_web { height: 160px; }
 }
 
 
@@ -382,7 +393,7 @@ input, textarea {
 }
 
 
-@media (min-width:1024px) {
+@media (min-width:1025px) {
   .modal { width: 450px; }
 }
 
@@ -427,7 +438,7 @@ footer {
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .social_media_links { width: 88px; }
   .foot_btn_img {
 	  -webkit-filter: grayscale(1);

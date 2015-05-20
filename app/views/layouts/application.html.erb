@@ -6,9 +6,7 @@
   <link href='https://fonts.googleapis.com/css?family=Istok+Web|Montserrat' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-  <%= javascript_include_tag 'application' %>
-  <%= javascript_include_tag 'jssor' %>
-  <%= javascript_include_tag 'jssor.slider.mini' %>
+  <%= javascript_include_tag 'application', 'jssor', 'jssor.slider.mini' %>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <%= csrf_meta_tags %>
@@ -62,7 +60,7 @@
 		</li>
 	</ul>
 	<div class='contact_cont'>
-		<a class='contact_email' href='mailto:dylanwatkins@gmail.com?Subject=SoCal%20VR' target='_top' class='contact_email'>Contact Us</a>
+		<a class='contact_email' href='mailto:dylanwatkins@gmail.com?Subject=SoCal%20VR' target='_top'>Contact Us</a>
 	</div>
 </footer>
 
