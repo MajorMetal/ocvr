@@ -1,18 +1,7 @@
 <p class='section_text'>For more information about the <span>SoCal VR</span> conference, enter your email in the subscription form on our website. This will give you updates as they roll in as well as step by step instructions on how to register for a Vive demo, and more. Sign up now, while you still can. </p>
 <div class='home_subscription_form'>
-	<%= form_for @users do |f| %>
-		<% if @users.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@users.errors.count, "error") %> prohibited this email from being saved:</h2>
-
-      <ul>
-      <% @users.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-		<%= f.text_field :email, class: 'home_subscription_form_input', placeholder: 'Email' %>
+	<%= form_for @user do |f| %>
+		<%= f.email_field :email, class: 'home_subscription_form_input', placeholder: 'Email' %>
 		<%= f.submit 'Sign Up' %>
 	<% end %>
 </div>

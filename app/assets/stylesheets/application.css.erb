@@ -83,17 +83,19 @@ html, body {
 
 
 /* ==~~~== Modified Elements ==~~~== */
-input[type=text] {
+input[type=email], input[type=text] {
   border: 1px solid #AAA;
   border-radius: 5px;
   padding: 0.75em 1em;
   font-size: 0.8em;
   color: #222;
 }
-input[type=text]:focus {
+input[type=email]:focus, input[type=text]:focus {
   outline: none;
   background: #FFF;
 }
+input[type=email].valid { border: 1px solid green; }
+input[type=email].error { border: 1px solid red; }
 input[type=submit] {
   border: 1px solid #FF6927;
   border-radius: 5px;
@@ -117,6 +119,9 @@ ul { list-style-type: none; }
 input, textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 @media (min-width: 740px) {
@@ -146,13 +151,45 @@ input, textarea {
       -o-transition: 500ms ease-in-out;
         transition: 500ms ease-in-out;
 }
+.flash_notice {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 80px;
+  border: 1px solid green;
+  background: lightgreen;
+  z-index: 1;
+}
+.flash_notice.error {
+  border: 1px solid red;
+  background: lightcoral;
+}
+.flash_message {
+  position: relative;
+  color: green;
+  font-size: 0.8em;
+  text-align: center;
+  margin: 0;
+  padding: 4px 0;
+}
+.flash_message.error {
+  color: red;
+}
 
 
 @media (min-width: 740px) {
   .mobile_bg { display: none; }
   .web_bg { display: block; }
+  .flash_notice { top: 100px; }
 }
 
+@media (min-width: 1025px) {
+  .flash_notice { top: 120px; }
+}
+
+@media (min-width: 1601px) {
+  .flash_notice { top: 160px; }
+}
 
 /*  ==~~~== Navbars ==~~~== */
 .navbar_web {
