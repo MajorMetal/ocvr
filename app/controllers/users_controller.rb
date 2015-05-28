@@ -10,12 +10,19 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.find_or_create_by(user_params)
+    @user = User.create(user_params)
 
     if @user.save
       flash[:notice] = "#{@user.email} was added to the subscription list!"
+      # Notifier.welcome(@user).deliver_now
     else
-      flash[:error] = "#{@user.email} was NOT added to the subscription list."
+      if @user.errors.added? :email, :taken
+        flash[:notice] = "#{@user.email} is already on the subscription list."
+      elsif @user.errors.added? :email, :blank
+        flash[:error] = "The email submitted was blank."
+      else
+        flash[:error] = "#{@user.email} was NOT added to the subscription list."
+      end
     end
 
     redirect_to root_path
