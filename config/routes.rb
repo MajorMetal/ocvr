@@ -2,12 +2,10 @@ Rails.application.routes.draw do
 
   root 'homes#home'
 
-  get '/expo' => 'homes#expo'
+  get '/tester' => 'homes#tester'
 
   get '/users' => 'users#index', defaults: { format: 'json' }
-
   get '/users/new' => 'users#new'
-
   post '/users' => 'users#create'
 
 
