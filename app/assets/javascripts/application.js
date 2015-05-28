@@ -74,14 +74,11 @@ $(document).ready(function(){
     $html.data('previous-overflow', $html.css('overflow'));
     $html.css('overflow', 'hidden');
     disableScroll = true;
-    // $window.scrollTo({left: scrollPosition[0] + 'px', top: scrollPosition[1] + 'px'}, 800);
 	};
 
 	function scrollUnlock() {
-    // var scrollPosition = $html.data('scroll-position');
     $html.css('overflow', $html.data('previous-overflow'));
     disableScroll = false;
-    // $window.scrollTo({left: scrollPosition[0] + 'px', top: scrollPosition[1]+ 'px'}, 800);
 	};
 
 	document.ontouchmove = function(e) {
