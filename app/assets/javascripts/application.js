@@ -44,10 +44,22 @@ $(document).ready(function(){
     });
 	});
 
+  $window.resize(function() {
+    if($window.width() < 740) {
+      $modal.css('top', '0px');
+    }
+    else if($window.width() >= 740) {
+      $modal.css('top', '-400px');
+      $modal.addClass('web');
+      setTimeout(function() { $modal.removeClass('web'); }, 1);
+    }
+  });
+
 	// Toggles the Mobile Navbar
 	$revealMobile.click(function() {
 		if ($revealMobile.hasClass('active')) { scrollUnlock(); }
 		else { scrollLock(); }
+
 		$revealMobile.toggleClass('active');
 		$navMobile.toggleClass('active');
 		$mobileBG.toggleClass('hidden');
@@ -56,13 +68,11 @@ $(document).ready(function(){
 	$openModal.click(function() {
 		curPos = Math.floor($window.scrollTop());
 		$modal.css('top', (curPos + 100) + 'px');
-		$modal.addClass('active');
 		$webBG.removeClass('hidden');
 		scrollLock();
 	});
 
 	$closeModal.click(function() {
-		$modal.removeClass('active');
 		$modal.css('top', '-400px');
 		$webBG.addClass('hidden');
 		scrollUnlock();
@@ -81,9 +91,7 @@ $(document).ready(function(){
     disableScroll = false;
 	};
 
-	document.ontouchmove = function(e) {
-	  if (disableScroll) { e.preventDefault(); } 
-	};
+	document.ontouchmove = function(e) { if (disableScroll) { e.preventDefault(); } };
 
 
 	// ==========================
@@ -159,9 +167,7 @@ $(document).ready(function(){
       jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
       jssor_slider1.$ScaleHeight(Math.min((bodyWidth / 3), 640));
     }
-    else {
-      window.setTimeout(ScaleSlider, 30);
-    }
+    else { window.setTimeout(ScaleSlider, 30); }
   }
   ScaleSlider();
   $(window).bind("load", ScaleSlider);
@@ -169,6 +175,13 @@ $(document).ready(function(){
   $(window).bind("orientationchange", ScaleSlider);
   //responsive code end
 
-  $("#new_user").validate();
+  $(".new_user").validate({
+    rules: {
+      email: { required: true, email: true }
+    },
+    messages: {
+      email: { required: "", email: "" }
+    }
+  });
 
 });

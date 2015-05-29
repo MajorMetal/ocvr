@@ -25,11 +25,20 @@
 			<a class='signup' href='https://goo.gl/forms/yX7IELD6iR' target='_blank'>EXHIBITOR SIGNUP</a>
 		</div>
 	</div>
-	<div class='container' id='home_subscription_cont'>
+</main>
+
+	<div class='modal'>
+		<div class='modal_exit'>
+			<i class='fa fa-times'></i>
+		</div>
+		<h1 class='modal_title'>SoCal VR Con</h1>
 		<h3 class='section_title'>SUBSCRIBE</h3>
-		<%= render 'homes/subscription_form' %>
+		<div class='modal_subscription_form'>
+			<%= render 'homes/subscription_form' %>
+		</div>
 	</div>
 
+<main class='main'>
 	<div class='container clearfix expo_info'>
 		<div class='column full clearfix'>
 			<h3 class='section_title' id='expo_title'>SUMMER EXPO</h3>
@@ -103,6 +112,6 @@
 	    }
 	  });
 	};
-  
+
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>

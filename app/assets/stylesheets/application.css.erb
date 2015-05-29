@@ -51,7 +51,6 @@ html, body {
   		-o-box-sizing: border-box;
   			box-sizing: border-box;
 }
-.main { width: 100%; }
 .container {
   margin: 0 auto;
   max-width: 48rem;
@@ -62,7 +61,7 @@ html, body {
   display: table;
 }
 .clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
+.clearfix { zoom: 1; }
 
 
 @media (min-width: 740px) {
@@ -367,33 +366,27 @@ input:-webkit-autofill {
 
 /* ==~~~== Modal ==~~~== */
 .modal {
-  position: absolute;
-  display: none;
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
-  top: -400px;
-  left: 0;
-  right: 0;
-  background: #FFF;
+  position: relative;
+  display: block;
   text-align: center;
-  z-index: 7;
-  -webkit-transition: 1000ms ease-in-out;
-    -moz-transition: 1000ms ease-in-out;
-      -o-transition: 1000ms ease-in-out;
-        transition: 1000ms ease-in-out;
+  padding-top: 50px;
+  top: 0px;
+  z-index: 0;
 }
 .modal_exit {
   position: absolute;
+  display: none;
   height: 30px;
   width: 30px;
-  border: 4px solid #000;
-  border-radius: 50%;
-  top: -10px;
-  right: -10px;
+  top: 0px;
+  right: 0px;
   text-align: center;
   background: #FFF;
   cursor: pointer;
+  -webkit-transition: 250ms ease-in-out;
+    -moz-transition: 250ms ease-in-out;
+      -o-transition: 250ms ease-in-out;
+        transition: 250ms ease-in-out;
 }
 .modal_exit > i {
   position: absolute;
@@ -402,11 +395,11 @@ input:-webkit-autofill {
   width: 15px;
   top: -5px; right: 0; bottom: 0; left: 0;
 }
-.modal_exit > i:before {
-  top: 0;
+.modal_exit:hover {
+  color: #FF6927;
 }
-.modal.active {
-  top: 100px;
+.modal_title {
+  display: none;
 }
 .modal_title {
   font-family: 'Montserrat', arial, sans-serif;
@@ -414,7 +407,7 @@ input:-webkit-autofill {
 }
 .modal_subscription_form {
   position: relative;
-  width: 325px;
+  width: 90%;
   margin: 0 auto;
   padding-top: 20px;
 }
@@ -426,7 +419,30 @@ input:-webkit-autofill {
 
 
 @media (min-width:740px) {
-  .modal { display: block; }
+  .modal {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    padding-top: 0;
+    top: -400px; left: 0; right: 0;
+    background: #FFF;
+    z-index: 7;
+    -webkit-transition: 1000ms ease-in-out;
+      -moz-transition: 1000ms ease-in-out;
+        -o-transition: 1000ms ease-in-out;
+          transition: 1000ms ease-in-out;
+  }
+  .web {
+    -webkit-transition: 0ms ease-in;
+      -moz-transition: 0ms ease-in;
+        -o-transition: 0ms ease-in;
+          transition: 0ms ease-in;
+  }
+  .modal_exit { display: block; }
+  .modal_title { display: block; }
+  .modal > .section_title { display: none; }
+  .modal_subscription_form { width: 325px; }
 }
 
 
