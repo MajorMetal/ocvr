@@ -121,7 +121,9 @@ header {
 
 
 /* ==~~~== Expo Page Main Body ==~~~== */
-.expo_info { padding: 50px 0 75px 0; }
+.expo_info {
+	padding: 50px 0 75px 0;
+}
 #expo_title {
 	font-weight: 900;
 	font-size: 1.5em;
@@ -140,7 +142,7 @@ header {
 	position: relative;
 	height: 300px;
 	width: 100%;
-	margin-top: -300px;
+	top: -300px;
 	background: transparent;
 	z-index: 2;
 }
@@ -155,6 +157,8 @@ header {
   background: transparent;
 }
 #start {
+	position: relative;
+	top: 25px;
 	width: 300px;
 	max-width: 80%;
 	padding: 5px;
@@ -176,7 +180,9 @@ header {
 
 
 @media (min-width: 740px) {
-	.map_cover { margin-top: 0; }
+	.map_cover {
+		top: 25px;
+	}
 	#directions-panel {
 		height: 300px;
 		width: 0px;

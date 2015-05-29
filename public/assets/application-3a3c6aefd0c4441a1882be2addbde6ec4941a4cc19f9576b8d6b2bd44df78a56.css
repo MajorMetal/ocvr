@@ -167,19 +167,19 @@ header {
   padding: 50px 0 75px 0;
 }
 
-/* line 126, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 128, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #expo_title {
   font-weight: 900;
   font-size: 1.5em;
 }
 
-/* line 130, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 132, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .expo_loc {
   font-family: 'Istok Web', arial, sans-serif;
   margin-top: -15px;
 }
 
-/* line 134, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 136, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #map-canvas {
   position: relative;
   height: 300px;
@@ -187,17 +187,17 @@ header {
   z-index: 1;
 }
 
-/* line 140, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 142, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .map_cover {
   position: relative;
   height: 300px;
   width: 100%;
-  margin-top: -300px;
+  top: -300px;
   background: transparent;
   z-index: 2;
 }
 
-/* line 148, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 150, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #panel {
   position: relative;
   text-align: left;
@@ -209,14 +209,16 @@ header {
   background: transparent;
 }
 
-/* line 158, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 160, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #start {
+  position: relative;
+  top: 25px;
   width: 300px;
   max-width: 80%;
   padding: 5px;
 }
 
-/* line 163, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 167, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #directions-panel {
   position: relative;
   display: block;
@@ -229,18 +231,18 @@ header {
   transition: 250ms ease-in;
 }
 
-/* line 174, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 178, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #directions-panel.active {
   margin-top: 0;
 }
 
 @media (min-width: 740px) {
-  /* line 180, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 184, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .map_cover {
-    margin-top: 0;
+    top: 25px;
   }
 
-  /* line 181, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 187, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   #directions-panel {
     height: 300px;
     width: 0px;
@@ -249,7 +251,7 @@ header {
     z-index: 3;
   }
 
-  /* line 188, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 194, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   #directions-panel.active {
     width: 390px;
     margin-top: -300px;
@@ -720,7 +722,7 @@ footer {
 	width: 66px;
 	height: 30px;
 	margin: 0 auto;
-	padding: 20px 0;
+	padding: 40px 0 20px 0;
 }
 .foot_btn_img {
   height: 30px;
