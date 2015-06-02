@@ -50,7 +50,7 @@ $(document).ready(function(){
 	});
 
 	$closeModal.click(function() {
-		$modal.css('top', '-350px');
+		$modal.css('top', '-100%');
 		$webBG.addClass('hidden');
 		scrollUnlock();
 	})
