@@ -25,3 +25,64 @@
 		<span></span>
 	</div>
 </nav>
+
+<style>
+/* ==~~~== Mobile Hamburger Menu Reveal ==~~~== */
+.nav_reveal {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  padding-left: 7px;
+  background-color: #FF6927;
+  cursor: pointer;
+  z-index: 6;
+}
+#nav_reveal {
+	display: block;
+	cursor: pointer;
+	font-size: 20px;
+  border-radius: 0 0 80px 0;
+  z-index: 7;
+  -webkit-transition: 250ms ease-in-out;
+    -moz-transition: 250ms ease-in-out;
+      -o-transition: 250ms ease-in-out;
+        transition: 250ms ease-in-out;
+}
+.nav_reveal span, .nav_reveal span:before, .nav_reveal span:after {
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 18px;
+  top: 9px;
+  border-radius: 1px;
+  background: white;
+  content: '';
+}
+.nav_reveal span:before { top: 5px; }
+.nav_reveal span:after { top: 10px; }
+.nav_reveal, .nav_reveal span, .nav_reveal span:before, .nav_reveal span:after, .nav_list_mobile {
+  -webkit-transition: 500ms ease-in-out;
+    -moz-transition: 500ms ease-in-out;
+      -o-transition: 500ms ease-in-out;
+        transition: 500ms ease-in-out;
+}
+.nav_reveal.active, .nav_reveal.active span { background-color: transparent; }
+.nav_reveal.active span:before, .nav_reveal.active span:after { top: 5px; }
+.nav_reveal.active span:before {
+  background: #FF6927;
+  -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+}
+.nav_reveal.active span:after {
+  background: #FF6927;
+  -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+}
+.nav_list_mobile.active { left: 0px; }
+</style>

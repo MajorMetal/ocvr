@@ -13626,13 +13626,16 @@ $(document).ready(function(){
 	var $window = $(window);
 	var $html = $('html');
 	var $body = $('body');
-	var $navMobile = $('#nav_list_mobile');
+
+	var $navMobile = $('#nav-list-mobile');
 	var $revealMobile = $('#nav_reveal');
+
 	var $modal = $('.modal');
-	var $openModal = $('#sub_nav_btn');
-	var $closeModal = $('.modal_exit');
-	var $mobileBG = $('#mobile_cover');
-	var $webBG = $('#web_cover');
+	var $openModal = $('#subscribe-btn');
+	var $closeModal = $('.modal-exit');
+  
+	var $mobileBG = $('#mobile-cover');
+	var $webBG = $('#web-cover');
 
 	var parallax = $('[data-scroll-speed]');
 	var curPos;
@@ -13650,17 +13653,6 @@ $(document).ready(function(){
      	$this.css('transform', 'translateY(' + val + 'px)');
     });
 	});
-
-  $window.resize(function() {
-    if($window.width() < 740) {
-      $modal.css('top', '0px');
-    }
-    else if($window.width() >= 740) {
-      $modal.css('top', '-400px');
-      $modal.addClass('web');
-      setTimeout(function() { $modal.removeClass('web'); }, 1);
-    }
-  });
 
 	// Toggles the Mobile Navbar
 	$revealMobile.click(function() {
@@ -13784,10 +13776,10 @@ $(document).ready(function(){
 
   $(".new_user").validate({
     rules: {
-      email: { required: true, email: true }
+      'user[email]': { required: true, email: true }
     },
     messages: {
-      email: { required: "", email: "" }
+      'user[email]': { required: "", email: "" }
     }
   });
 

@@ -13,28 +13,29 @@
 </head>
 <body>
 
-<nav class='navbar_web'>
-	<div class='title_bar' id='title_bar'>
-		<img class='title' src='<%= asset_path('SocalLogoSkinny2.png') %>' />
+<nav class='nav-web'>
+	<div class='nav-logo-cont'>
+		<img class='nav-logo-img' src='<%= asset_path('SocalLogoSkinny2.png') %>' />
 	</div>
-	<ul class='nav_list_web' id='nav_list_web'>
-		<li class='nav_btn_web'>
-			<p class='nav_btn' id='sub_nav_btn'>Subscribe</p>
+	<ul class='nav-list-web'>
+		<li class='inline-btn'>
+			<p class='nav-btn-web' id='subscribe-btn'>Subscribe</p>
 		</li>
 	</ul>
 </nav>
 
 <%= render 'layouts/flash' %>
+
 <%= yield %>
 
-<div class='mobile_bg'>
-	<div class='cover hidden' id='mobile_cover'>
-	</div>
+<%= render 'partials/modal' %>
+
+<div class='mobile-bg'>
+	<div class='cover hidden' id='mobile-cover'></div>
 </div>
 
-<div class='web_bg'>
-	<div class='cover hidden' id='web_cover'>
-	</div>
+<div class='web-bg'>
+	<div class='cover hidden' id='web-cover'></div>
 </div>
 
 <footer>
