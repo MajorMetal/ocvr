@@ -27,8 +27,8 @@ $(document).ready(function() {
     $SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
     $SlideDuration: 800,                               	//[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
     $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-    // $SlideWidth: bodyWidth,                          //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-    // $SlideHeight: (bodyWidth / 2),                   //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+    $SlideWidth: bodyWidth,                             //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+    $SlideHeight: (bodyWidth / 3),                      //[Optional] Height of every slide in pixels, default value is height of 'slides' container
     $SlideSpacing: 0, 					                				//[Optional] Space between each slide in pixels, default value is 0
     $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
     $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
@@ -67,7 +67,10 @@ $(document).ready(function() {
     bodyWidth = document.body.clientWidth;
     header.style.height = (bodyWidth / 3) + 'px';
 
-    if (bodyWidth) { jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920)); }
+    if (bodyWidth) {
+      jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
+      jssor_slider1.$ScaleHeight(Math.min((bodyWidth / 3), 640));
+    }
     else { window.setTimeout(ScaleSlider, 30); }
   }
 
