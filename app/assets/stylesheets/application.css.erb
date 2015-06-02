@@ -172,20 +172,18 @@ input:-webkit-autofill {
 }
 .flash-message.error { color: red; }
 
-
 @media (min-width: 740px) {
   .mobile-bg { display: none; }
   .web-bg { display: block; }
   .flash-notice { top: 100px; }
 }
-
 @media (min-width: 1025px) {
   .flash-notice { top: 120px; }
 }
-
 @media (min-width: 1601px) {
   .flash-notice { top: 160px; }
 }
+
 
 /*  ==~~~== Navbars ==~~~== */
 .nav-web {
@@ -277,7 +275,6 @@ input:-webkit-autofill {
   color: #FFF;
 }
 
-
 @media (min-width: 740px) {
   .nav-web { height: 100px; }
   .nav-list-web { display: block; }
@@ -292,14 +289,15 @@ input:-webkit-autofill {
 .modal {
   position: absolute;
   display: none;
+  height: 325px;
+  width: 400px;
   top: 0;
-  padding-top: 50px;
+  padding: 0 30px 30px 30px;
   text-align: center;
   z-index: 0;
 }
 .modal-exit {
   position: absolute;
-  display: none;
   height: 30px;
   width: 30px;
   top: 0; right: 0;
@@ -313,41 +311,34 @@ input:-webkit-autofill {
 }
 .modal-exit > i {
   position: absolute;
-  height: 15px;
-  width: 15px;
-  top: -5px; right: 0; bottom: 0; left: 0;
-  margin: auto;
+  height: 20px;
+  width: 20px;
+  top: 10px; right: 10px;
 }
 .modal-exit:hover { color: #FF6927; }
 .modal-title {
   position: relative;
-  display: none;
-  padding-top: 20px;
+  top: 0;
   font-family: 'Montserrat', arial, sans-serif;
 }
 .subscription-form-cont {
   position: relative;
   display: block;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 20px;
 }
+.subscription-form-cont > .section-text { width: 90%; }
 .subscription-form { margin-top: 20px; }
 .subscription-form-input {
   margin-right: 5px;
   width: 200px;
 }
 
-
 @media (min-width:740px) {
   .modal {
-    position: absolute;
     display: block;
-    width: 400px;
-    height: 400px;
+    top: -100%; left: 0; right: 0;
     margin: 0 auto;
-    padding-top: 0;
-    top: -400px; left: 0; right: 0;
     background: #FFF;
     z-index: 7;
     -webkit-transition: 1000ms ease-in-out;
@@ -355,21 +346,19 @@ input:-webkit-autofill {
         -o-transition: 1000ms ease-in-out;
           transition: 1000ms ease-in-out;
   }
-  .web {
-    -webkit-transition: 0ms ease-in;
-      -moz-transition: 0ms ease-in;
-        -o-transition: 0ms ease-in;
-          transition: 0ms ease-in;
-  }
-  .modal-exit { display: block; }
-  .modal-title { display: block; }
-  .modal > .section_title { display: none; }
-  .modal_subscription_form { width: 325px; }
 }
-
-
 @media (min-width:1025px) {
-  .modal { width: 450px; }
+  .subscription-form { margin-top: 30px; }
+  .modal {
+    height: 350px;
+    width: 450px;
+  }
+}
+@media (min-width:1601px) {
+  .modal {
+    height: 375px;
+    width: 500px;
+  }
 }
 
 
