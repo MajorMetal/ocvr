@@ -10883,7 +10883,10 @@ $(document).ready(function() {
     bodyWidth = document.body.clientWidth;
     header.style.height = (bodyWidth / 3) + 'px';
 
-    if (bodyWidth) { jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920)); }
+    if (bodyWidth) {
+      jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
+      jssor_slider1.$ScaleHeight(Math.min((bodyWidth / 3), 640));
+    }
     else { window.setTimeout(ScaleSlider, 30); }
   }
 
