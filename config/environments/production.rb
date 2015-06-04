@@ -26,7 +26,7 @@ Rails.application.configure do
   config.assets.compress = true
   config.assets.compile = true
   config.assets.digest = true
-  config.static_cache_control = "public, max-age=60"
+  config.static_cache_control = "public, max-age=31536000"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
