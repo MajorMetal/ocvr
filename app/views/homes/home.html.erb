@@ -14,39 +14,37 @@
 	</div>
 </header>
 
-<main class='main' id='home_cont'>
-	<div class='container user_links'>
+<main class='main'>
+	<div class='container clearfix'>
 		<div class='column half'>
-			<h5 class='section_title'>WANT TO ATTEND?</h5>
-			<a class='signup' id='attendee_signup' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038' target='_blank'>PURCHASE TICKETS</a>
+			<h5 class='section-title'>WANT TO ATTEND?</h5>
+			<a class='button' id='attendee_button' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038' target='_blank'>PURCHASE TICKETS</a>
 		</div>
 		<div class='column half'>
-			<h5 class='section_title'>WANT TO EXHIBIT?</h5>
-			<a class='signup' href='https://goo.gl/forms/yX7IELD6iR' target='_blank'>EXHIBITOR SIGNUP</a>
+			<h5 class='section-title'>WANT TO EXHIBIT?</h5>
+			<a class='button' href='https://goo.gl/forms/yX7IELD6iR' target='_blank'>EXHIBITOR SIGNUP</a>
 		</div>
 	</div>
-	<div class='container expo_info'>
-		<div class='column full expo_info'>
-			<h5 class='section_title' id='expo_title'>SUMMER EXPO</h5>
-			<h6 class='section_title expo_loc'>July 12th, 2015</h6>
-			<h6 class='section_title expo_loc'>Institute for Innovation, University of California Irvine</h6>
-			<h6 class='section_title expo_loc'>5141 California Ave. Irvine, CA</h6>
+	<div class='container clearfix'>
+		<div class='column full'>
+			<h5 class='section-title'>SUMMER EXPO</h5>
+			<h6 class='section-subtitle'>July 12th, 2015</h6>
+			<h6 class='section-subtitle'>Institute for Innovation, University of California Irvine</h6>
+			<h6 class='section-subtitle'>5141 California Ave. Irvine, CA</h6>
 			<p class='section-text'>Welcome to the future! The future of entertainment, sports, art, music, medicine, gaming, and journalism is now.</p>
 			<p class='section-text'>Connecting all the genres is the exciting, engaging medium that is Virtual Reality. VR has flooded into the public consciousness through media publications all around the world. Now is your chance to experience the latest in this emerging technology. Immersive technology that the press has been raving about. Experience what millions of others will find out many months from now.</p>
 			<p class='section-text'>We have assembled a huge array of demos, experiences, panelists, and speakers for a transformative and exclusive event.</p>
 			<p class='section-text'>Over 40 companies will show off their latest. This will allow opportunities for all those who attend to teleport themselves into computerized realms that are beyond the imagination.</p>
 			<p class='section-text'>In addition to previously unreleased demos and experiences, a lineup of jam-packed panels and speeches will be held. This will alter the way that you look at Virtual Reality. Expect big names and intriguing discussions that must be heard in person.</p>
 			<p class='section-text'>Be part of the future. Join us in the newly opened and beautiful Institute of Innovation at University of California Irvine.</p>
-
 		</div>
 	</div>
-  <div class='map_cont'>
-  	<div id="panel">
-    	<input id='start' type='text' placeholder='Directions' onchange='calcRoute();'>
+  <div class='container full clearfix'>
+  	<div class='directions-input'>
+    	<input id='directions-start' type='text' placeholder='Directions' onchange='calcRoute();'>
   	</div>
 		<div class='column full' id='map-canvas'></div>
-		<div class='map_cover'></div>
-		<div id="directions-panel"></div>
+		<div id='directions-panel'></div>
 	</div>
 </main>
 
@@ -61,7 +59,9 @@
 		var myLatlng = new google.maps.LatLng(33.6405,-117.8541);
     var mapOptions = {
       center: {lat: 33.6405, lng: -117.8541},
-      zoom: 14
+      zoom: 14,
+      scrollwheel: false,
+      draggable: true
     };
 
     // var infowindow = new google.maps.InfoWindow({
@@ -85,7 +85,7 @@
 	function calcRoute() {
 		marker.setMap(map);
 		if (!$('#directions-panel').hasClass('active')) { $('#directions-panel').addClass('active') };
-	  var start = document.getElementById('start').value;
+	  var start = document.getElementById('directions-start').value;
 	  var end = '5141 California Ave. Irvine, CA';
 	  var request = {
 	      origin:start,
@@ -93,9 +93,7 @@
 	      travelMode: google.maps.TravelMode.DRIVING
 	  };
 	  directionsService.route(request, function (response, status) {
-	    if (status == google.maps.DirectionsStatus.OK) {
-	      directionsDisplay.setDirections(response);
-	    }
+	    if (status == google.maps.DirectionsStatus.OK) { directionsDisplay.setDirections(response); }
 	  });
 	};
 

@@ -10883,11 +10883,11 @@ $(document).ready(function() {
     bodyWidth = document.body.clientWidth;
     header.style.height = (bodyWidth / 3) + 'px';
 
-    // if (parentWidth) {
-    //   jssor_slider1.$ScaleHeight(Math.min((parentWidth / 3), 640));
-    //   jssor_slider1.$ScaleWidth(Math.min(parentWidth, 1920));
-    // }
-    // else { window.setTimeout(ScaleSlider, 30); }
+    if (bodyWidth) {
+      jssor_slider1.$ScaleHeight(Math.min((bodyWidth / 3), 640));
+      jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
+    }
+    else { window.setTimeout(ScaleSlider, 30); }
   }
 
   ScaleSlider();
@@ -13724,8 +13724,8 @@ $(document).ready(function(){
 	var $window = $(window);
 	var $html = $('html');
 	var $body = $('body');
-	var $navMobile = $('#nav-list-mobile');
-	var $revealMobile = $('#nav_reveal');
+	// var $navMobile = $('#nav-list-mobile');
+	// var $revealMobile = $('#nav_reveal');
 	var $modal = $('.modal');
 	var $openModal = $('#subscribe-btn');
 	var $closeModal = $('.modal-exit');

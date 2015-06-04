@@ -20,8 +20,8 @@ $(document).ready(function(){
 	var $window = $(window);
 	var $html = $('html');
 	var $body = $('body');
-	var $navMobile = $('#nav-list-mobile');
-	var $revealMobile = $('#nav_reveal');
+	// var $navMobile = $('#nav-list-mobile');
+	// var $revealMobile = $('#nav_reveal');
 	var $modal = $('.modal');
 	var $openModal = $('#subscribe-btn');
 	var $closeModal = $('.modal-exit');
