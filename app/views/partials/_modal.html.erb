@@ -1,0 +1,15 @@
+<div class='modal'>
+	<div class='modal-exit'>
+		<i class='fa fa-times'></i>
+	</div>
+	<h1 class='modal-title'>SoCal VR Con</h1>
+	<div class='subscription-form-cont'>
+		<p class='section-text'>For more information about the <span>SoCal VR</span> Conference, enter your email in the subscription form. This will give you updates as they roll out as well as step by step instructions on how to register for a Vive demo, and more.<br>Sign up now, while you still can. </p>
+		<div class='subscription-form'>
+			<%= form_for @user do |f| %>
+				<%= f.email_field :email, class: 'subscription-form-input', placeholder: 'Email' %>
+				<%= f.submit 'Sign Up' %>
+			<% end %>
+		</div>
+	</div>
+</div>

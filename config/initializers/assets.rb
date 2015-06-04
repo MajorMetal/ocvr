@@ -12,3 +12,6 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( jssor.js )
 Rails.application.config.assets.precompile += %w( jssor.slider.mini.js )
 Rails.application.config.assets.precompile += %w( jquery.validate.min.js )
+Rails.application.config.assets.precompile += %w( carousel.js )
+Rails.application.config.assets.precompile += %w( parallax.js )
+Rails.application.config.assets.precompile += %w( validation.js )

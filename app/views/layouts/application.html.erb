@@ -13,45 +13,46 @@
 </head>
 <body>
 
-<nav class='navbar_web'>
-	<div class='title_bar' id='title_bar'>
-		<img class='title' src='<%= asset_path('SocalLogoSkinny2.png') %>' />
+<nav class='nav-web'>
+	<div class='nav-logo-cont'>
+		<img class='nav-logo-img' src='<%= asset_path('SocalLogoSkinny2.png') %>' />
 	</div>
-	<ul class='nav_list_web' id='nav_list_web'>
-		<li class='nav_btn_web'>
-			<p class='nav_btn' id='sub_nav_btn'>Subscribe</p>
+	<ul class='nav-list-web'>
+		<li class='inline-btn'>
+			<p class='nav-btn-web' id='subscribe-btn'>Subscribe</p>
 		</li>
 	</ul>
 </nav>
 
-<%= render 'layouts/flash' %>
+<%= render 'partials/flash' %>
+
 <%= yield %>
 
-<div class='mobile_bg'>
-	<div class='cover hidden' id='mobile_cover'>
-	</div>
+<%= render 'partials/modal' %>
+
+<div class='mobile-bg'>
+	<div class='cover hidden' id='mobile-cover'></div>
 </div>
 
-<div class='web_bg'>
-	<div class='cover hidden' id='web_cover'>
-	</div>
+<div class='web-bg'>
+	<div class='cover hidden' id='web-cover'></div>
 </div>
 
 <footer>
-	<ul class='social_media_links'>
-		<li class='nav_btn_web'>
+	<ul class='social-media-nav'>
+		<li class='inline-btn'>
 			<a href='https://twitter.com/socalvr' target='_blank'>
-				<div class='foot_btn_img' id='twitter'> </div>
+				<div class='social-media-img' id='twitter'></div>
 			</a>
 		</li>
-		<li class='nav_btn_web'>
+		<li class='inline-btn'>
 			<a href='https://www.facebook.com/SocalVR' target='_blank'>
-				<div class='foot_btn_img' id='facebook'></div>
+				<div class='social-media-img' id='facebook'></div>
 			</a>
 		</li>
 	</ul>
-	<div class='contact_cont'>
-		<a class='contact_email' href='mailto:dylanwatkins@gmail.com?Subject=SoCal%20VR' target='_top'>Contact Us</a>
+	<div class='contact-info-cont'>
+		<a class='contact-info' href='mailto:dylanwatkins@gmail.com?Subject=SoCal%20VR' target='_top'>Contact Us</a>
 	</div>
 </footer>
 
