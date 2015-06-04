@@ -26,7 +26,7 @@ gem 'actionmailer', '~> 4.2.0'
 # Is used for hiding API Keys
 gem 'figaro'
 # Middleware for serving up compressed files
-gem 'rack-zippy'
+gem 'heroku_rails_deflate', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
