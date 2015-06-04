@@ -32,14 +32,14 @@ $(document).ready(function(){
 	var disableScroll = false;
 
 	// Toggles the Mobile Navbar
-	$revealMobile.click(function() {
-		if ($revealMobile.hasClass('active')) { scrollUnlock(); }
-		else { scrollLock(); }
+	// $revealMobile.click(function() {
+	// 	if ($revealMobile.hasClass('active')) { scrollUnlock(); }
+	// 	else { scrollLock(); }
 
-		$revealMobile.toggleClass('active');
-		$navMobile.toggleClass('active');
-		$mobileBG.toggleClass('hidden');
-	});
+	// 	$revealMobile.toggleClass('active');
+	// 	$navMobile.toggleClass('active');
+	// 	$mobileBG.toggleClass('hidden');
+	// });
 
   // Modal Functions
 	$openModal.click(function() {
