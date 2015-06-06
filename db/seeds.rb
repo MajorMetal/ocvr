@@ -10,7 +10,7 @@ exhibitors = Exhibitor.create([
 	{ name: 'Monster VR', img: 'MonsterVR.png' },
 	{ name: 'V', img: 'V.png' },
 	{ name: 'Warped Imagination', img: 'WarpedImagination.png' },
-	{ name: 'Vrideo', img: 'VRideo.jpg' },
+	{ name: 'Vrideo', img: 'VRideo.png' },
 	{ name: 'Funktronic Labs', img: 'Collider.png' },
 	{ name: 'RocketSail', img: 'RocketSail.png' },
 	{ name: 'New Deal Studios', img: 'NewDealStudios.png' },
@@ -34,14 +34,14 @@ exhibitors = Exhibitor.create([
 
 speakers = Speaker.create([
 	{ name: 'Duncan Trussell', img: 'DuncanTrussel.jpg' },
-	{ name: 'Dave Taylor', img: 'DaveTaylor.jpeg' }
+	{ name: 'Dave Taylor', img: 'DaveTaylor.jpg' }
 ])
 
 sponsors = Sponsor.create([
 	{ name: 'Next VR', rank: 'Diamond', img: 'NextVR.png' },
-	{ name: 'Voices of VR', rank: 'Media', img: 'VoicesOfVR.jpeg' },
+	{ name: 'Voices of VR', rank: 'Media', img: 'VoicesOfVR.jpg' },
 	{ name: 'Upload', rank: 'Media', img: 'Upload.png' },
 	{ name: 'Qgits', rank: 'Media', img: 'Qgits.png' },
-	{ name: 'Inner Rift', rank: 'Media', img: 'InnerRift.jpeg' },
+	{ name: 'Inner Rift', rank: 'Media', img: 'InnerRift.jpg' },
 	{ name: 'Duncan Trussell', rank: 'Media', img: 'DuncanTrussel.png' }
 ])
