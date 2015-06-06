@@ -1,12 +1,12 @@
-<div class='container clearfix' id='exhibitor-cont'>
-		<h3 class='section-title'>EXHIBITORS</h3>
-	<div class='column full'>
-		<div class='sponsor-cont clearfix'>
-			<% @exhibitors.each do |exhibitor| %>
+<h3 class='section-title'>EXHIBITORS</h3>
+<div class='column full'>
+	<div class='sponsor-cont clearfix'>
+		<% @exhibitors.each do |exhibitor| %>
+			<a href='<%= exhibitor.site %>' target='_blank'>
 				<div class='sponsor-img-cont'>
 					<img class='sponsor-img' src="<%= asset_path("#{exhibitor.img}") %>" />
 				</div>
-			<% end %>
-		</div>
+			</a>
+		<% end %>
 	</div>
 </div>

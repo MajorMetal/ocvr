@@ -7,41 +7,58 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 exhibitors = Exhibitor.create([
-	{ name: 'Monster VR', img: 'MonsterVR.png' },
-	{ name: 'V', img: 'V.png' },
-	{ name: 'Warped Imagination', img: 'WarpedImagination.png' },
-	{ name: 'Vrideo', img: 'VRideo.png' },
-	{ name: 'Funktronic Labs', img: 'Collider.png' },
-	{ name: 'RocketSail', img: 'RocketSail.png' },
-	{ name: 'New Deal Studios', img: 'NewDealStudios.png' },
-	{ name: 'Labcoat Studios', img: 'Labcoat.png' },
-	{ name: 'The Department of Silly Stuff', img: 'FacetedFlight.png' },
-	{ name: 'Zenka', img: 'Zenka.png' },
-	{ name: 'Freeform Labs', img: 'ElemenTerra.png' },
-	{ name: 'Studio Transcendent', img: 'StudioTranscendnt.png' },
-	{ name: 'Dandelion VR', img: 'Dandelion.jpg' },
-	{ name: 'Immersive Entertainment', img: 'IEI.png' },
-	{ name: 'Sidekick VR', img: 'Sidekick.png' },
-	{ name: 'Side Effects Software', img: 'Houdini.png' },
-	{ name: 'Greenlight VR', img: 'GreenlightVR.png' },
-	{ name: 'Fish Bowl VR', img: 'Fishbowl.png' },
-	{ name: 'OTOY, Inc.', img: 'Otoy.png' },
-	{ name: 'Audeze', img: 'Audeze.png' },
-	{ name: 'Specular Theory, Inc.', img: 'SpecularTheory.png' },
-	{ name: 'VRecover', img: 'VRecover.png' },
-	{ name: 'Air Dropper', img: 'AirDropper.jpg' }
+	{ name: 'Monster VR', img: 'MonsterVR.png', site: '' },
+	{ name: 'V', img: 'V.png', site: 'http://startwithv.com' },
+	{ name: 'Warped Imagination', img: 'WarpedImagination.png', site: 'http://warpedimagination.com' },
+	{ name: 'Otherworld Interactive', img: 'Otherworld.png', site: 'http://www.otherworldinteractive.com' },
+	{ name: 'Vrideo', img: 'VRideo.png', site: 'http://www.vrideo.com' },
+	{ name: 'Funktronic Labs', img: 'Collider.png', site: 'http://funktroniclabs.com/collider' },
+	{ name: 'RocketSail', img: 'RocketSail.png', site: 'http://www.rocketsail.com' },
+	{ name: 'New Deal Studios', img: 'NewDealStudios.png', site: 'http://www.newdealstudio.com/virtual-reality' },
+	{ name: 'Labcoat Studios', img: 'Labcoat.png', site: 'http://vrjam.challangepost.com/submissions/36460-re-entry' },
+	{ name: 'The Department of Silly Stuff', img: 'FacetedFlight.png', site: 'http://www.facetedflight.com' },
+	{ name: 'Zenka', img: 'Zenka.png', site: 'http://www.zenka.org' },
+	{ name: 'Freeform Labs', img: 'ElemenTerra.png', site: 'http://elementerravr.com' },
+	{ name: 'Studio Transcendent', img: 'StudioTranscendnt.png', site: 'http://studiotranscendent.com' },
+	{ name: 'Dandelion VR', img: 'Dandelion.jpg', site: 'http://vrjam.challengepost.com/submissions/36441-dandelion' },
+	{ name: 'Next VR', img: 'NextVR.png', site: 'http://nextvr.com' },
+	{ name: 'Immersive Entertainment', img: 'IEI.png', site: 'http://www.immersiveent.com' },
+	{ name: 'Sidekick VR', img: 'Sidekick.png', site: 'http://www.sidekickvrgames.com' },
+	{ name: 'Side Effects Software', img: 'Houdini.png', site: 'http://www.sidefx.com/' },
+	{ name: 'Greenlight VR', img: 'GreenlightVR.png', site: 'http://www.greenlightvr.com' },
+	{ name: 'Fish Bowl VR', img: 'Fishbowl.png', site: 'http://www.fishbowlvr.com/' },
+	{ name: 'OTOY, Inc.', img: 'Otoy.png', site: 'http://www.otoy.com' },
+	{ name: 'Audeze', img: 'Audeze.png', site: 'http://www.audeze.com' },
+	{ name: 'Specular Theory, Inc.', img: 'SpecularTheory.png', site: 'http://www.speculartheory.com' },
+	{ name: 'VRecover', img: 'VRecover.png', site: 'http://www.vrecover.com' }
 ])
 
 speakers = Speaker.create([
-	{ name: 'Duncan Trussell', img: 'DuncanTrussel.jpg' },
-	{ name: 'Dave Taylor', img: 'DaveTaylor.jpg' }
+	{ name: 'Duncan Trussell', img: 'DuncanTrussel.jpg', title: 'Host of the Duncan Trussell Family Hour Podcast, Comdeian, VR Evangelist' },
+	{ name: 'Dave Taylor', img: 'DaveTaylor.jpg', title: 'Game Producer, Developer on Doom and Quake' },
+	{ name: 'Jonnie Ross', img: 'JonnieRoss.jpg', title: 'Co-Founder at VRLA' },
+	{ name: 'Mike Armstrong', img: 'MikeArmstrong.jpg', title: 'Founder & Developer at Riftmax' },
+	{ name: 'Matthew Gratzner', img: 'MatthewGratzner.jpg', title: 'Director & Co-Founder at Vrideo' },
+	{ name: 'Alex Rosenfeld', img: 'AlexRosenfeld.jpg', title: 'Founder & CEO at Vrideo' },
+	{ name: 'Brad Allen', img: 'BradAllen.jpg', title: 'Executive Chairman at NextVR' },
+	{ name: 'Bruce Wooden', img: 'BruceWooden.jpg', title: 'Head of Development & Community Relations at AltspaceVR' },
+	{ name: 'James Jensen', img: 'JamesJensen.jpg', title: 'CTO at The Void' },
+	{ name: 'Mike Murdock', img: 'MikeMurdock.jpg', title: 'Co-Founder & Creative Director at Otherworld Interactive' },
+	{ name: 'E McNeil', img: 'EMcNeil.jpg', title: 'Creator of Darknet' },
+	{ name: 'Demetrius Wren', img: 'DemetriusWren.jpg', title: 'Film Maker' },
+	{ name: 'Robert Hernandez', img: 'RobertHernandez.jpg', title: 'Associate Professor of Professional Practice at USC Annenberg' },
+	{ name: 'Matthew Terndrup', img: 'MatthewTerndrup.jpg', title: 'VR Journalist' },
+	{ name: 'Ivan Blaustein', img: 'IvanBlaustein.jpg', title: 'Director, Product Integration at VRCade' },
+	{ name: 'Cris Miranda', img: 'CrisMiranda.jpg', title: 'Founder at EnterVR' },
+	{ name: 'Christina Heller', img: 'ChristinaHeller.jpg', title: 'CEO at VR Playhouse' }
 ])
 
 sponsors = Sponsor.create([
+	{ name: 'Duncan Trussell', rank: 'Other', img: 'DuncanTrussellFH.png' },
 	{ name: 'Next VR', rank: 'Diamond', img: 'NextVR.png' },
+	{ name: 'Fast Start Studios', rank: 'Ruby', img: 'FastStart.png' },
 	{ name: 'Voices of VR', rank: 'Media', img: 'VoicesOfVR.jpg' },
 	{ name: 'Upload', rank: 'Media', img: 'Upload.png' },
 	{ name: 'Qgits', rank: 'Media', img: 'Qgits.png' },
-	{ name: 'Inner Rift', rank: 'Media', img: 'InnerRift.jpg' },
-	{ name: 'Duncan Trussell', rank: 'Media', img: 'DuncanTrussel.png' }
+	{ name: 'Inner Rift', rank: 'Media', img: 'InnerRift.jpg' }
 ])

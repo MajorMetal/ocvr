@@ -2,10 +2,13 @@ class HomesController < ApplicationController
 
 	def home
 		@user = User.new
-		@diamond = Sponsor.where(rank: 'Diamond')
-		@media = Sponsor.where(rank: 'Media')
 		@exhibitors = Exhibitor.limit(6)
-		@speakers = Speaker.all
+		@speakers = Speaker.limit(6)
+
+		@other = Sponsor.where(rank: 'Other')
+		@diamond = Sponsor.where(rank: 'Diamond')
+		@ruby = Sponsor.where(rank: 'Ruby')
+		@media = Sponsor.where(rank: 'Media')
 	end
 	
 	def attend

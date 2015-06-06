@@ -2,13 +2,16 @@
 	<div id="slider1_container" class='carousel_cont'>
   	<div u="slides" class='carousel_slide'>
     	<div>
-	      <img u="image" src="<%= asset_path('slide1-min.jpg') %>" />
+	      <img u="image" src="<%= asset_path('slide1.jpg') %>" />
 	    </div>
 	    <div>
-	      <img u="image" src="<%= asset_path('slide2-min.jpg') %>" />
+	      <img u="image" src="<%= asset_path('slide2.jpg') %>" />
 	    </div>
 	    <div>
-	      <img u="image" src="<%= asset_path('slide3-min.jpg') %>" />
+	      <img u="image" src="<%= asset_path('slide3.jpg') %>" />
+	    </div>
+	    <div>
+	      <img u="image" src="<%= asset_path('slide4.jpg') %>" />
 	    </div>
 	  </div>
 	</div>
@@ -26,12 +29,17 @@
 			</iframe>
 		</div>
 	</div>
-	<%= render 'partials/exhibitor' %>
-	<div class='container clearfix' id='exhibitor-signup'>
+	<div class='container clearfix' id='exhibitor-cont'>
+		<%= render 'partials/exhibitor' %>
 		<div class='column full'>
 			<%= link_to 'MORE EXHIBITORS', exhibitors_path, class: 'button' %>
 		</div>
 	</div>
-	<%= render 'partials/speakers' %>
+	<div class='container clearfix'>
+		<%= render 'partials/speakers' %>
+		<div class='column full'>
+			<%= link_to 'MORE SPEAKERS', speakers_path, class: 'button' %>
+		</div>
+	</div>
+	<%= render 'partials/map' %>
 </main>
-<%= render 'partials/map' %>

@@ -1,7 +1,9 @@
 class SponsorsController < ApplicationController
 
   def index
-  	@diamond = Sponsor.where(rank: 'Diamond')
+  	@other = Sponsor.where(rank: 'Other')
+    @diamond = Sponsor.where(rank: 'Diamond')
+    @ruby = Sponsor.where(rank: 'Ruby')
     @media = Sponsor.where(rank: 'Media')
     @user = User.new
   end

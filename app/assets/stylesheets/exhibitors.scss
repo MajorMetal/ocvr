@@ -4,7 +4,11 @@
 
 .main.exhibitor {
 	margin-top: 80px;
-	padding-top: 50px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.main.sponsor {
+	margin-top: 80px;
 	padding-bottom: 100px;
 }
 #exhibitor-signup {
@@ -14,8 +18,10 @@
 
 @media (min-width: 740px) {
 	.main.exhibitor { margin-top: 140px; }
+	.main.sponsor { margin-top: 140px; }
 }
 
 @media (min-width: 1025px) {
 	.main.exhibitor { margin-top: 160px; }
+	.main.sponsor { margin-top: 160px; }
 }
