@@ -1,0 +1,13 @@
+<div class='container clearfix'>
+	<h3 class='section-title'>FEATURED SPEAKERS</h5>
+	<div class='column full'>
+		<div class='speaker-cont clearfix'>
+			<% @speakers.each do |speaker| %>
+				<div class='speaker-img-cont'>
+					<img class='speaker-img' src="<%= asset_path("#{speaker.img}") %>" />
+					<p class='speaker-info'><%= speaker.name %></p>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

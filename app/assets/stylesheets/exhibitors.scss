@@ -1,0 +1,21 @@
+// Place all the styles related to the exhibitors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main.exhibitor {
+	margin-top: 80px;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+#exhibitor-signup {
+	margin-top: -50px;
+	padding-top: 0;
+}
+
+@media (min-width: 740px) {
+	.main.exhibitor { margin-top: 140px; }
+}
+
+@media (min-width: 1025px) {
+	.main.exhibitor { margin-top: 160px; }
+}

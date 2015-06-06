@@ -10816,6 +10816,9 @@ return jQuery;
 })( jQuery );
 $(document).ready(function() {
 
+  var header = document.getElementById('header');
+
+  if (header) {
 	var _CaptionTransitions = [];
   _CaptionTransitions["L"] = { $Duration: 900, x: 0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
   _CaptionTransitions["R"] = { $Duration: 900, x: -0.6, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $Opacity: 2 };
@@ -10829,7 +10832,6 @@ $(document).ready(function() {
   _CaptionTransitions["MCLIP|L"] = { $Duration: 900, $Clip: 1, $Move: true, $Easing: { $Clip: $JssorEasing$.$EaseInOutCubic} };
   _CaptionTransitions["MCLIP|R"] = { $Duration: 900, $Clip: 2, $Move: true, $Easing: { $Clip: $JssorEasing$.$EaseInOutCubic} };
   
-  var header = document.getElementById('header');
   var bodyWidth = document.body.clientWidth;
 
   header.style.height = (bodyWidth / 3) + 'px';
@@ -10894,7 +10896,12 @@ $(document).ready(function() {
   $(window).bind("load", ScaleSlider);
   $(window).bind("resize", ScaleSlider);
   $(window).bind("orientationchange", ScaleSlider);
+  }
 });
+(function() {
+
+
+}).call(this);
 (function() {
 
 
@@ -13692,6 +13699,14 @@ $(window).scroll(function () {
 		$this.css('transform', 'translateY(' + val + 'px)');
   });
 });
+(function() {
+
+
+}).call(this);
+(function() {
+
+
+}).call(this);
 (function() {
 
 
