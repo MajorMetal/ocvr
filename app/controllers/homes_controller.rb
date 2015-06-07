@@ -2,7 +2,7 @@ class HomesController < ApplicationController
 
 	def home
 		@user = User.new
-		@exhibitors = Exhibitor.limit(6)
+		@exhibitors = Exhibitor.where(is_featured: true)
 		@speakers = Speaker.limit(6)
 
 		@other = Sponsor.where(rank: 'Other')

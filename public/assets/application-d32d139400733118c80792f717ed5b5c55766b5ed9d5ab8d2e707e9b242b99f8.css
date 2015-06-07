@@ -296,17 +296,17 @@ header {
   position: relative;
   display: block;
   height: 100px;
-  width: 100%;
+  width: 360px;
+  margin: 10px auto;
   border: 2px solid #AAA;
   border-radius: 5px;
-  margin: 4px 0;
-  float: left;
 }
 
-/* line 199, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 198, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .sponsor-img-cont.duncan {
   height: auto;
   border: none;
+  padding: 0 4%;
 }
 
 /* line 203, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
@@ -370,25 +370,123 @@ header {
   .sponsor-img-cont {
     width: 32% !important;
     margin: 4px;
+    float: left;
   }
 
-  /* line 246, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 247, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .sponsor-img-cont.diamond {
     margin: 4px auto;
     float: none;
   }
 
-  /* line 250, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 251, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .sponsor-img-cont.duncan {
     margin: 4px auto;
     float: none;
   }
 
-  /* line 254, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 255, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .speaker-img-cont {
     height: 250px;
     width: 33.3%;
   }
+}
+/* line 261, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+#expo-info-home {
+  width: 100%;
+  margin-top: 100px;
+  padding: 100px 0;
+  background: #222;
+  color: #DDD;
+}
+
+/* line 268, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+#section-text-home {
+  color: #BBB;
+}
+/* jQuery Countdown styles 2.0.0. */
+
+.is-countdown {
+	position: relative;
+	height: 490px;
+	width: 90%;
+	margin: 100px auto;
+}
+.countdown-rtl {
+	direction: rtl;
+}
+.countdown-holding span {
+	color: #888;
+}
+.countdown-row {
+	position: relative;
+	/*clear: both;*/
+	width: 100%;
+	text-align: center;
+}
+.countdown-show1 .countdown-section {
+	width: 98%;
+}
+.countdown-show2 .countdown-section {
+	width: 48%;
+}
+.countdown-show3 .countdown-section {
+	width: 32.5%;
+}
+.countdown-show4 .countdown-section {
+	width: 220px;
+	margin: 10px auto;
+}
+.countdown-show5 .countdown-section {
+	width: 19.5%;
+}
+.countdown-show6 .countdown-section {
+	width: 16.25%;
+}
+.countdown-show7 .countdown-section {
+	width: 14%;
+}
+.countdown-section {
+	position: relative;
+	display: block;
+	border: 3px solid #222;
+	border-radius: 10px;
+	font-size: 30px;
+	font-weight: 900;
+	text-align: center;
+}
+.countdown-amount {
+  font-size: 200%;
+}
+.countdown-period {
+	display: block;
+}
+.countdown-descr {
+	display: block;
+	width: 100%;
+}
+
+@media (min-width: 740px) {
+	.is-countdown {
+		height: 110px;
+	}
+	.countdown-show4 .countdown-section {
+		width: 24%;
+		margin: 0.5%;
+	}
+	.countdown-section {
+		position: relative;
+		float: left;
+	}
+}
+
+@media (min-width: 1025px) {
+	.is-countdown {
+		height: 145px;
+	}
+	.countdown-section {
+		font-size: 40px;
+	}
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -402,6 +500,7 @@ header {
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
 
 
  */
@@ -499,6 +598,17 @@ input[type=submit] {
       -o-transition: 250ms ease-in-out;
         transition: 250ms ease-in-out;
 }
+select {
+  background: #FFF;
+  height: 30px;
+  width: 300px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid #AAA;
+}
+select:focus { outline: none; }
+table { margin: 20px auto; }
 h1 { font-size: 2.5em; }
 h2 { font-size: 2.25em; }
 h3 { font-size: 2em; }
@@ -553,7 +663,8 @@ input:-webkit-autofill {
   top: 80px;
   border: 1px solid green;
   background: lightgreen;
-  z-index: 1;
+  font-size: 16px;
+  z-index: 2;
 }
 .flash-notice.error {
   border: 1px solid red;
@@ -564,19 +675,16 @@ input:-webkit-autofill {
   color: green;
   text-align: center;
   margin: 0;
-  padding: 3px 0;
+  padding: 5px 0;
 }
 .flash-message.error { color: red; }
 
 @media (min-width: 740px) {
   .mobile-bg { display: none; }
   .web-bg { display: block; }
-  .flash-notice { top: 100px; }
+  .flash-notice { top: 140px; }
 }
 @media (min-width: 1025px) {
-  .flash-notice { top: 120px; }
-}
-@media (min-width: 1601px) {
   .flash-notice { top: 160px; }
 }
 

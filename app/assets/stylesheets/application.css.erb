@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery.countdown
  */
 
  /* ==~~~== Colors ==~~~==
@@ -106,6 +107,17 @@ input[type=submit] {
       -o-transition: 250ms ease-in-out;
         transition: 250ms ease-in-out;
 }
+select {
+  background: #FFF;
+  height: 30px;
+  width: 300px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid #AAA;
+}
+select:focus { outline: none; }
+table { margin: 20px auto; }
 h1 { font-size: 2.5em; }
 h2 { font-size: 2.25em; }
 h3 { font-size: 2em; }
@@ -160,7 +172,8 @@ input:-webkit-autofill {
   top: 80px;
   border: 1px solid green;
   background: lightgreen;
-  z-index: 1;
+  font-size: 16px;
+  z-index: 2;
 }
 .flash-notice.error {
   border: 1px solid red;
@@ -171,19 +184,16 @@ input:-webkit-autofill {
   color: green;
   text-align: center;
   margin: 0;
-  padding: 3px 0;
+  padding: 5px 0;
 }
 .flash-message.error { color: red; }
 
 @media (min-width: 740px) {
   .mobile-bg { display: none; }
   .web-bg { display: block; }
-  .flash-notice { top: 100px; }
+  .flash-notice { top: 140px; }
 }
 @media (min-width: 1025px) {
-  .flash-notice { top: 120px; }
-}
-@media (min-width: 1601px) {
   .flash-notice { top: 160px; }
 }
 
