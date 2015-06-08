@@ -21,8 +21,8 @@ $(document).ready(function(){
 	var $window = $(window);
 	var $html = $('html');
 	var $body = $('body');
-	// var $navMobile = $('#nav-list-mobile');
-	// var $revealMobile = $('#nav_reveal');
+	var $navMobile = $('#nav-list-mobile');
+	var $revealMobile = $('#nav-reveal');
 	var $modal = $('.modal');
 	var $openModal = $('#subscribe-btn');
 	var $closeModal = $('.modal-exit');
@@ -33,14 +33,37 @@ $(document).ready(function(){
 	var disableScroll = false;
 
 	// Toggles the Mobile Navbar
-	// $revealMobile.click(function() {
-	// 	if ($revealMobile.hasClass('active')) { scrollUnlock(); }
-	// 	else { scrollLock(); }
+	$revealMobile.click(function() {
+		if ($revealMobile.hasClass('active')) { scrollUnlock(); }
+		else { scrollLock(); }
 
-	// 	$revealMobile.toggleClass('active');
-	// 	$navMobile.toggleClass('active');
-	// 	$mobileBG.toggleClass('hidden');
-	// });
+		$revealMobile.toggleClass('active');
+		$navMobile.toggleClass('active');
+		$mobileBG.toggleClass('hidden');
+	});
+
+	function MobileMenu () {
+		var list = document.getElementsByClassName('mobile-btn');
+		var height = $window.height();
+		console.log(height);
+		if(height <= 360) {
+			for (var i=0; i < list.length; i++){
+				if (list[i].className != 'mobile-btn active') {
+					list[i].className = 'mobile-btn active';
+				}
+			}
+		}
+		else {
+			for (var i=0; i < list.length; i++){
+				list[i].className = 'mobile-btn';
+			}
+		}
+	}
+
+	MobileMenu();
+	$window.bind("load", MobileMenu);
+  $window.bind("resize", MobileMenu);
+  $window.bind("orientationchange", MobileMenu);
 
   // Modal Functions
 	$openModal.click(function() {

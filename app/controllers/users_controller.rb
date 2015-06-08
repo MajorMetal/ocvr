@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  # def show
+  #   @user = User.where(email: params[:email])
+  # end
+
   def new
     @user = User.new
   end
@@ -27,6 +31,11 @@ class UsersController < ApplicationController
 
     redirect_to root_path
   end
+
+  # def destroy
+  #   @user = User.where(email: params[:email]).destroy
+  #   redirect_to root_path
+  # end
 
   private
 

@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<nav class='nav-web'>
+<nav class='navbar'>
 	<div class='nav-logo-cont'>
 		<img class='nav-logo-img' src='<%= asset_path('SocalLogoSkinny2.png') %>' />
 	</div>
@@ -42,6 +42,39 @@
 		</li>
 	</ul>
 </nav>
+
+<div class='nav-reveal' id='nav-reveal'>
+	<span></span>
+</div>
+
+<ul class='nav-list-mobile' id='nav-list-mobile'>
+	<li class='mobile-btn'>
+		<%= link_to 'HOME', root_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'EXPO', expo_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'ATTEND', attend_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'EXHIBITORS', exhibitors_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'SPEAKERS', speakers_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-subscription'>
+		<div class='mobile-subscription-form'>
+			<%= form_for @user do |f| %>
+				<%= f.email_field :email, class: 'mobile-subscription-form-input', placeholder: 'Email' %>
+				<%= f.submit 'Subscribe', id: 'mobile-subscription-form-submit' %>
+			<% end %>
+		</div>
+	</li>
+</ul>
 
 <%= render 'partials/flash' %>
 <%= yield %>
