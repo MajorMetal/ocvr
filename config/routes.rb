@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :exhibitors, only: [:index, :new, :create]
   resources :sponsors, only: [:index, :new, :create]
 
+  get '/sponsors/buy' => 'sponsors#buy'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -296,15 +296,16 @@ input:-webkit-autofill {
 
 #nav-list-mobile {
 	position: fixed;
-  height: 100vh;
+  height: 0vh;
 	width: 100%;
-	top: -100%;
+	top: -300px;
   margin: 0;
 	background-color: #222;
   z-index: 7;
 }
 #nav-list-mobile.active {
   top: 80px;
+  height: 100vh;
 }
 .mobile-btn {
   position: relative;
@@ -340,16 +341,15 @@ input:-webkit-autofill {
 .mobile-btn.active > .nav-btn-mobile:hover { font-size: 16px; }
 .nav-reveal {
   position: fixed;
-  width: 30px;
+  width: 40px;
   height: 20px;
-  top: 50px; right: 0;
+  top: 55px; right: 0;
   cursor: pointer;
   z-index: 10;
 }
 #nav-reveal {
   display: block;
   cursor: pointer;
-  font-size: 20px;
   z-index: 10;
   -webkit-transition: 250ms ease-in-out;
     -moz-transition: 250ms ease-in-out;
@@ -359,15 +359,15 @@ input:-webkit-autofill {
 .nav-reveal span, .nav-reveal span:before, .nav-reveal span:after {
   position: absolute;
   display: block;
-  height: 3px;
-  width: 18px;
-  top: 9px;
+  height: 5px;
+  width: 30px;
+  top: 0px;
   border-radius: 1px;
   background: #FF6927;
   content: '';
 }
-.nav-reveal span:before { top: 5px; }
-.nav-reveal span:after { top: 10px; }
+.nav-reveal span:before { top: 8px; }
+.nav-reveal span:after { top: 16px; }
 .nav-reveal, .nav-reveal span, .nav-reveal span:before, .nav-reveal span:after, #nav-list-mobile {
   -webkit-transition: 1000ms ease-in-out;
     -moz-transition: 1000ms ease-in-out;

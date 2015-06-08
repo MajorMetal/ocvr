@@ -4,7 +4,12 @@ class SponsorsController < ApplicationController
   	@other = Sponsor.where(rank: 'Other')
     @diamond = Sponsor.where(rank: 'Diamond')
     @ruby = Sponsor.where(rank: 'Ruby')
+    @community = Sponsor.where(rank: 'Community')
     @media = Sponsor.where(rank: 'Media')
+    @user = User.new
+  end
+
+  def buy
     @user = User.new
   end
 

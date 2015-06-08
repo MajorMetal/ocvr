@@ -348,7 +348,7 @@ header {
   position: relative;
   display: block;
   float: left;
-  height: 275px;
+  height: 300px;
   width: 50%;
 }
 
@@ -375,8 +375,8 @@ header {
 @media (min-width: 740px) {
   /* line 249, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .sponsor-img-cont {
-    width: 32% !important;
-    margin: 4px;
+    width: 44% !important;
+    margin: 4px 3%;
     float: left;
   }
 
@@ -494,6 +494,34 @@ header {
 	.countdown-section {
 		font-size: 40px;
 	}
+}
+/* line 5, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/sponsors.scss */
+.sponsor-buy {
+  position: relative;
+  display: block;
+  margin-top: 80px;
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 13, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/sponsors.scss */
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 740px) {
+  /* line 19, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/sponsors.scss */
+  .sponsor-buy {
+    margin-top: 140px;
+  }
+}
+@media (min-width: 1025px) {
+  /* line 25, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/sponsors.scss */
+  .sponsor-buy {
+    margin-top: 160px;
+  }
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -794,15 +822,16 @@ input:-webkit-autofill {
 
 #nav-list-mobile {
 	position: fixed;
-  height: 100vh;
+  height: 0vh;
 	width: 100%;
-	top: -100%;
+	top: -300px;
   margin: 0;
 	background-color: #222;
   z-index: 7;
 }
 #nav-list-mobile.active {
   top: 80px;
+  height: 100vh;
 }
 .mobile-btn {
   position: relative;
@@ -838,16 +867,15 @@ input:-webkit-autofill {
 .mobile-btn.active > .nav-btn-mobile:hover { font-size: 16px; }
 .nav-reveal {
   position: fixed;
-  width: 30px;
+  width: 40px;
   height: 20px;
-  top: 50px; right: 0;
+  top: 55px; right: 0;
   cursor: pointer;
   z-index: 10;
 }
 #nav-reveal {
   display: block;
   cursor: pointer;
-  font-size: 20px;
   z-index: 10;
   -webkit-transition: 250ms ease-in-out;
     -moz-transition: 250ms ease-in-out;
@@ -857,15 +885,15 @@ input:-webkit-autofill {
 .nav-reveal span, .nav-reveal span:before, .nav-reveal span:after {
   position: absolute;
   display: block;
-  height: 3px;
-  width: 18px;
-  top: 9px;
+  height: 5px;
+  width: 30px;
+  top: 0px;
   border-radius: 1px;
   background: #FF6927;
   content: '';
 }
-.nav-reveal span:before { top: 5px; }
-.nav-reveal span:after { top: 10px; }
+.nav-reveal span:before { top: 8px; }
+.nav-reveal span:after { top: 16px; }
 .nav-reveal, .nav-reveal span, .nav-reveal span:before, .nav-reveal span:after, #nav-list-mobile {
   -webkit-transition: 1000ms ease-in-out;
     -moz-transition: 1000ms ease-in-out;
