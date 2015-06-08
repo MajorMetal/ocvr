@@ -42,28 +42,25 @@ $(document).ready(function(){
 		$mobileBG.toggleClass('hidden');
 	});
 
-	function MobileMenu () {
+	function mobileMenu () {
 		var list = document.getElementsByClassName('mobile-btn');
 		var height = $window.height();
-		console.log(height);
-		if(height <= 360) {
+		var width = $window.width();
+
+		if(height <= 360) {`
 			for (var i=0; i < list.length; i++){
-				if (list[i].className != 'mobile-btn active') {
-					list[i].className = 'mobile-btn active';
-				}
+				if (list[i].className != 'mobile-btn active') { list[i].className = 'mobile-btn active'; }
 			}
 		}
 		else {
-			for (var i=0; i < list.length; i++){
-				list[i].className = 'mobile-btn';
-			}
+			for (var i=0; i < list.length; i++) { list[i].className = 'mobile-btn'; }
 		}
 	}
 
-	MobileMenu();
-	$window.bind("load", MobileMenu);
-  $window.bind("resize", MobileMenu);
-  $window.bind("orientationchange", MobileMenu);
+	mobileMenu();
+	$window.bind("load", mobileMenu);
+  $window.bind("resize", mobileMenu);
+  $window.bind("orientationchange", mobileMenu);
 
   // Modal Functions
 	$openModal.click(function() {
