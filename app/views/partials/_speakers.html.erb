@@ -1,0 +1,12 @@
+<h3 class='section-title'>SPEAKERS</h5>
+<div class='column full'>
+	<div class='speaker-cont clearfix'>
+		<% @speakers.each do |speaker| %>
+			<div class='speaker-img-cont'>
+				<img class='speaker-img' src="<%= asset_path("#{speaker.img}") %>" />
+				<p class='speaker-info name'><%= speaker.name.upcase %></p>
+				<p class='speaker-info'><%= speaker.title %></p>
+			</div>
+		<% end %>
+	</div>
+</div>

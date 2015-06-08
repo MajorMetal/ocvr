@@ -1,5 +1,5 @@
 class Notifier < ApplicationMailer
-	default from: 'samjwalston@gmail.com'
+	default from: 'socalvrcon@gmail.com'
 
   def welcome(recipient)
     @user = recipient
