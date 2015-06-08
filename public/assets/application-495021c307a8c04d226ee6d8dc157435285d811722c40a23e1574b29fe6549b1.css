@@ -13,7 +13,7 @@
 
 /* line 14, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
 #exhibitor-signup {
-  margin-top: -50px;
+  margin-top: 0;
   padding-top: 0;
 }
 
@@ -27,14 +27,20 @@
   .main.sponsor {
     margin-top: 140px;
   }
+
+  /* line 22, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  #exhibitor-signup {
+    margin-top: -50px;
+    padding-top: 0;
+  }
 }
 @media (min-width: 1025px) {
-  /* line 25, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  /* line 29, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
   .main.exhibitor {
     margin-top: 160px;
   }
 
-  /* line 26, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  /* line 30, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
   .main.sponsor {
     margin-top: 160px;
   }
@@ -287,12 +293,12 @@ header {
   }
 }
 /* line 188, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
-.sponsor-cont {
+.sponsor-cont, .exhibitor-cont {
   margin-bottom: 25px;
 }
 
 /* line 189, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
-.sponsor-img-cont {
+.sponsor-img-cont, .exhibitor-img-cont {
   position: relative;
   display: block;
   height: 100px;
@@ -311,7 +317,7 @@ header {
 }
 
 /* line 204, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
-.sponsor-img {
+.sponsor-img, .exhibitor-img {
   position: relative;
   max-width: 100%;
   max-height: 100%;
@@ -393,12 +399,19 @@ header {
   }
 
   /* line 262, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  .exhibitor-img-cont {
+    width: 31.3% !important;
+    margin: 4px 1%;
+    float: left;
+  }
+
+  /* line 267, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .speaker-img-cont {
     height: 250px;
     width: 33.3%;
   }
 }
-/* line 268, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 273, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #expo-info-home {
   width: 100%;
   margin-top: 100px;
@@ -407,7 +420,7 @@ header {
   color: #DDD;
 }
 
-/* line 275, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 280, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #section-text-home {
   color: #BBB;
 }

@@ -1,9 +1,9 @@
 <div class='column full'>
-	<div class='sponsor-cont clearfix'>
+	<div class='exhibitor-cont clearfix'>
 		<% @exhibitors.each do |exhibitor| %>
 			<a href='<%= exhibitor.site %>' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path("#{exhibitor.img}") %>" />
+				<div class='exhibitor-img-cont'>
+					<img class='exhibitor-img' src="<%= asset_path("#{exhibitor.img}") %>" />
 				</div>
 			</a>
 		<% end %>
