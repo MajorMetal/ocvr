@@ -15000,7 +15000,7 @@ $(document).ready(function(){
 		var height = $window.height();
 		var width = $window.width();
 
-		if(height <= 360) {`
+		if(height <= 360) {
 			for (var i=0; i < list.length; i++){
 				if (list[i].className != 'mobile-btn active') { list[i].className = 'mobile-btn active'; }
 			}
