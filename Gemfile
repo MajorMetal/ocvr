@@ -27,6 +27,7 @@ gem 'actionmailer', '~> 4.2.0'
 gem 'figaro'
 # Middleware for serving up compressed files
 gem 'heroku_rails_deflate', group: :production
+gem 'jquery-countdown-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server

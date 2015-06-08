@@ -1,0 +1,11 @@
+<div class='column full'>
+	<div class='exhibitor-cont clearfix'>
+		<% @exhibitors.each do |exhibitor| %>
+			<a href='<%= exhibitor.site %>' target='_blank'>
+				<div class='exhibitor-img-cont'>
+					<img class='exhibitor-img' src="<%= asset_path("#{exhibitor.img}") %>" />
+				</div>
+			</a>
+		<% end %>
+	</div>
+</div>

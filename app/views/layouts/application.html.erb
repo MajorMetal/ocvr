@@ -10,24 +10,74 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
 
-<nav class='nav-web'>
+<nav class='navbar'>
 	<div class='nav-logo-cont'>
 		<img class='nav-logo-img' src='<%= asset_path('SocalLogoSkinny2.png') %>' />
 	</div>
 	<ul class='nav-list-web'>
 		<li class='inline-btn'>
-			<p class='nav-btn-web' id='subscribe-btn'>Subscribe</p>
+			<%= link_to 'HOME', root_path, class: 'nav-btn-web' %>
+		</li>
+		<li class='inline-btn'>
+			<%= link_to 'EXPO', expo_path, class: 'nav-btn-web' %>
+		</li>
+		<li class='inline-btn'>
+			<%= link_to 'ATTEND', attend_path, class: 'nav-btn-web' %>
+		</li>
+		<li class='inline-btn'>
+			<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-web' %>
+		</li>
+		<li class='inline-btn'>
+			<%= link_to 'EXHIBITORS', exhibitors_path, class: 'nav-btn-web' %>
+		</li>
+		<li class='inline-btn'>
+			<%= link_to 'SPEAKERS', speakers_path, class: 'nav-btn-web' %>
+		</li>
+		<li class='inline-btn'>
+			<p class='nav-btn-web' id='subscribe-btn'>SUBSCRIBE</p>
 		</li>
 	</ul>
 </nav>
 
+<div class='nav-reveal' id='nav-reveal'>
+	<span></span>
+</div>
+
+<ul class='nav-list-mobile' id='nav-list-mobile'>
+	<li class='mobile-btn'>
+		<%= link_to 'HOME', root_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'EXPO', expo_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'ATTEND', attend_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'EXHIBITORS', exhibitors_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'SPEAKERS', speakers_path, class: 'nav-btn-mobile' %>
+	</li>
+	<li class='mobile-subscription'>
+		<div class='mobile-subscription-form'>
+			<%= form_for @user do |f| %>
+				<%= f.email_field :email, class: 'mobile-subscription-form-input', placeholder: 'Email' %>
+				<%= f.submit 'Subscribe', id: 'mobile-subscription-form-submit' %>
+			<% end %>
+		</div>
+	</li>
+</ul>
+
 <%= render 'partials/flash' %>
-
 <%= yield %>
-
 <%= render 'partials/modal' %>
 
 <div class='mobile-bg'>
@@ -55,6 +105,58 @@
 		<a class='contact-info' href='mailto:dylanwatkins@gmail.com?Subject=SoCal%20VR' target='_top'>Contact Us</a>
 	</div>
 </footer>
+
+<script>
+	var directionsDisplay;
+	var directionsService = new google.maps.DirectionsService();
+	var map;
+	var marker;
+
+	function initialize() {
+		directionsDisplay = new google.maps.DirectionsRenderer();
+		var myLatlng = new google.maps.LatLng(33.6405,-117.8541);
+    var mapOptions = {
+      center: {lat: 33.6405, lng: -117.8541},
+      zoom: 14,
+      scrollwheel: false,
+      draggable: true
+    };
+
+    // var infowindow = new google.maps.InfoWindow({
+    //   content: contentString
+  	// });
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById('directions-panel'));
+
+  	marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map
+  	});
+  };
+
+  	// google.maps.event.addListener(marker, 'click', function() {
+    // 	infowindow.open(map,marker);
+  	// });
+
+	function calcRoute() {
+		marker.setMap(map);
+		if (!$('#directions-panel').hasClass('active')) { $('#directions-panel').addClass('active') };
+	  var start = document.getElementById('directions-start').value;
+	  var end = '5141 California Ave. Irvine, CA';
+	  var request = {
+	      origin:start,
+	      destination:end,
+	      travelMode: google.maps.TravelMode.DRIVING
+	  };
+	  directionsService.route(request, function (response, status) {
+	    if (status == google.maps.DirectionsStatus.OK) { directionsDisplay.setDirections(response); }
+	  });
+	};
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
 </body>
 </html>

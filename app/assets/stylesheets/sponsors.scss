@@ -1,0 +1,28 @@
+// Place all the styles related to the sponsors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sponsor-buy {
+	position: relative;
+	display: block;
+	margin-top: 80px;
+	padding: 100px 0;
+	width: 100%;
+	text-align: center;
+}
+.center {
+	display: block;
+	margin: 0 auto;
+}
+
+@media (min-width: 740px) {
+	.sponsor-buy {
+		margin-top: 140px;
+	}
+}
+
+@media (min-width: 1025px) {
+	.sponsor-buy {
+		margin-top: 160px;
+	}
+}

@@ -2,100 +2,66 @@
 	<div id="slider1_container" class='carousel_cont'>
   	<div u="slides" class='carousel_slide'>
     	<div>
-	      <img u="image" src="<%= asset_path('slide1-min.jpg') %>" />
+	      <img u="image" src="<%= asset_path('slide1.jpg') %>" />
 	    </div>
 	    <div>
-	      <img u="image" src="<%= asset_path('slide2-min.jpg') %>" />
+	      <img u="image" src="<%= asset_path('slide2.jpg') %>" />
 	    </div>
 	    <div>
-	      <img u="image" src="<%= asset_path('slide3-min.jpg') %>" />
+	      <img u="image" src="<%= asset_path('slide3.jpg') %>" />
+	    </div>
+	    <div>
+	      <img u="image" src="<%= asset_path('slide4.jpg') %>" />
 	    </div>
 	  </div>
 	</div>
 </header>
 
 <main class='main'>
-	<div class='container clearfix'>
-		<div class='column half'>
-			<h5 class='section-title'>WANT TO ATTEND?</h5>
-			<a class='button' id='attendee_button' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038' target='_blank'>PURCHASE TICKETS</a>
-		</div>
-		<div class='column half'>
-			<h5 class='section-title'>WANT TO EXHIBIT?</h5>
-			<a class='button' href='https://goo.gl/forms/yX7IELD6iR' target='_blank'>EXHIBITOR SIGNUP</a>
-		</div>
-	</div>
-	<div class='container clearfix'>
+	<%= render 'partials/sponsors' %>
+	<div class='clearfix' id='due_date_timer'></div>
+	<div class='container clearfix' id='expo-info-home'>
 		<div class='column full'>
-			<h5 class='section-title'>SUMMER EXPO</h5>
-			<h6 class='section-subtitle'>July 12th, 2015</h6>
-			<h6 class='section-subtitle'>Institute for Innovation, University of California Irvine</h6>
-			<h6 class='section-subtitle'>5141 California Ave. Irvine, CA</h6>
-			<p class='section-text'>Welcome to the future! The future of entertainment, sports, art, music, medicine, gaming, and journalism is now.</p>
-			<p class='section-text'>Connecting all the genres is the exciting, engaging medium that is Virtual Reality. VR has flooded into the public consciousness through media publications all around the world. Now is your chance to experience the latest in this emerging technology. Immersive technology that the press has been raving about. Experience what millions of others will find out many months from now.</p>
-			<p class='section-text'>We have assembled a huge array of demos, experiences, panelists, and speakers for a transformative and exclusive event.</p>
-			<p class='section-text'>Over 40 companies will show off their latest. This will allow opportunities for all those who attend to teleport themselves into computerized realms that are beyond the imagination.</p>
-			<p class='section-text'>In addition to previously unreleased demos and experiences, a lineup of jam-packed panels and speeches will be held. This will alter the way that you look at Virtual Reality. Expect big names and intriguing discussions that must be heard in person.</p>
-			<p class='section-text'>Be part of the future. Join us in the newly opened and beautiful Institute of Innovation at University of California Irvine.</p>
+			<h3 class='section-title'>SUMMER EXPO</h3>
+			<div class='expo-location'>
+				<h6 class='section-subtitle'>July 12th, 2015</h6>
+				<h6 class='section-subtitle'>Institute for Innovation, University of California Irvine</h6>
+				<h6 class='section-subtitle'>5141 California Ave. Irvine, CA</h6>
+			</div>
+			<p class='section-text' id='section-text-home'>Welcome to the future! The future of entertainment, sports, art, music, medicine, gaming, and journalism is now.</p>
+			<p class='section-text' id='section-text-home'>Connecting all the genres is the exciting, engaging medium that is Virtual Reality. VR has flooded into the public consciousness through media publications all around the world. Now is your chance to experience the latest in this emerging technology. Immersive technology that the press has been raving about. Experience what millions of others will find out many months from now.</p>
+			<p class='section-text' id='section-text-home'>We have assembled a huge array of demos, experiences, panelists, and speakers for a transformative and exclusive event.</p>
+			<p class='section-text' id='section-text-home'>Over 40 companies will show off their latest. This will allow opportunities for all those who attend to teleport themselves into computerized realms that are beyond the imagination.</p>
+			<p class='section-text' id='section-text-home'>In addition to previously unreleased demos and experiences, a lineup of jam-packed panels and speeches will be held. This will alter the way that you look at Virtual Reality. Expect big names and intriguing discussions that must be heard in person.</p>
+			<p class='section-text' id='section-text-home'>Be part of the future. Join us in the newly opened and beautiful Institute of Innovation at University of California Irvine.</p>
 		</div>
 	</div>
-  <div class='container full clearfix'>
-  	<div class='directions-input'>
-    	<input id='directions-start' type='text' placeholder='Directions' onchange='calcRoute();'>
-  	</div>
-		<div class='column full' id='map-canvas'></div>
-		<div id='directions-panel'></div>
+	<div class='container clearfix'>
+		<div class='column full' id='attendee_button'>
+			<a class='button' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038' target='_blank'>PURCHASE TICKETS</a>
+		</div>
+		<div class='column full' id='ticket-iframe'>
+			<iframe class='clearfix ticket-iframe' src='http://www.eventbrite.com/tickets-external?eid=17219851038'>
+			</iframe>
+		</div>
 	</div>
+	<div class='container clearfix' id='exhibitor-cont'>
+		<h3 class='section-title'>FEATURED EXHIBITORS</h3>
+		<%= render 'partials/exhibitor' %>
+		<div class='column full'>
+			<%= link_to 'MORE EXHIBITORS', exhibitors_path, class: 'button' %>
+		</div>
+	</div>
+	<div class='container clearfix'>
+		<%= render 'partials/speakers' %>
+		<div class='column full'>
+			<%= link_to 'MORE SPEAKERS', speakers_path, class: 'button' %>
+		</div>
+	</div>
+	<%= render 'partials/map' %>
 </main>
 
 <script>
-	var directionsDisplay;
-	var directionsService = new google.maps.DirectionsService();
-	var map;
-	var marker;
-
-	function initialize() {
-		directionsDisplay = new google.maps.DirectionsRenderer();
-		var myLatlng = new google.maps.LatLng(33.6405,-117.8541);
-    var mapOptions = {
-      center: {lat: 33.6405, lng: -117.8541},
-      zoom: 14,
-      scrollwheel: false,
-      draggable: true
-    };
-
-    // var infowindow = new google.maps.InfoWindow({
-    //   content: contentString
-  	// });
-
-    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    directionsDisplay.setMap(map);
-    directionsDisplay.setPanel(document.getElementById('directions-panel'));
-
-  	marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map
-  	});
-  };
-
-  	// google.maps.event.addListener(marker, 'click', function() {
-    // 	infowindow.open(map,marker);
-  	// });
-
-	function calcRoute() {
-		marker.setMap(map);
-		if (!$('#directions-panel').hasClass('active')) { $('#directions-panel').addClass('active') };
-	  var start = document.getElementById('directions-start').value;
-	  var end = '5141 California Ave. Irvine, CA';
-	  var request = {
-	      origin:start,
-	      destination:end,
-	      travelMode: google.maps.TravelMode.DRIVING
-	  };
-	  directionsService.route(request, function (response, status) {
-	    if (status == google.maps.DirectionsStatus.OK) { directionsDisplay.setDirections(response); }
-	  });
-	};
-
-  google.maps.event.addDomListener(window, 'load', initialize);
+	var date = new Date(2015, 06, 12, 11, 00, 00);
+  $("#due_date_timer").countdown({until: date});
 </script>
