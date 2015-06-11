@@ -232,14 +232,14 @@ input:-webkit-autofill {
   position: relative;
   display: block;
   height: auto;
-  width: 90%;
+  width: 80%;
   max-width: 1200px;
   top: 50%;
   -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
       -o-transform: translateY(-50%);
         transform: translateY(-50%);
-  margin: 0 auto;
+  margin-left: 5%;
   font-family: 'Montserrat', arial, sans-serif;
 }
 .nav-list-web {
@@ -351,10 +351,6 @@ input:-webkit-autofill {
   display: block;
   cursor: pointer;
   z-index: 10;
-  -webkit-transition: 250ms ease-in-out;
-    -moz-transition: 250ms ease-in-out;
-      -o-transition: 250ms ease-in-out;
-        transition: 250ms ease-in-out;
 }
 .nav-reveal span, .nav-reveal span:before, .nav-reveal span:after {
   position: absolute;
@@ -368,7 +364,13 @@ input:-webkit-autofill {
 }
 .nav-reveal span:before { top: 8px; }
 .nav-reveal span:after { top: 16px; }
-.nav-reveal, .nav-reveal span, .nav-reveal span:before, .nav-reveal span:after, #nav-list-mobile {
+.nav-reveal, .nav-reveal span, .nav-reveal span:before, .nav-reveal span:after {
+  -webkit-transition: 500ms ease-in-out;
+    -moz-transition: 500ms ease-in-out;
+      -o-transition: 500ms ease-in-out;
+        transition: 500ms ease-in-out;
+}
+#nav-list-mobile {
   -webkit-transition: 1000ms ease-in-out;
     -moz-transition: 1000ms ease-in-out;
       -o-transition: 1000ms ease-in-out;

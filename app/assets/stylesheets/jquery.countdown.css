@@ -1,7 +1,7 @@
 /* jQuery Countdown styles 2.0.0. */
 .is-countdown {
 	position: relative;
-	height: 490px;
+	height: 580px;
 	width: 90%;
 	margin: 100px auto;
 }
@@ -13,7 +13,6 @@
 }
 .countdown-row {
 	position: relative;
-	/*clear: both;*/
 	width: 100%;
 	text-align: center;
 }
@@ -61,7 +60,7 @@
 
 @media (min-width: 740px) {
 	.is-countdown {
-		height: 110px;
+		height: 140px;
 	}
 	.countdown-show4 .countdown-section {
 		width: 24%;
@@ -75,7 +74,7 @@
 
 @media (min-width: 1025px) {
 	.is-countdown {
-		height: 145px;
+		height: 190px;
 	}
 	.countdown-section {
 		font-size: 40px;

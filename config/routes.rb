@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   root 'homes#home'
 
-  get '/attend' => 'homes#attend'
   get '/expo' => 'homes#expo'
 
   get '/users' => 'users#index', defaults: { format: 'json' }

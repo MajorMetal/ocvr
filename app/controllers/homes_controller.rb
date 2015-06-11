@@ -11,10 +11,6 @@ class HomesController < ApplicationController
 		@community = Sponsor.where(rank: 'Community')
 		@media = Sponsor.where(rank: 'Media')
 	end
-	
-	def attend
-		@user = User.new
-	end
 
 	def expo
 		@user = User.new

@@ -45,17 +45,17 @@
 			</iframe>
 		</div>
 	</div>
+	<div class='container clearfix' id='speakers-cont-home'>
+		<%= render 'partials/speakers' %>
+		<div class='column full'>
+			<%= link_to 'MORE SPEAKERS', speakers_path, class: 'button' %>
+		</div>
+	</div>
 	<div class='container clearfix' id='exhibitor-cont'>
 		<h3 class='section-title'>FEATURED EXHIBITORS</h3>
 		<%= render 'partials/exhibitor' %>
 		<div class='column full'>
 			<%= link_to 'MORE EXHIBITORS', exhibitors_path, class: 'button' %>
-		</div>
-	</div>
-	<div class='container clearfix'>
-		<%= render 'partials/speakers' %>
-		<div class='column full'>
-			<%= link_to 'MORE SPEAKERS', speakers_path, class: 'button' %>
 		</div>
 	</div>
 	<%= render 'partials/map' %>

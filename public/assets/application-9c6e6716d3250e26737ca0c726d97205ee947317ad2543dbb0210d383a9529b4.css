@@ -350,6 +350,15 @@ header {
 }
 
 /* line 227, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+#speakers-cont-home {
+  width: 100%;
+  margin-bottom: 100px;
+  padding: 100px 0;
+  background: #222;
+  color: #DDD;
+}
+
+/* line 234, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .speaker-img-cont {
   position: relative;
   display: block;
@@ -358,7 +367,7 @@ header {
   width: 50%;
 }
 
-/* line 234, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 241, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .speaker-img {
   position: relative;
   height: 120px;
@@ -366,53 +375,53 @@ header {
   border-radius: 50%;
 }
 
-/* line 240, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 247, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .speaker-info {
   font-size: 16px;
   max-width: 80%;
   margin: 5px auto;
 }
 
-/* line 245, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 252, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .speaker-info.name {
   font-weight: 900;
 }
 
 @media (min-width: 740px) {
-  /* line 249, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 256, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .sponsor-img-cont {
     width: 44% !important;
     margin: 4px 3%;
     float: left;
   }
 
-  /* line 254, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 261, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .sponsor-img-cont.diamond {
     width: 55% !important;
     margin: 4px auto;
     float: none;
   }
 
-  /* line 259, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 266, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .sponsor-img-cont.duncan {
     margin: 4px auto;
     float: none;
   }
 
-  /* line 263, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 270, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .exhibitor-img-cont {
     width: 31.3% !important;
     margin: 4px 1%;
     float: left;
   }
 
-  /* line 268, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 275, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .speaker-img-cont {
     height: 250px;
     width: 33.3%;
   }
 }
-/* line 274, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 281, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #expo-info-home {
   width: 100%;
   margin-top: 100px;
@@ -421,7 +430,7 @@ header {
   color: #DDD;
 }
 
-/* line 281, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 288, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #section-text-home {
   color: #BBB;
 }
@@ -429,7 +438,7 @@ header {
 
 .is-countdown {
 	position: relative;
-	height: 490px;
+	height: 580px;
 	width: 90%;
 	margin: 100px auto;
 }
@@ -441,7 +450,6 @@ header {
 }
 .countdown-row {
 	position: relative;
-	/*clear: both;*/
 	width: 100%;
 	text-align: center;
 }
@@ -489,7 +497,7 @@ header {
 
 @media (min-width: 740px) {
 	.is-countdown {
-		height: 110px;
+		height: 140px;
 	}
 	.countdown-show4 .countdown-section {
 		width: 24%;
@@ -503,7 +511,7 @@ header {
 
 @media (min-width: 1025px) {
 	.is-countdown {
-		height: 145px;
+		height: 190px;
 	}
 	.countdown-section {
 		font-size: 40px;
@@ -772,14 +780,14 @@ input:-webkit-autofill {
   position: relative;
   display: block;
   height: auto;
-  width: 90%;
+  width: 80%;
   max-width: 1200px;
   top: 50%;
   -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
       -o-transform: translateY(-50%);
         transform: translateY(-50%);
-  margin: 0 auto;
+  margin-left: 5%;
   font-family: 'Montserrat', arial, sans-serif;
 }
 .nav-list-web {
@@ -891,10 +899,6 @@ input:-webkit-autofill {
   display: block;
   cursor: pointer;
   z-index: 10;
-  -webkit-transition: 250ms ease-in-out;
-    -moz-transition: 250ms ease-in-out;
-      -o-transition: 250ms ease-in-out;
-        transition: 250ms ease-in-out;
 }
 .nav-reveal span, .nav-reveal span:before, .nav-reveal span:after {
   position: absolute;
@@ -908,7 +912,13 @@ input:-webkit-autofill {
 }
 .nav-reveal span:before { top: 8px; }
 .nav-reveal span:after { top: 16px; }
-.nav-reveal, .nav-reveal span, .nav-reveal span:before, .nav-reveal span:after, #nav-list-mobile {
+.nav-reveal, .nav-reveal span, .nav-reveal span:before, .nav-reveal span:after {
+  -webkit-transition: 500ms ease-in-out;
+    -moz-transition: 500ms ease-in-out;
+      -o-transition: 500ms ease-in-out;
+        transition: 500ms ease-in-out;
+}
+#nav-list-mobile {
   -webkit-transition: 1000ms ease-in-out;
     -moz-transition: 1000ms ease-in-out;
       -o-transition: 1000ms ease-in-out;
