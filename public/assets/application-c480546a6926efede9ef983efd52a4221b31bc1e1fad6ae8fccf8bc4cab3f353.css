@@ -298,6 +298,11 @@ header {
 }
 
 /* line 189, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+.sponsor-cont {
+  margin-top: 5%;
+}
+
+/* line 191, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .sponsor-img-cont, .exhibitor-img-cont {
   position: relative;
   display: block;
@@ -305,8 +310,6 @@ header {
   width: 360px;
   max-width: 100%;
   margin: 10px auto;
-  border: 2px solid #AAA;
-  border-radius: 5px;
 }
 
 /* line 199, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
@@ -340,7 +343,7 @@ header {
 
 /* line 222, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #exhibitor-cont {
-  padding: 0;
+  padding: 0 0 100px 0;
 }
 
 /* line 223, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
@@ -352,13 +355,12 @@ header {
 /* line 227, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #speakers-cont-home {
   width: 100%;
-  margin-bottom: 100px;
   padding: 100px 0;
   background: #222;
   color: #DDD;
 }
 
-/* line 234, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 233, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .speaker-img-cont {
   position: relative;
   display: block;
@@ -367,7 +369,7 @@ header {
   width: 50%;
 }
 
-/* line 241, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 240, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .speaker-img {
   position: relative;
   height: 120px;
@@ -375,64 +377,64 @@ header {
   border-radius: 50%;
 }
 
-/* line 247, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 246, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .speaker-info {
   font-size: 16px;
   max-width: 80%;
   margin: 5px auto;
 }
 
-/* line 252, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 251, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .speaker-info.name {
   font-weight: 900;
 }
 
 @media (min-width: 740px) {
-  /* line 256, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 255, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .sponsor-img-cont {
     width: 44% !important;
     margin: 4px 3%;
     float: left;
   }
 
-  /* line 261, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 260, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .sponsor-img-cont.diamond {
     width: 55% !important;
     margin: 4px auto;
     float: none;
   }
 
-  /* line 266, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 265, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .sponsor-img-cont.duncan {
     margin: 4px auto;
     float: none;
   }
 
-  /* line 270, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 269, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .exhibitor-img-cont {
     width: 31.3% !important;
     margin: 4px 1%;
     float: left;
   }
 
-  /* line 275, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+  /* line 274, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
   .speaker-img-cont {
     height: 250px;
     width: 33.3%;
   }
 }
-/* line 281, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+/* line 280, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 #expo-info-home {
   width: 100%;
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   padding: 100px 0;
   background: #222;
   color: #DDD;
 }
 
-/* line 288, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
-#section-text-home {
-  color: #BBB;
+/* line 287, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
+#expo-info-home > .column > .section-text {
+  color: #BBB !important;
 }
 /* jQuery Countdown styles 2.0.0. */
 
@@ -440,7 +442,7 @@ header {
 	position: relative;
 	height: 580px;
 	width: 90%;
-	margin: 100px auto;
+	margin: 100px auto 0 auto;
 }
 .countdown-rtl {
 	direction: rtl;
@@ -826,6 +828,7 @@ input:-webkit-autofill {
 #subscribe-btn {
   position: absolute;
   height: 35px;
+  width: auto;
   top: 0; right: 0;
   border: 2px solid #FF6927;
   border-radius: 5px;
