@@ -18,24 +18,10 @@
 </header>
 
 <main class='main'>
-	<%= render 'partials/sponsors' %>
-	<div class='clearfix' id='due_date_timer'></div>
 	<div class='container clearfix' id='expo-info-home'>
-		<div class='column full'>
-			<h3 class='section-title'>SUMMER EXPO</h3>
-			<div class='expo-location'>
-				<h6 class='section-subtitle'>July 12th, 2015</h6>
-				<h6 class='section-subtitle'>Institute for Innovation, University of California Irvine</h6>
-				<h6 class='section-subtitle'>5141 California Ave. Irvine, CA</h6>
-			</div>
-			<p class='section-text' id='section-text-home'>Welcome to the future! The future of entertainment, sports, art, music, medicine, gaming, and journalism is now.</p>
-			<p class='section-text' id='section-text-home'>Connecting all the genres is the exciting, engaging medium that is Virtual Reality. VR has flooded into the public consciousness through media publications all around the world. Now is your chance to experience the latest in this emerging technology. Immersive technology that the press has been raving about. Experience what millions of others will find out many months from now.</p>
-			<p class='section-text' id='section-text-home'>We have assembled a huge array of demos, experiences, panelists, and speakers for a transformative and exclusive event.</p>
-			<p class='section-text' id='section-text-home'>Over 40 companies will show off their latest. This will allow opportunities for all those who attend to teleport themselves into computerized realms that are beyond the imagination.</p>
-			<p class='section-text' id='section-text-home'>In addition to previously unreleased demos and experiences, a lineup of jam-packed panels and speeches will be held. This will alter the way that you look at Virtual Reality. Expect big names and intriguing discussions that must be heard in person.</p>
-			<p class='section-text' id='section-text-home'>Be part of the future. Join us in the newly opened and beautiful Institute of Innovation at University of California Irvine.</p>
-		</div>
+		<%= render 'partials/expoinfo' %>
 	</div>
+	<div class='clearfix' id='due_date_timer'></div>
 	<div class='container clearfix'>
 		<div class='column full' id='attendee_button'>
 			<a class='button' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038' target='_blank'>PURCHASE TICKETS</a>
@@ -45,12 +31,6 @@
 			</iframe>
 		</div>
 	</div>
-	<div class='container clearfix' id='speakers-cont-home'>
-		<%= render 'partials/speakers' %>
-		<div class='column full'>
-			<%= link_to 'MORE SPEAKERS', speakers_path, class: 'button' %>
-		</div>
-	</div>
 	<div class='container clearfix' id='exhibitor-cont'>
 		<h3 class='section-title'>FEATURED EXHIBITORS</h3>
 		<%= render 'partials/exhibitor' %>
@@ -58,6 +38,13 @@
 			<%= link_to 'MORE EXHIBITORS', exhibitors_path, class: 'button' %>
 		</div>
 	</div>
+	<div class='container clearfix' id='speakers-cont-home'>
+		<%= render 'partials/speakers' %>
+		<div class='column full'>
+			<%= link_to 'MORE SPEAKERS', speakers_path, class: 'button' %>
+		</div>
+	</div>
+	<%= render 'partials/sponsors' %>
 	<%= render 'partials/map' %>
 </main>
 

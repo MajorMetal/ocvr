@@ -40,7 +40,7 @@ exhibitors = Exhibitor.create([
 	{ name: 'Specular Theory, Inc.', img: 'SpecularTheory.png', site: 'http://www.speculartheory.com' },
 	{ name: 'VRecover', img: 'VRecover.png', site: 'http://www.vrecover.com' },
 	{ name: 'SELVZ', img: 'Selvz.png', site: 'http://www.selvz.com' },
-	{ name: 'Emblematic Group', img: 'Emblematic.png', site: 'https://emblematicgroup.squarespace.com/' },
+	{ name: 'Emblematic Group', img: 'Emblematic.jpg', site: 'https://emblematicgroup.squarespace.com/' },
 	{ name: 'Oval Integration Inc.', img: 'Oval.png', site: 'http://www.ovalintegration.com/', is_featured: true }
 ])
 

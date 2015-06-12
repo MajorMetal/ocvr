@@ -26,16 +26,16 @@
 			<%= link_to 'EXPO', expo_path, class: 'nav-btn-web' %>
 		</li>
 		<li class='inline-btn'>
-			<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-web' %>
-		</li>
-		<li class='inline-btn'>
 			<%= link_to 'EXHIBITORS', exhibitors_path, class: 'nav-btn-web' %>
 		</li>
 		<li class='inline-btn'>
 			<%= link_to 'SPEAKERS', speakers_path, class: 'nav-btn-web' %>
 		</li>
 		<li class='inline-btn'>
-			<p class='nav-btn-web' id='subscribe-btn'>SUBSCRIBE</p>
+			<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-web' %>
+		</li>
+		<li class='inline-btn'>
+			<p class='nav-btn-web' id='subscribe-btn'>REGISTER FOR FREE</p>
 		</li>
 	</ul>
 </nav>
@@ -52,19 +52,19 @@
 		<%= link_to 'EXPO', expo_path, class: 'nav-btn-mobile' %>
 	</li>
 	<li class='mobile-btn'>
-		<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-mobile' %>
-	</li>
-	<li class='mobile-btn'>
 		<%= link_to 'EXHIBITORS', exhibitors_path, class: 'nav-btn-mobile' %>
 	</li>
 	<li class='mobile-btn'>
 		<%= link_to 'SPEAKERS', speakers_path, class: 'nav-btn-mobile' %>
 	</li>
+	<li class='mobile-btn'>
+		<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-mobile' %>
+	</li>
 	<li class='mobile-subscription'>
 		<div class='mobile-subscription-form'>
 			<%= form_for @user do |f| %>
 				<%= f.email_field :email, class: 'mobile-subscription-form-input', placeholder: 'Email' %>
-				<%= f.submit 'Subscribe', id: 'mobile-subscription-form-submit' %>
+				<%= f.submit 'Register For Free', id: 'mobile-subscription-form-submit' %>
 			<% end %>
 		</div>
 	</li>

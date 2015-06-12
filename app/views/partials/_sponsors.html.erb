@@ -2,7 +2,6 @@
 	<h3 class='section-title'>SPONSORS</h5>
 	<div class='column full'>
 		<div class='sponsor-cont clearfix'>
-			<h6 class='section-subtitle sponsor'>DIAMOND</h6>
 			<% @diamond.each do |sponsor| %>
 				<div class='sponsor-img-cont diamond'>
 					<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
@@ -10,7 +9,6 @@
 			<% end %>
 		</div>
 		<div class='sponsor-cont clearfix'>
-			<h6 class='section-subtitle sponsor'>RUBY</h6>
 			<% @ruby.each do |sponsor| %>
 				<div class='sponsor-img-cont'>
 					<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
@@ -18,7 +16,6 @@
 			<% end %>
 		</div>
 		<div class='sponsor-cont clearfix'>
-			<h6 class='section-subtitle sponsor'>COMMUNITY</h6>
 			<% @community.each do |sponsor| %>
 				<div class='sponsor-img-cont'>
 					<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
@@ -26,7 +23,6 @@
 			<% end %>
 		</div>
 		<div class='sponsor-cont clearfix'>
-			<h6 class='section-subtitle sponsor'>MEDIA</h6>
 			<% @other.each do |sponsor| %>
 				<div class='sponsor-img-cont duncan'>
 					<img class='sponsor-img duncan' src="<%= asset_path("#{sponsor.img}") %>" />
