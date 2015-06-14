@@ -958,6 +958,10 @@ input:-webkit-autofill {
     z-index: 5;
   }
   .nav-logo-cont { height: 100px; }
+  .nav-logo-img {
+    width: 90%;
+    margin: 0 auto;
+  }
   .nav-list-web { display: block; }
   .nav-list-mobile { display: none; }
   #nav-reveal { display: none; }

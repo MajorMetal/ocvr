@@ -14976,7 +14976,7 @@ $(document).ready(function(){
 	var $body = $('body');
 	var $navMobile = $('#nav-list-mobile');
 	var $revealMobile = $('#nav-reveal');
-	var $modal = $('.modal');
+	// var $modal = $('.modal');
 	var $openModal = $('#subscribe-btn');
 	var $closeModal = $('.modal-exit');
 	var $mobileBG = $('#mobile-cover');
@@ -15016,18 +15016,18 @@ $(document).ready(function(){
   $window.bind("orientationchange", mobileMenu);
 
   // Modal Functions
-	$openModal.click(function() {
-		curPos = Math.floor($window.scrollTop());
-		$modal.css('top', (curPos + 100) + 'px');
-		$webBG.removeClass('hidden');
-		scrollLock();
-	});
+	// $openModal.click(function() {
+	// 	curPos = Math.floor($window.scrollTop());
+	// 	$modal.css('top', (curPos + 100) + 'px');
+	// 	$webBG.removeClass('hidden');
+	// 	scrollLock();
+	// });
 
-	$closeModal.click(function() {
-		$modal.css('top', '-400px');
-		$webBG.addClass('hidden');
-		scrollUnlock();
-	})
+	// $closeModal.click(function() {
+	// 	$modal.css('top', '-400px');
+	// 	$webBG.addClass('hidden');
+	// 	scrollUnlock();
+	// })
 
   // Scroll Control Functions
 	function scrollLock() {

@@ -35,7 +35,7 @@
 			<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-web' %>
 		</li>
 		<li class='inline-btn'>
-			<p class='nav-btn-web' id='subscribe-btn'>REGISTER FOR FREE</p>
+			<a class='nav-btn-web' id='subscribe-btn' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038' target='_blank'>REGISTER FOR FREE</a>
 		</li>
 	</ul>
 </nav>
@@ -60,19 +60,13 @@
 	<li class='mobile-btn'>
 		<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-mobile' %>
 	</li>
-	<li class='mobile-subscription'>
-		<div class='mobile-subscription-form'>
-			<%= form_for @user do |f| %>
-				<%= f.email_field :email, class: 'mobile-subscription-form-input', placeholder: 'Email' %>
-				<%= f.submit 'Register For Free', id: 'mobile-subscription-form-submit' %>
-			<% end %>
-		</div>
-	</li>
+	<li class='mobile-btn'>
+			<a class='nav-btn-mobile' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038'>REGISTER</a>
+		</li>
 </ul>
 
 <%= render 'partials/flash' %>
 <%= yield %>
-<%= render 'partials/modal' %>
 
 <div class='mobile-bg'>
 	<div class='cover hidden' id='mobile-cover'></div>
