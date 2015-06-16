@@ -2,16 +2,16 @@
 	<div id="slider1_container" class='carousel_cont'>
   	<div u="slides" class='carousel_slide'>
     	<div>
-	      <img u="image" src="<%= asset_path('slide1.jpg') %>" />
+	      <img u="image" src="<%= asset_path('slide4.jpg') %>" />
 	    </div>
 	    <div>
 	      <img u="image" src="<%= asset_path('slide2.jpg') %>" />
 	    </div>
 	    <div>
-	      <img u="image" src="<%= asset_path('slide3.jpg') %>" />
+	      <img u="image" src="<%= asset_path('slide1.jpg') %>" />
 	    </div>
 	    <div>
-	      <img u="image" src="<%= asset_path('slide4.jpg') %>" />
+	      <img u="image" src="<%= asset_path('slide3.jpg') %>" />
 	    </div>
 	  </div>
 	</div>
@@ -33,13 +33,22 @@
 	</div>
 	<div class='container clearfix' id='exhibitor-cont'>
 		<h3 class='section-title'>FEATURED EXHIBITORS</h3>
-		<%= render 'partials/exhibitor' %>
+		<div class='column full'>
+			<div class='exhibitor-cont clearfix'>
+				<%= render 'partials/exhibitor_featured' %>
+			</div>
+		</div>
 		<div class='column full'>
 			<%= link_to 'MORE EXHIBITORS', exhibitors_path, class: 'button' %>
 		</div>
 	</div>
 	<div class='container clearfix' id='speakers-cont-home'>
-		<%= render 'partials/speakers' %>
+		<h3 class='section-title'>SPEAKERS</h5>
+		<div class='column full'>
+			<div class='speaker-cont clearfix'>
+				<%= render 'partials/speakers_featured' %>
+			</div>
+		</div>
 		<div class='column full'>
 			<%= link_to 'MORE SPEAKERS', speakers_path, class: 'button' %>
 		</div>

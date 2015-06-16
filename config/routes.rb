@@ -5,12 +5,10 @@ Rails.application.routes.draw do
   get '/expo' => 'homes#expo'
 
   get '/users' => 'users#index', defaults: { format: 'json' }
-  get '/users/new' => 'users#new'
-  post '/users' => 'users#create'
 
-  resources :speakers, only: [:index, :new, :create]
-  resources :exhibitors, only: [:index, :new, :create]
-  resources :sponsors, only: [:index, :new, :create]
+  resources :speakers, only: [:index]
+  resources :exhibitors, only: [:index]
+  resources :sponsors, only: [:index]
 
   get '/sponsors/buy' => 'sponsors#buy'
 

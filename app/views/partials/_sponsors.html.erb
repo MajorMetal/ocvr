@@ -1,38 +1,93 @@
 <div class='container clearfix'>
-	<h3 class='section-title'>SPONSORS</h5>
+	<h3 class='section-title'>SPONSORS</h3>
 	<div class='column full'>
 		<div class='sponsor-cont clearfix'>
-			<% @diamond.each do |sponsor| %>
-				<div class='sponsor-img-cont diamond'>
-					<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
-				</div>
-			<% end %>
+			<h5 class='section-title'>DIAMOND</h5>
+			<div class='sponsor-img-cont diamond'>
+				<img class='sponsor-img' src="<%= asset_path('NextVR.png') %>" />
+			</div>
 		</div>
 		<div class='sponsor-cont clearfix'>
-			<% @ruby.each do |sponsor| %>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
-				</div>
-			<% end %>
+			<h5 class='section-title'>RUBY</h5>
+			<div class='sponsor-img-cont'>
+				<img class='sponsor-img' src="<%= asset_path('FastStart.png') %>" />
+			</div>
+			<div class='sponsor-img-cont'>
+				<img class='sponsor-img' src="<%= asset_path('ROC.jpg') %>" />
+			</div>
 		</div>
 		<div class='sponsor-cont clearfix'>
-			<% @community.each do |sponsor| %>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
-				</div>
-			<% end %>
+			<h5 class='section-title'>EMERALD</h5>
+			<div class='sponsor-img-cont'>
+				<img class='sponsor-img' src="<%= asset_path('Welens.png') %>" />
+			</div>
+			<div class='sponsor-img-cont'>
+				<img class='sponsor-img' src="<%= asset_path('Houdini.png') %>" />
+			</div>
 		</div>
 		<div class='sponsor-cont clearfix'>
-			<% @other.each do |sponsor| %>
-				<div class='sponsor-img-cont duncan'>
-					<img class='sponsor-img duncan' src="<%= asset_path("#{sponsor.img}") %>" />
+			<h5 class='section-title'>COMMUNITY</h5>
+			<div class='clearfix'>
+				<div class='sponsor-img-cont quarter'>
+					<img class='sponsor-img' src="<%= asset_path('VRFest.png') %>" />
 				</div>
-			<% end %>
-			<% @media.each do |sponsor| %>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
+				<div class='sponsor-img-cont quarter'>
+					<img class='sponsor-img' src="<%= asset_path('VRLA.png') %>" />
 				</div>
-			<% end %>
+				<div class='sponsor-img-cont quarter'>
+					<img class='sponsor-img' src="<%= asset_path('VRLB.png') %>" />
+				</div>
+				<div class='sponsor-img-cont quarter'>
+					<img class='sponsor-img' src="<%= asset_path('SDVR.png') %>" />
+				</div>
+			</div>
+			<div class='sponsor-img-cont'>
+				<img class='sponsor-img' src="<%= asset_path('OCVR.png') %>" />
+			</div>
+			<div class='sponsor-img-cont'>
+				<img class='sponsor-img' src="<%= asset_path('VRCade.png') %>" />
+			</div>
+		</div>
+		<div class='sponsor-cont clearfix'>
+			<h5 class='section-title'>MEDIA</h5>
+			<div class='sponsor-img-cont duncan'>
+				<img class='sponsor-img duncan' src="<%= asset_path('DuncanTrussellFH.png') %>" />
+			</div>
+
+			<div class='sponsor-img-cont third'>
+				<img class='sponsor-img' src="<%= asset_path('VRScout.png') %>" />
+			</div>
+			<div class='sponsor-img-cont third'>
+				<img class='sponsor-img' src="<%= asset_path('Upload.png') %>" />
+			</div>
+			<div class='sponsor-img-cont third'>
+				<img class='sponsor-img' src="<%= asset_path('VRFocus.png') %>" />
+			</div>
+			<div class='two-thirds clearfix'>
+				<div class='sponsor-img-cont quarter'>
+					<img class='sponsor-img' src="<%= asset_path('VRDigest.png') %>" />
+				</div>
+				<div class='sponsor-img-cont quarter'>
+					<img class='sponsor-img' src="<%= asset_path('VoicesOfVR.jpg') %>" />
+				</div>
+				<div class='sponsor-img-cont quarter'>
+					<img class='sponsor-img' src="<%= asset_path('InnerRift.jpg') %>" />
+				</div>
+				<div class='sponsor-img-cont quarter'>
+					<img class='sponsor-img' src="<%= asset_path('Qgits.png') %>" />
+				</div>
+			</div>
+			<div class='half clearfix'>
+				<div class='sponsor-img-cont third'>
+					<img class='sponsor-img' src="<%= asset_path('YouRift.jpg') %>" />
+				</div>
+				<div class='sponsor-img-cont third'>
+					<img class='sponsor-img' src="<%= asset_path('EnterVR.png') %>" />
+				</div>
+				<div class='sponsor-img-cont third'>
+					<img class='sponsor-img' src="<%= asset_path('UltraCulture.jpg') %>" />
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

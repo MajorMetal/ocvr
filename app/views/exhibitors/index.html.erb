@@ -1,7 +1,12 @@
 <main class='main exhibitor'>
 	<div class='container clearfix' id='exhibitor-cont'>
 		<h3 class='section-title'>EXHIBITORS</h3>
-		<%= render 'partials/exhibitor' %>
+		<div class='column full'>
+			<div class='exhibitor-cont clearfix'>
+				<%= render 'partials/exhibitor_featured' %>
+				<%= render 'partials/exhibitor' %>
+			</div>
+		</div>
 	</div>
 	<div class='container clearfix' id='exhibitor-signup'>
 		<div class='column full'>

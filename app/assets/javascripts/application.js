@@ -19,24 +19,11 @@ $(document).ready(function(){
 
 	// HTML Elements
 	var $window = $(window);
-	var $html = $('html');
-	var $body = $('body');
 	var $navMobile = $('#nav-list-mobile');
 	var $revealMobile = $('#nav-reveal');
-	// var $modal = $('.modal');
-	var $openModal = $('#subscribe-btn');
-	var $closeModal = $('.modal-exit');
-	var $mobileBG = $('#mobile-cover');
-	var $webBG = $('#web-cover');
-
-	var curPos;
-	var disableScroll = false;
 
 	// Toggles the Mobile Navbar
 	$revealMobile.click(function() {
-		if ($revealMobile.hasClass('active')) { scrollUnlock(); }
-		else { scrollLock(); }
-
 		$revealMobile.toggleClass('active');
 		$navMobile.toggleClass('active');
 		$mobileBG.toggleClass('hidden');
@@ -49,7 +36,7 @@ $(document).ready(function(){
 
 		if(height <= 360) {
 			for (var i=0; i < list.length; i++){
-				if (list[i].className != 'mobile-btn active') { list[i].className = 'mobile-btn active'; }
+				if (list[i].className != 'mobile-btn small') { list[i].className = 'mobile-btn small'; }
 			}
 		}
 		else {
@@ -61,35 +48,5 @@ $(document).ready(function(){
 	$window.bind("load", mobileMenu);
   $window.bind("resize", mobileMenu);
   $window.bind("orientationchange", mobileMenu);
-
-  // Modal Functions
-	// $openModal.click(function() {
-	// 	curPos = Math.floor($window.scrollTop());
-	// 	$modal.css('top', (curPos + 100) + 'px');
-	// 	$webBG.removeClass('hidden');
-	// 	scrollLock();
-	// });
-
-	// $closeModal.click(function() {
-	// 	$modal.css('top', '-400px');
-	// 	$webBG.addClass('hidden');
-	// 	scrollUnlock();
-	// })
-
-  // Scroll Control Functions
-	function scrollLock() {
-		var scrollPosition = [ $window.scrollLeft(), $window.scrollTop() ];
-		$html.data('scroll-position', scrollPosition);
-    $html.data('previous-overflow', $html.css('overflow'));
-    $html.css('overflow', 'hidden');
-    disableScroll = true;
-	};
-
-	function scrollUnlock() {
-    $html.css('overflow', $html.data('previous-overflow'));
-    disableScroll = false;
-	};
-
-	document.ontouchmove = function(e) { if (disableScroll) { e.preventDefault(); } };
 
 });

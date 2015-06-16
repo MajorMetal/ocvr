@@ -6,42 +6,42 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 exhibitors = Exhibitor.create([
-	{ name: 'Monster VR', img: 'MonsterVR.png', site: '' },
-	{ name: 'V', img: 'V.png', site: 'http://startwithv.com' },
 	{ name: 'Warped Imagination', img: 'WarpedImagination.png', site: 'http://warpedimagination.com', is_featured: true },
-	{ name: 'Otherworld Interactive', img: 'Otherworld.png', site: 'http://www.otherworldinteractive.com' },
+	{ name: 'Otherworld Interactive', img: 'Otherworld.png', site: 'http://www.otherworldinteractive.com', is_featured: true },
 	{ name: 'Vrideo', img: 'VRideo.png', site: 'http://www.vrideo.com', is_featured: true },
 	{ name: 'Funktronic Labs', img: 'Funktronic.png', site: 'http://funktroniclabs.com/collider', is_featured: true },
+	{ name: 'Sidekick VR', img: 'Sidekick.png', site: 'http://www.sidekickvrgames.com', is_featured: true },
+	{ name: 'OTOY, Inc.', img: 'Otoy.png', site: 'http://www.otoy.com', is_featured: true },
+	{ name: 'Oval Integration Inc.', img: 'Oval.png', site: 'http://www.ovalintegration.com/', is_featured: true },
+	{ name: 'Monster VR', img: 'MonsterVR.png', site: '' },
+	{ name: 'V', img: 'V.png', site: 'http://startwithv.com' },
 	{ name: 'RocketSail', img: 'RocketSail.png', site: 'http://www.rocketsail.com' },
 	{ name: 'New Deal Studios', img: 'NewDealStudios.png', site: 'http://www.newdealstudio.com/virtual-reality' },
 	{ name: 'Labcoat Studios', img: 'Labcoat.png', site: 'http://vrjam.challangepost.com/submissions/36460-re-entry' },
 	{ name: 'The Department of Silly Stuff', img: 'FacetedFlight.png', site: 'http://www.facetedflight.com' },
-	{ name: 'Zenka', img: 'Zenka.png', site: 'http://www.zenka.org' },
+	{ name: 'Zenka', img: 'Zenka.png', site: 'http://www.zenka.org', is_featured: true },
 	{ name: 'Freeform Labs', img: 'ElemenTerra.png', site: 'http://elementerravr.com' },
 	{ name: 'Studio Transcendent', img: 'StudioTranscendent.png', site: 'http://studiotranscendent.com' },
 	{ name: 'Dandelion VR', img: 'Dandelion.jpg', site: 'http://vrjam.challengepost.com/submissions/36441-dandelion' },
 	{ name: 'Next VR', img: 'NextVR.png', site: 'http://nextvr.com', is_featured: true },
 	{ name: 'Immersive Entertainment', img: 'IEI.png', site: 'http://www.immersiveent.com' },
-	{ name: 'Sidekick VR', img: 'Sidekick.png', site: 'http://www.sidekickvrgames.com', is_featured: true },
 	{ name: 'Really Big Pictures', img: 'RBP.png', site: 'http://www.reallybigpictures.com' },
 	{ name: 'SubPac', img: 'SubPac.png', site: 'http://www,thesubpac.com' },
-	# { name: 'Trillby Games LLC', img: 'Trillby.png', site: 'http://www.trillbygames.com' },
 	{ name: 'Side Effects Software', img: 'Houdini.png', site: 'http://www.sidefx.com/' },
-	# { name: 'WhiteHawk Software', img: 'WhiteHawk.png', site: 'https://www.facebook.com/PrecisionFlight' },
 	{ name: 'Greenlight VR', img: 'GreenlightVR.png', site: 'http://www.greenlightvr.com' },
 	{ name: 'Shape Space VR', img: 'ShapeSpace.jpg', site: 'http://www,ShapeSpaceVR.com' },
 	{ name: 'Meta', img: 'Meta.png', site: 'http://getmeta.com' },
 	{ name: 'Fish Bowl VR', img: 'Fishbowl.png', site: 'http://www.fishbowlvr.com/' },
-	{ name: 'OTOY, Inc.', img: 'Otoy.png', site: 'http://www.otoy.com', is_featured: true },
-	# { name: 'NanoVR', img: 'NanoVR.png', site: 'http://nanovr.io' },
-	# { name: 'Blended Web Media', img: 'BlendedWebMedia.png', site: 'http://blendedwebmedia.com' },
 	{ name: 'Sonic VR', img: 'SonicVR.png', site: 'http://www.sonicvr.com' },
 	{ name: 'Audeze', img: 'Audeze.png', site: 'http://www.audeze.com' },
 	{ name: 'Specular Theory, Inc.', img: 'SpecularTheory.png', site: 'http://www.speculartheory.com' },
 	{ name: 'VRecover', img: 'VRecover.png', site: 'http://www.vrecover.com' },
 	{ name: 'SELVZ', img: 'Selvz.png', site: 'http://www.selvz.com' },
-	{ name: 'Emblematic Group', img: 'Emblematic.jpg', site: 'https://emblematicgroup.squarespace.com/' },
-	{ name: 'Oval Integration Inc.', img: 'Oval.png', site: 'http://www.ovalintegration.com/', is_featured: true }
+	{ name: 'Emblematic Group', img: 'Emblematic.jpg', site: 'https://emblematicgroup.squarespace.com/' }
+	# { name: 'Trillby Games LLC', img: 'Trillby.png', site: 'http://www.trillbygames.com' },
+	# { name: 'WhiteHawk Software', img: 'WhiteHawk.png', site: 'https://www.facebook.com/PrecisionFlight' },
+	# { name: 'NanoVR', img: 'NanoVR.png', site: 'http://nanovr.io' },
+	# { name: 'Blended Web Media', img: 'BlendedWebMedia.png', site: 'http://blendedwebmedia.com' }
 ])
 
 speakers = Speaker.create([
@@ -69,22 +69,32 @@ speakers = Speaker.create([
 
 sponsors = Sponsor.create([
 	{ name: 'Next VR', rank: 'Diamond', img: 'NextVR.png' },
+
 	{ name: 'Fast Start Studios', rank: 'Ruby', img: 'FastStart.png' },
 	{ name: 'Real Office Centers', rank: 'Ruby', img: 'ROC.jpg' },
+
+	{ name: 'Welens', rank: 'Emerald', img: 'Welens.png' },
+	{ name: 'Side Effects Software', rank: 'Emerald', img: 'Houdini.png' },
+
 	{ name: 'VRLA', rank: 'Community', img: 'VRLA.png' },
 	{ name: 'OCVR', rank: 'Community', img: 'OCVR.png' },
 	{ name: 'VRLB', rank: 'Community', img: 'VRLB.png' },
 	{ name: 'SDVR', rank: 'Community', img: 'SDVR.png' },
 	{ name: 'VR Fest', rank: 'Community', img: 'VRFest.png' },
 	{ name: 'VRCade', rank: 'Community', img: 'VRCade.png' },
+
 	{ name: 'Duncan Trussell', rank: 'Other', img: 'DuncanTrussellFH.png' },
+
 	{ name: 'VR Scout', rank: 'Media', img: 'VRScout.png' },
 	{ name: 'UploadVR', rank: 'Media', img: 'Upload.png' },
+	{ name: 'VRfocus', rank: 'Media', img: 'VRFocus.png' },
 	{ name: 'Voices of VR', rank: 'Media', img: 'VoicesOfVR.jpg' },
 	{ name: 'Enter VR', rank: 'Media', img: 'EnterVR.png' },
 	{ name: 'Inner Rift', rank: 'Media', img: 'InnerRift.jpg' },
 	{ name: 'Qgits', rank: 'Media', img: 'Qgits.png' },
-	{ name: 'VRfocus', rank: 'Media', img: 'VRFocus.png' }
+	{ name: 'Yourift', rank: 'Media', img: 'YouRift.jpg' },
+	{ name: 'Ultraculture', rank: 'Media', img: 'UltraCulture.jpg' },
+	{ name: 'VR Digest', rank: 'Media', img: 'VRDigest.png' }
 ])
 
 
