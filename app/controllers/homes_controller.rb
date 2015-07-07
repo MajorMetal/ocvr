@@ -6,4 +6,7 @@ class HomesController < ApplicationController
 	def expo
 	end
 
+	def maps
+	end
+
 end

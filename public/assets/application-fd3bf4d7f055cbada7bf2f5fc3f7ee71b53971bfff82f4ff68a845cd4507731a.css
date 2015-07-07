@@ -1,46 +1,44 @@
 /* line 5, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+.main.exhibitor, .main.attend, .main.maps {
+  margin-top: 80px;
+  padding-bottom: 100px;
+}
+
+/* line 9, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
 .main.exhibitor {
-  margin-top: 80px;
   padding-top: 100px;
-  padding-bottom: 100px;
 }
 
-/* line 10, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
-.main.sponsor {
-  margin-top: 80px;
-  padding-bottom: 100px;
-}
-
-/* line 14, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+/* line 12, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
 #exhibitor-signup {
   margin-top: 0;
   padding-top: 0;
 }
 
 @media (min-width: 740px) {
-  /* line 20, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  /* line 18, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
   .main.exhibitor {
     margin-top: 140px;
   }
 
-  /* line 21, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  /* line 19, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
   .main.sponsor {
     margin-top: 140px;
   }
 
-  /* line 22, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  /* line 20, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
   #exhibitor-signup {
     margin-top: -50px;
     padding-top: 0;
   }
 }
 @media (min-width: 1025px) {
-  /* line 29, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  /* line 27, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
   .main.exhibitor {
     margin-top: 160px;
   }
 
-  /* line 30, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  /* line 28, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
   .main.sponsor {
     margin-top: 160px;
   }

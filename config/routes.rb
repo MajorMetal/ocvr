@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/expo' => 'homes#expo'
 
-  get '/users' => 'users#index', defaults: { format: 'json' }
+  # get '/maps' => 'homes#maps'
 
   resources :speakers, only: [:index]
   resources :exhibitors, only: [:index]

@@ -2,14 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.main.exhibitor {
+.main.exhibitor, .main.attend, .main.maps {
 	margin-top: 80px;
-	padding-top: 100px;
 	padding-bottom: 100px;
 }
-.main.sponsor {
-	margin-top: 80px;
-	padding-bottom: 100px;
+.main.exhibitor {
+	padding-top: 100px;
 }
 #exhibitor-signup {
 	margin-top: 0;
