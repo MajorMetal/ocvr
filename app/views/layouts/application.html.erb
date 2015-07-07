@@ -25,9 +25,9 @@
 		<li class='inline-btn'>
 			<%= link_to 'EXPO', expo_path, class: 'nav-btn-web' %>
 		</li>
-		<!-- <li class='inline-btn'> -->
-			<%#= link_to 'MAPS', maps_path, class: 'nav-btn-web' %>
-		<!-- </li> -->
+		<li class='inline-btn'>
+			<%= link_to 'MAPS', maps_path, class: 'nav-btn-web' %>
+		</li>
 		<li class='inline-btn'>
 			<%= link_to 'EXHIBITORS', exhibitors_path, class: 'nav-btn-web' %>
 		</li>
@@ -57,9 +57,9 @@
 	<li class='mobile-btn'>
 		<%= link_to 'EXPO', expo_path, class: 'nav-btn-mobile' %>
 	</li>
-	<!-- <li class='mobile-btn'> -->
-		<%#= link_to 'MAPS', maps_path, class: 'nav-btn-mobile' %>
-	<!-- </li> -->
+	<li class='mobile-btn'>
+		<%= link_to 'MAPS', maps_path, class: 'nav-btn-mobile' %>
+	</li>
 	<li class='mobile-btn'>
 		<%= link_to 'EXHIBITORS', exhibitors_path, class: 'nav-btn-mobile' %>
 	</li>
@@ -113,10 +113,6 @@
       draggable: true
     };
 
-    // var infowindow = new google.maps.InfoWindow({
-    //   content: contentString
-  	// });
-
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById('directions-panel'));
@@ -126,10 +122,6 @@
       map: map
   	});
   };
-
-  	// google.maps.event.addListener(marker, 'click', function() {
-    // 	infowindow.open(map,marker);
-  	// });
 
 	function calcRoute() {
 		marker.setMap(map);

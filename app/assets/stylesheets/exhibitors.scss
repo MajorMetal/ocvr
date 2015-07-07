@@ -15,8 +15,7 @@
 }
 
 @media (min-width: 740px) {
-	.main.exhibitor { margin-top: 140px; }
-	.main.sponsor { margin-top: 140px; }
+	.main.exhibitor, .main.sponsor, .main.maps { margin-top: 140px; }
 	#exhibitor-signup {
 		margin-top: -50px;
 		padding-top: 0;
@@ -24,6 +23,5 @@
 }
 
 @media (min-width: 1025px) {
-	.main.exhibitor { margin-top: 160px; }
-	.main.sponsor { margin-top: 160px; }
+	.main.exhibitor, .main.sponsor, .main.maps { margin-top: 160px; }
 }
