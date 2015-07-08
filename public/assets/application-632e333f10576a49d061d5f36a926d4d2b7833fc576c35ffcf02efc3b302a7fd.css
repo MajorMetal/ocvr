@@ -1,34 +1,39 @@
 /* line 5, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
-.main.exhibitor, .main.attend, .main.maps {
+.main.exhibitor, .main.attend {
   margin-top: 80px;
   padding-bottom: 100px;
 }
 
 /* line 9, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+.main.maps {
+  margin-top: 80px;
+}
+
+/* line 12, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
 .main.exhibitor {
   padding-top: 100px;
 }
 
-/* line 12, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+/* line 15, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
 #exhibitor-signup {
   margin-top: 0;
   padding-top: 0;
 }
 
 @media (min-width: 740px) {
-  /* line 18, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  /* line 21, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
   .main.exhibitor, .main.sponsor, .main.maps {
     margin-top: 140px;
   }
 
-  /* line 19, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  /* line 22, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
   #exhibitor-signup {
     margin-top: -50px;
     padding-top: 0;
   }
 }
 @media (min-width: 1025px) {
-  /* line 26, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
+  /* line 29, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/exhibitors.scss */
   .main.exhibitor, .main.sponsor, .main.maps {
     margin-top: 160px;
   }

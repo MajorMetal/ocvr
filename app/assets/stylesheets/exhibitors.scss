@@ -2,9 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.main.exhibitor, .main.attend, .main.maps {
+.main.exhibitor, .main.attend {
 	margin-top: 80px;
 	padding-bottom: 100px;
+}
+.main.maps {
+	margin-top: 80px;
 }
 .main.exhibitor {
 	padding-top: 100px;
