@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get '/maps' => 'homes#maps'
 
+  get '/team' => 'homes#team'
+
   resources :speakers, only: [:index]
   resources :exhibitors, only: [:index]
   resources :sponsors, only: [:index]

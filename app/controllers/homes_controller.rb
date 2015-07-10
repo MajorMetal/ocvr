@@ -9,4 +9,7 @@ class HomesController < ApplicationController
 	def maps
 	end
 
+	def team
+	end
+
 end
