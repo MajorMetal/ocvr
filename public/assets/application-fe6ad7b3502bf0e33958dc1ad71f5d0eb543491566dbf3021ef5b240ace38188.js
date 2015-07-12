@@ -12050,7 +12050,7 @@ return jQuery;
 ;
 $(document).ready(function() {
 
-  var header = document.getElementById('header');
+  var header = document.getElementById('header_carousel');
 
   if (header) {
 	var _CaptionTransitions = [];
@@ -14974,6 +14974,7 @@ $(document).ready(function(){
 	var $window = $(window);
 	var $navMobile = $('#nav-list-mobile');
 	var $revealMobile = $('#nav-reveal');
+	var $header = $('#header_livestream');
 
 	// Toggles the Mobile Navbar
 	$revealMobile.click(function() {
@@ -14987,19 +14988,31 @@ $(document).ready(function(){
 		var height = $window.height();
 		var width = $window.width();
 
-		if(height <= 360) {
+		if(height <= 475) {
+			$navMobile.addClass('small');
 			for (var i=0; i < list.length; i++){
 				if (list[i].className != 'mobile-btn small') { list[i].className = 'mobile-btn small'; }
 			}
 		}
 		else {
+			$navMobile.removeClass('small');
 			for (var i=0; i < list.length; i++) { list[i].className = 'mobile-btn'; }
 		}
+	}
+
+	function liveStream () {
+		var width = $window.width();
+    $header.height((width / 3) + 'px');
 	}
 
 	mobileMenu();
 	$window.bind("load", mobileMenu);
   $window.bind("resize", mobileMenu);
   $window.bind("orientationchange", mobileMenu);
+
+  liveStream();
+  $(window).bind("load", liveStream);
+  $(window).bind("resize", liveStream);
+  $(window).bind("orientationchange", liveStream);
 
 });

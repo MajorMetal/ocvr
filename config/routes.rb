@@ -3,10 +3,9 @@ Rails.application.routes.draw do
   root 'homes#home'
 
   get '/expo' => 'homes#expo'
-
   get '/maps' => 'homes#maps'
-
   get '/team' => 'homes#team'
+  get '/livestream' => 'homes#stream'
 
   resources :speakers, only: [:index]
   resources :exhibitors, only: [:index]

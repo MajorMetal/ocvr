@@ -220,10 +220,12 @@ input:-webkit-autofill {
       -o-transition: 250ms ease-in-out;
         transition: 250ms ease-in-out;
 }
+.nav-btn-web.orange { color: #FF6927; }
 .nav-btn-web:hover {
   font-size: 17px;
   border-top: 3px solid #FF6927;
 }
+.nav-btn-web.orange:hover { border-top: 3px solid #222; }
 #subscribe-btn {
   position: absolute;
   height: 35px;
@@ -246,16 +248,19 @@ input:-webkit-autofill {
 
 #nav-list-mobile {
 	position: fixed;
-  height: 0vh;
+  height: 100vh;
 	width: 100%;
-	top: -300px;
+  top: 0;
+	left: -100%;
   margin: 0;
 	background-color: #222;
-  z-index: 7;
+  z-index: 8;
+}
+#nav-list-mobile.small {
+  padding: 0;
 }
 #nav-list-mobile.active {
-  top: 80px;
-  height: 100vh;
+  left: 0;
 }
 .mobile-btn {
   position: relative;
@@ -267,6 +272,7 @@ input:-webkit-autofill {
 }
 .mobile-btn.small {
   width: 33.3%;
+  margin-left: 0px;
   margin-bottom: 20px;
 }
 .nav-btn-mobile {
@@ -283,16 +289,18 @@ input:-webkit-autofill {
       -o-transition: 250ms ease-in-out;
         transition: 250ms ease-in-out;
 }
+.nav-btn-mobile.orange { color: #FF6927; }
 .nav-btn-mobile:hover {
   border-left: 3px solid #FF6927;
   font-size: 18px;
 }
+.nav-btn-mobile.orange:hover { border-left: 3px solid #FFF; }
 .mobile-btn.active > .nav-btn-mobile:hover { font-size: 16px; }
 .nav-reveal {
   position: fixed;
   width: 40px;
   height: 20px;
-  top: 55px; right: 0;
+  top: 10px; right: 0;
   cursor: pointer;
   z-index: 10;
 }
@@ -360,13 +368,13 @@ input:-webkit-autofill {
     width: 90%;
     margin: 0 auto;
   }
-  .nav-list-web { display: block; }
-  .nav-list-mobile { display: none; }
-  #nav-reveal { display: none; }
 }
 @media (min-width: 1025px) {
   .navbar { height: 160px; }
   .nav-logo-cont { height: 120px; }
+  .nav-list-web { display: block; }
+  .nav-list-mobile { display: none; }
+  #nav-reveal { display: none; }
 }
 
 

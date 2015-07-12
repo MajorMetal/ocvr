@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var header = document.getElementById('header');
+  var header = document.getElementById('header_carousel');
 
   if (header) {
 	var _CaptionTransitions = [];

@@ -1,7 +1,7 @@
 /* jQuery Countdown styles 2.0.0. */
 .is-countdown {
 	position: relative;
-	height: 580px;
+	height: 450px;
 	width: 90%;
 	margin: 100px auto 0 auto;
 }
@@ -18,12 +18,15 @@
 }
 .countdown-show1 .countdown-section {
 	width: 98%;
+	margin: 10px auto;
 }
 .countdown-show2 .countdown-section {
 	width: 48%;
+	margin: 10px auto;
 }
 .countdown-show3 .countdown-section {
 	width: 32.5%;
+	margin: 10px auto;
 }
 .countdown-show4 .countdown-section {
 	width: 220px;
@@ -31,12 +34,15 @@
 }
 .countdown-show5 .countdown-section {
 	width: 19.5%;
+	margin: 10px auto;
 }
 .countdown-show6 .countdown-section {
 	width: 16.25%;
+	margin: 10px auto;
 }
 .countdown-show7 .countdown-section {
 	width: 14%;
+	margin: 10px auto;
 }
 .countdown-section {
 	position: relative;

@@ -28,7 +28,18 @@ header {
   overflow: hidden;
   z-index: 1;
 }
+#header_carousel { display: none; }
+.livestream {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
 
+
+@media handheld {
+	#header_carousel { display: block; }
+}
 
 @media (min-width: 740px) {
 	header { margin-top: 140px; }

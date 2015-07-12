@@ -12,4 +12,7 @@ class HomesController < ApplicationController
 	def team
 	end
 
+	def stream
+	end
+
 end
