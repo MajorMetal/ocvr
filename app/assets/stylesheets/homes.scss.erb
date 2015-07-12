@@ -28,7 +28,9 @@ header {
   overflow: hidden;
   z-index: 1;
 }
-#header_livestream { display: none; }
+#header_livestream {
+	margin-top: 100px;
+}
 .livestream {
 	position: relative;
 	width: 100%;
@@ -37,16 +39,12 @@ header {
 }
 
 
-@media screen {
-	#header_carousel { display: none; }
-	#header_livestream { display: block; }
-}
-
 @media (min-width: 740px) {
-	header { margin-top: 140px; }
+	header { margin-top: 100px; }
 }
 @media (min-width: 1025px) {
 	header { margin-top: 160px; }
+	#header_livestream { margin-top: 160px; }
 }
 
 
