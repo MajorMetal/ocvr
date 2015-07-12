@@ -28,7 +28,6 @@ header {
   overflow: hidden;
   z-index: 1;
 }
-#header_carousel { display: none; }
 .livestream {
 	position: relative;
 	width: 100%;
@@ -37,8 +36,8 @@ header {
 }
 
 
-@media handheld {
-	#header_carousel { display: block; }
+@media screen {
+	#header_carousel { display: none; }
 }
 
 @media (min-width: 740px) {
