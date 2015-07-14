@@ -7,7 +7,7 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
   <%= javascript_include_tag 'application' %>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>
+  <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key='></script>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
@@ -16,37 +16,37 @@
 
 <nav class='navbar'>
 	<div class='nav-logo-cont'>
-		<img class='nav-logo-img' src='<%= asset_path('SocalLogoSkinny2.png') %>' />
+		<img class='nav-logo max-width-sml' src='<%= asset_path('SocalLogoSkinny2.png') %>' />
 	</div>
-	<ul class='nav-list-web'>
-		<li class='inline-btn'>
+	<ul class='nav-list-web max-width-sml'>
+		<li class='web-btn'>
 			<%= link_to 'HOME', root_path, class: 'nav-btn-web' %>
 		</li>
-		<li class='inline-btn'>
-			<%= link_to 'LIVE STREAM', livestream_path, class: 'nav-btn-web orange' %>
-		</li>
-		<li class='inline-btn'>
+		<!-- <li class='web-btn'> -->
+			<%#= link_to 'LIVE STREAM', livestream_path, class: 'nav-btn-web opposite' %>
+		<!-- </li> -->
+		<li class='web-btn'>
 			<%= link_to 'EXPO', expo_path, class: 'nav-btn-web' %>
 		</li>
-		<li class='inline-btn'>
+		<li class='web-btn'>
 			<%= link_to 'MAPS', maps_path, class: 'nav-btn-web' %>
 		</li>
-		<li class='inline-btn'>
+		<li class='web-btn'>
 			<%= link_to 'EXHIBITORS', exhibitors_path, class: 'nav-btn-web' %>
 		</li>
-		<li class='inline-btn'>
+		<li class='web-btn'>
 			<%= link_to 'SPEAKERS', speakers_path, class: 'nav-btn-web' %>
 		</li>
-		<li class='inline-btn'>
+		<li class='web-btn'>
 			<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-web' %>
 		</li>
-		<li class='inline-btn'>
+		<li class='web-btn'>
 			<a class='nav-btn-web' href='https://docs.google.com/forms/d/1_cV0PEFQtsTzH9rAKG04j9fj-z9rH2fCET6-XO5ocgU/viewform' target='_blank'>VOLUNTEER</a>
 		</li>
-		<li class='inline-btn'>
+		<li class='web-btn'>
 			<%= link_to 'TEAM', team_path, class: 'nav-btn-web' %>
 		</li>
-		<li class='inline-btn'>
+		<li class='web-btn'>
 			<a class='nav-btn-web' id='subscribe-btn' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038' target='_blank'>REGISTER</a>
 		</li>
 	</ul>
@@ -60,9 +60,9 @@
 	<li class='mobile-btn'>
 		<%= link_to 'HOME', root_path, class: 'nav-btn-mobile' %>
 	</li>
-	<li class='mobile-btn'>
-		<a class='nav-btn-mobile orange' href='http://www.vrlive.com/livestream/07122015-10-AM-PST/8' target='_blank'>LIVE STREAM</a>
-	</li>
+	<!-- <li class='mobile-btn'>
+		<a class='nav-btn-mobile opposite' href='http://www.vrlive.com/livestream/07122015-10-AM-PST/8' target='_blank'>LIVE STREAM</a>
+	</li> -->
 	<li class='mobile-btn'>
 		<%= link_to 'EXPO', expo_path, class: 'nav-btn-mobile' %>
 	</li>
@@ -85,7 +85,7 @@
 			<a class='nav-btn-mobile' href='https://docs.google.com/forms/d/1_cV0PEFQtsTzH9rAKG04j9fj-z9rH2fCET6-XO5ocgU/viewform' target='_blank'>VOLUNTEER</a>
 		</li>
 	<li class='mobile-btn'>
-			<a class='nav-btn-mobile' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038'>REGISTER</a>
+			<a class='nav-btn-mobile opposite' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038'>REGISTER</a>
 		</li>
 </ul>
 
@@ -93,12 +93,12 @@
 
 <footer>
 	<ul class='social-media-nav'>
-		<li class='inline-btn'>
+		<li>
 			<a href='https://twitter.com/socalvr' target='_blank'>
 				<div class='social-media-img' id='twitter'></div>
 			</a>
 		</li>
-		<li class='inline-btn'>
+		<li>
 			<a href='https://www.facebook.com/SocalVR' target='_blank'>
 				<div class='social-media-img' id='facebook'></div>
 			</a>

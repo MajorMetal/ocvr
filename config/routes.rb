@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'workers/index'
+
   root 'homes#home'
 
   get '/expo' => 'homes#expo'

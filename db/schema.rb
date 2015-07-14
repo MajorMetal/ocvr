@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150607173611) do
+ActiveRecord::Schema.define(version: 20150713185739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "exhibitors", force: :cascade do |t|
     t.string   "name"
-    t.text     "bio"
     t.string   "img"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.string   "site"
     t.boolean  "is_featured", default: false
+    t.string   "class",       default: ""
   end
 
   create_table "homes", force: :cascade do |t|
@@ -33,21 +33,22 @@ ActiveRecord::Schema.define(version: 20150607173611) do
 
   create_table "speakers", force: :cascade do |t|
     t.string   "name"
-    t.string   "title"
-    t.string   "company"
     t.text     "bio"
     t.string   "img"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "is_featured", default: false
+    t.string   "class",       default: ""
   end
 
   create_table "sponsors", force: :cascade do |t|
     t.string   "name"
     t.string   "rank"
-    t.text     "bio"
     t.string   "img"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "site"
+    t.string   "class",      default: ""
   end
 
   create_table "users", force: :cascade do |t|

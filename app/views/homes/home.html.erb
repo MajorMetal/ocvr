@@ -1,64 +1,66 @@
-<header data-scroll-speed="3" id='header_carousel'>
-	<div id="slider1_container" class='carousel_cont'>
-  	<div u="slides" class='carousel_slide'>
+<header class='carousel' id='header' data-scroll-speed='3'>
+	<div class='carousel carousel-cont' id='slider-cont'>
+  	<div u='slides' class='carousel carousel-slide'>
     	<div>
-	      <img u="image" src="<%= asset_path('slide4.jpg') %>" />
+	      <img u='image' src="<%= asset_path('slide4.jpg') %>" />
 	    </div>
 	    <div>
-	      <img u="image" src="<%= asset_path('slide2.jpg') %>" />
+	      <img u='image' src="<%= asset_path('slide2.jpg') %>" />
 	    </div>
 	    <div>
-	      <img u="image" src="<%= asset_path('slide1.jpg') %>" />
+	      <img u='image' src="<%= asset_path('slide1.jpg') %>" />
 	    </div>
 	    <div>
-	      <img u="image" src="<%= asset_path('slide3.jpg') %>" />
+	      <img u='image' src="<%= asset_path('slide3.jpg') %>" />
 	    </div>
 	  </div>
 	</div>
 </header>
 
-<main class='main'>
-	<div class='container clearfix' id='expo-info-home'>
+<main class='main home'>
+	<div class='container full clearfix' id='expo-info-home'>
 		<%= render 'partials/expoinfo' %>
 	</div>
-	<div class='clearfix' id='due_date_timer'></div>
-	<div class='container clearfix'>
-		<div class='column full' id='attendee_button'>
+
+	<!-- <div class='clearfix' id='due_date_timer'></div> -->
+
+	<!-- <div class='container clearfix'>
+		<div class='column' id='attendee_button'>
 			<a class='button' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038' target='_blank'>REGISTER FOR FREE</a>
 		</div>
-		<div class='column full' id='ticket-iframe'>
+		<div class='column' id='ticket-iframe'>
 			<iframe class='clearfix ticket-iframe' src='http://www.eventbrite.com/tickets-external?eid=17219851038'>
 			</iframe>
 		</div>
-	</div>
-	<div class='container clearfix' id='exhibitor-cont'>
+	</div> -->
+
+	<div class='container clearfix'>
 		<h3 class='section-title'>FEATURED EXHIBITORS</h3>
-		<div class='column full'>
+		<div class='column'>
 			<div class='exhibitor-cont clearfix'>
 				<%= render 'partials/exhibitor_featured' %>
 			</div>
 		</div>
-		<div class='column full'>
+		<div class='column'>
 			<%= link_to 'MORE EXHIBITORS', exhibitors_path, class: 'button' %>
 		</div>
 	</div>
 	<div class='container clearfix' id='speakers-cont-home'>
 		<h3 class='section-title'>SPEAKERS</h5>
-		<div class='column full'>
+		<div class='column'>
 			<div class='speaker-cont clearfix'>
 				<%= render 'partials/speakers_featured' %>
 			</div>
 		</div>
-		<div class='column full'>
+		<div class='column'>
 			<%= link_to 'MORE SPEAKERS', speakers_path, class: 'button' %>
 		</div>
 	</div>
 	<%= render 'partials/sponsors' %>
-	<%= render 'partials/party' %>
 	<%= render 'partials/map' %>
 </main>
 
-<script>
-	var date = new Date(2015, 06, 12, 11, 00, 00);
-  $("#due_date_timer").countdown({until: date});
-</script>
+<!-- <script>
+	// var date = new Date(2015, 06, 12, 11, 00, 00);
+  // $('#due_date_timer').countdown({until: date});
+</script> -->

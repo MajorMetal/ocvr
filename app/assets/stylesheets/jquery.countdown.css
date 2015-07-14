@@ -5,12 +5,8 @@
 	width: 90%;
 	margin: 100px auto 0 auto;
 }
-.countdown-rtl {
-	direction: rtl;
-}
-.countdown-holding span {
-	color: #888;
-}
+.countdown-rtl { direction: rtl; }
+.countdown-holding span { color: #888; }
 .countdown-row {
 	position: relative;
 	width: 100%;
