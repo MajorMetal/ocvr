@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713185739) do
+ActiveRecord::Schema.define(version: 20150714194106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(version: 20150713185739) do
   create_table "exhibitors", force: :cascade do |t|
     t.string   "name"
     t.string   "img"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "site"
-    t.boolean  "is_featured", default: false
-    t.string   "class",       default: ""
+    t.boolean  "is_featured",  default: false
+    t.string   "custom_class", default: ""
   end
 
   create_table "homes", force: :cascade do |t|
@@ -35,26 +35,35 @@ ActiveRecord::Schema.define(version: 20150713185739) do
     t.string   "name"
     t.text     "bio"
     t.string   "img"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.boolean  "is_featured", default: false
-    t.string   "class",       default: ""
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.boolean  "is_featured",  default: false
+    t.string   "custom_class", default: ""
   end
 
   create_table "sponsors", force: :cascade do |t|
     t.string   "name"
     t.string   "rank"
     t.string   "img"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "site"
-    t.string   "class",      default: ""
+    t.string   "custom_class", default: ""
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "workers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "img"
+    t.string   "bio"
+    t.string   "custom_class", default: ""
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end

@@ -40,11 +40,11 @@
 		<li class='web-btn'>
 			<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-web' %>
 		</li>
-		<li class='web-btn'>
+		<!-- <li class='web-btn'>
 			<a class='nav-btn-web' href='https://docs.google.com/forms/d/1_cV0PEFQtsTzH9rAKG04j9fj-z9rH2fCET6-XO5ocgU/viewform' target='_blank'>VOLUNTEER</a>
-		</li>
+		</li> -->
 		<li class='web-btn'>
-			<%= link_to 'TEAM', team_path, class: 'nav-btn-web' %>
+			<%= link_to 'TEAM', workers_path, class: 'nav-btn-web' %>
 		</li>
 		<li class='web-btn'>
 			<a class='nav-btn-web' id='subscribe-btn' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038' target='_blank'>REGISTER</a>
@@ -79,14 +79,14 @@
 		<%= link_to 'SPONSORS', sponsors_path, class: 'nav-btn-mobile' %>
 	</li>
 	<li class='mobile-btn'>
-		<%= link_to 'TEAM', team_path, class: 'nav-btn-mobile' %>
+		<%= link_to 'TEAM', workers_path, class: 'nav-btn-mobile' %>
 	</li>
+	<!-- <li class='mobile-btn'>
+		<a class='nav-btn-mobile' href='https://docs.google.com/forms/d/1_cV0PEFQtsTzH9rAKG04j9fj-z9rH2fCET6-XO5ocgU/viewform' target='_blank'>VOLUNTEER</a>
+	</li> -->
 	<li class='mobile-btn'>
-			<a class='nav-btn-mobile' href='https://docs.google.com/forms/d/1_cV0PEFQtsTzH9rAKG04j9fj-z9rH2fCET6-XO5ocgU/viewform' target='_blank'>VOLUNTEER</a>
-		</li>
-	<li class='mobile-btn'>
-			<a class='nav-btn-mobile opposite' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038'>REGISTER</a>
-		</li>
+		<a class='nav-btn-mobile opposite' href='https://www.eventbrite.com/e/the-socal-virtual-reality-conference-expo-tickets-17219851038'>REGISTER</a>
+	</li>
 </ul>
 
 <%= yield %>

@@ -36,21 +36,17 @@
 
 	<div class='container clearfix'>
 		<h3 class='section-title'>FEATURED EXHIBITORS</h3>
-		<div class='column'>
-			<div class='exhibitor-cont clearfix'>
-				<%= render 'partials/exhibitor_featured' %>
-			</div>
+		<div class='column max-width-sml clearfix'>
+			<%= render 'partials/exhibitors' %>
 		</div>
 		<div class='column'>
 			<%= link_to 'MORE EXHIBITORS', exhibitors_path, class: 'button' %>
 		</div>
 	</div>
-	<div class='container clearfix' id='speakers-cont-home'>
-		<h3 class='section-title'>SPEAKERS</h5>
-		<div class='column'>
-			<div class='speaker-cont clearfix'>
-				<%= render 'partials/speakers_featured' %>
-			</div>
+	<div class='container full clearfix' id='speakers-cont-home'>
+		<h3 class='section-title'>FEATURED SPEAKERS</h5>
+		<div class='column max-width-sml clearfix'>
+			<%= render 'partials/speakers' %>
 		</div>
 		<div class='column'>
 			<%= link_to 'MORE SPEAKERS', speakers_path, class: 'button' %>

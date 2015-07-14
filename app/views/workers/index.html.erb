@@ -1,2 +1,14 @@
-<h1>Workers#index</h1>
-<p>Find me in app/views/workers/index.html.erb</p>
+<main class='main'>
+	<div class='container clearfix'>
+		<h3 class='section-title'>SoCal VR Team</h3>
+		<div class='column max-width-sml clearfix'>
+			<% @workers.each do |worker| %>
+				<div class="team-img-cont <%= worker.custom_class %>">
+					<img class='team-img' src="<%= asset_path("#{worker.img}") %>" />
+					<p class='team-info name'><%= worker.name %></p>
+					<p class='team-info'><%= worker.bio %></p>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</main>

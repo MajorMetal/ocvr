@@ -1,257 +1,73 @@
-<div class='container max-width-sml clearfix'>
+<div class='container clearfix'>
 	<h3 class='section-title'>SPONSORS</h3>
-	<div class='column'>
+	<div class='column max-width-sml'>
+
 		<div class='sponsor-cont clearfix'>
 			<h5 class='section-title'>DIAMOND</h5>
-			<a href='http://www.nextvr.com/' target='_blank'>
-				<div class='sponsor-img-cont lrg'>
-					<img class='sponsor-img' src="<%= asset_path('NextVR.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.techtoreconnect.org' target='_blank'>
-				<div class='sponsor-img-cont lrg'>
-					<img class='sponsor-img' src="<%= asset_path('TechtoReconnect.png') %>" />
-				</div>
-			</a>
+			<% @diamond.each do |sponsor| %>
+				<a href="<%= sponsor.site %>" target='_blank'>
+					<div class="sponsor-img-cont <%= sponsor.custom_class %>">
+						<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
+					</div>
+				</a>
+			<% end %>
 		</div>
+
 		<div class='sponsor-cont clearfix'>
 			<h5 class='section-title'>RUBY</h5>
-			<a href='http://www.faststartstudio.com/' target='_blank'>
-				<div class='sponsor-img-cont lrg'>
-					<img class='sponsor-img' src="<%= asset_path('FastStart.png') %>" />
-				</div>
-			</a>
-			<a href='http://altvr.com/' target='_blank'>
-				<div class='sponsor-img-cont lrg'>
-					<img class='sponsor-img' src="<%= asset_path('AltspaceVR-new.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.realofficecenters.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('ROC.jpg') %>" />
-				</div>
-			</a>
-			<a href='http://innovation.uci.edu/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('UCICove.png') %>" />
-				</div>
-			</a>
-			<a href='http://unity3d.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('Unity.png') %>" />
-				</div>
-			</a>
+			<% @ruby.each do |sponsor| %>
+				<a href="<%= sponsor.site %>" target='_blank'>
+					<div class="sponsor-img-cont <%= sponsor.custom_class %>">
+						<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
+					</div>
+				</a>
+			<% end %>
 		</div>
+
 		<div class='sponsor-cont clearfix'>
 			<h5 class='section-title'>EMERALD</h5>
-			<a href='http://www.welens.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('Welens.png') %>" />
-				</div>
-			</a>
-			<a href='https://thevoid.com/' target='_blank'>
-				<div class='sponsor-img-cont half'>
-					<img class='sponsor-img' src="<%= asset_path('Void.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.thefamousgroup.com/' target='_blank'>
-				<div class='sponsor-img-cont half'>
-					<img class='sponsor-img' src="<%= asset_path('FamousGroup.png') %>" />
-				</div>
-			</a>
-			<a href='https://www.boost.vc/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('Boost.svg') %>" />
-				</div>
-			</a>
-			<a href='http://www.sidefx.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('Houdini.png') %>" />
-				</div>
-			</a>
-			<a href='http://hackaday.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('HackADay-new.png') %>" />
-				</div>
-			</a>
-			<a href='http://vrcade.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('VRCade.png') %>" />
-				</div>
-			</a>
+			<% @emerald.each do |sponsor| %>
+				<a href="<%= sponsor.site %>" target='_blank'>
+					<div class="sponsor-img-cont <%= sponsor.custom_class %>">
+						<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
+					</div>
+				</a>
+			<% end %>
 		</div>
+
 		<div class='sponsor-cont clearfix'>
 			<h5 class='section-title'>COMMUNITY</h5>
-			<a href='http://www.vgda.net/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('VGDA.png') %>" />
-				</div>
-			</a>
-			<a href='http://orangecountyvr.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('OCVR.png') %>" />
-				</div>
-			</a>
-			<a href='http://digitalla.net/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('DigitalLA.jpg') %>" />
-				</div>
-			</a>
-			<a href='http://www.virtualrealityla.com/' target='_blank'>
-				<div class='sponsor-img-cont med'>
-					<img class='sponsor-img' src="<%= asset_path('VRLA.png') %>" />
-				</div>
-			</a>
-			<a href='http://svvr.com/' target='_blank'>
-			<div class='sponsor-img-cont med'>
-				<img class='sponsor-img' src="<%= asset_path('SVVR.png') %>" />
-			</div>
-			</a>
-			<a href='http://www.meetup.com/Long-Beach-Virtual-Reality-Meetup/' target='_blank'>
-				<div class='sponsor-img-cont med'>
-					<img class='sponsor-img' src="<%= asset_path('VRLB.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.meetup.com/San-Diego-Virtual-Reality/' target='_blank'>
-				<div class='sponsor-img-cont med'>
-					<img class='sponsor-img' src="<%= asset_path('SDVR.png') %>" />
-				</div>
-			</a>
-			<a href='http://3dff.org/' target='_blank'>
-				<div class='sponsor-img-cont sml margin-sml'>
-					<img class='sponsor-img' src="<%= asset_path('VRFest.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.meetup.com/virtualreality/' target='_blank'>
-				<div class='sponsor-img-cont sml'>
-					<img class='sponsor-img' src="<%= asset_path('SFVR.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.meetup.com/OCHackerz/' target='_blank'>
-				<div class='sponsor-img-cont sml'>
-					<img class='sponsor-img' src="<%= asset_path('OCHackerz.jpg') %>" />
-				</div>
-			</a>
-			<a href='http://survios.com/' target='_blank'>
-				<div class='sponsor-img-cont nrml'>
-					<img class='sponsor-img' src="<%= asset_path('Survios.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.khslaw.com/' target='_blank'>
-				<div class='sponsor-img-cont nrml'>
-					<img class='sponsor-img' src="<%= asset_path('KHS.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.kokirilab.com/' target='_blank'>
-				<div class='sponsor-img-cont nrml'>
-					<img class='sponsor-img' src="<%= asset_path('Kokiri.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.brainitch.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('Brainitch.png') %>" />
-				</div>
-			</a>
-			<a href='https://www.facebook.com/cybercodetwins' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('CyberCodeTwins.jpg') %>" />
-				</div>
-			</a>
-			<a href='http://www.web3d.org/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('Web3D.jpg') %>" />
-				</div>
-			</a>
+			<% @community.each do |sponsor| %>
+				<a href="<%= sponsor.site %>" target='_blank'>
+					<div class="sponsor-img-cont <%= sponsor.custom_class %>">
+						<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
+					</div>
+				</a>
+			<% end %>
 		</div>
+
 		<div class='sponsor-cont clearfix'>
 			<h5 class='section-title'>MEDIA</h5>
-			<a href='http://duncantrussell.com/' target='_blank'>
-				<div class='sponsor-img-cont duncan'>
-					<img class='sponsor-img duncan' src="<%= asset_path('DuncanTrussellFH.png') %>" />
-				</div>
-			</a>
-			<a href='http://vrscout.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('VRScout.png') %>" />
-				</div>
-			</a>
-			<a href='http://uploadvr.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('Upload.png') %>" />
-				</div>
-			<a href='http://vrfocus.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('VRFocus.png') %>" />
-				</div>
-			</a>
-			<a href='http://vrdigest.com/' target='_blank'>
-				<div class='sponsor-img-cont tiny'>
-					<img class='sponsor-img' src="<%= asset_path('VRDigest.png') %>" />
-				</div>
-			</a>
-			<a href='http://voicesofvr.com/' target='_blank'>
-				<div class='sponsor-img-cont tiny'>
-					<img class='sponsor-img' src="<%= asset_path('VoicesOfVR.jpg') %>" />
-				</div>
-			</a>
-			<a href='https://virtualrealityreporter.com/' target='_blank'>
-				<div class='sponsor-img-cont tiny'>
-					<img class='sponsor-img' src="<%= asset_path('VRReporter.jpg') %>" />
-				</div>
-			</a>
-			<a href='http://www.innerrift.com/' target='_blank'>
-				<div class='sponsor-img-cont tiny'>
-					<img class='sponsor-img' src="<%= asset_path('InnerRift.jpg') %>" />
-				</div>
-			</a>
-			<a href='http://www.qgits.org/' target='_blank'>
-				<div class='sponsor-img-cont tiny'>
-					<img class='sponsor-img' src="<%= asset_path('Qgits.png') %>" />
-				</div>
-			</a>
-			<a href='http://yourift.com/' target='_blank'>
-				<div class='sponsor-img-cont half margin-sml'>
-					<img class='sponsor-img' src="<%= asset_path('YouRift.jpg') %>" />
-				</div>
-			</a>
-			<a href='http://entervr.net/' target='_blank'>
-				<div class='sponsor-img-cont half'>
-					<img class='sponsor-img' src="<%= asset_path('EnterVR.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.vrcircle.com/' target='_blank'>
-				<div class='sponsor-img-cont half'>
-					<img class='sponsor-img' src="<%= asset_path('VRCircle.png') %>" />
-				</div>
-			</a>
-			<a href='http://ultraculture.org/' target='_blank'>
-				<div class='sponsor-img-cont half mobile-center'>
-					<img class='sponsor-img' src="<%= asset_path('UltraCulture.jpg') %>" />
-				</div>
-			</a>
-			<a href='http://roadtovr.com/' target='_blank'>
-				<div class='sponsor-img-cont margin-sml'>
-					<img class='sponsor-img' src="<%= asset_path('RoadToVR.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.zapchain.com/' target='_blank'>
-				<div class='sponsor-img-cont'>
-					<img class='sponsor-img' src="<%= asset_path('ZapChain.png') %>" />
-				</div>
-			</a>
+			<% @media.each do |sponsor| %>
+				<a href="<%= sponsor.site %>" target='_blank'>
+					<div class="sponsor-img-cont <%= sponsor.custom_class %>">
+						<img class="sponsor-img<% if sponsor.name == 'Duncan Trussell' %> <%= sponsor.custom_class %><% end %>"
+							src="<%= asset_path("#{sponsor.img}") %>" />
+					</div>
+				</a>
+			<% end %>
 		</div>
+
 		<div class='sponsor-cont clearfix'>
 			<h5 class='section-title'>360° BROADCASTING AND RECORDING</h5>
-			<a href='http://www.vrlive.com/' target='_blank'>
-				<div class='sponsor-img-cont lrg'>
-					<img class='sponsor-img' src="<%= asset_path('VRLive.png') %>" />
-				</div>
-			</a>
-			<a href='http://www.vrideo.com' target='_blank'>
-				<div class='sponsor-img-cont lrg'>
-					<img class='sponsor-img' src="<%= asset_path('VRideo.png') %>" />
-				</div>
-			</a>
+			<% @broadcaster.each do |sponsor| %>
+				<a href="<%= sponsor.site %>" target='_blank'>
+					<div class="sponsor-img-cont <%= sponsor.custom_class %>">
+						<img class='sponsor-img' src="<%= asset_path("#{sponsor.img}") %>" />
+					</div>
+				</a>
+			<% end %>
 		</div>
+
 	</div>
 </div>

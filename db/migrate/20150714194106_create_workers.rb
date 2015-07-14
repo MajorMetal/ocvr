@@ -4,7 +4,7 @@ class CreateWorkers < ActiveRecord::Migration
       t.string :name
       t.string :img
       t.string :bio
-      t.string :class, default: ''
+      t.string :custom_class, default: ''
 
       t.timestamps null: false
     end

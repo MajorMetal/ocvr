@@ -38,3 +38,11 @@
 	<p class='team-info name'>SAM WALSTON</p>
 	<p class='team-info'>Web Developer</p>
 </div>
+
+<% @workers.each do |worker| %>
+	<div class="team-img-cont <%= worker.custom_class %>">
+		<img class='team-img' src="<%= asset_path("#{worker.img}") %>" />
+		<p class='team-info name'><%= worker.name %></p>
+		<p class='team-info'><%= worker.bio %></p>
+	</div>
+<% end %>
