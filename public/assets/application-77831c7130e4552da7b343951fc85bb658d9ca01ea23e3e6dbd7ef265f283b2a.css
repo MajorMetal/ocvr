@@ -811,7 +811,7 @@ header {
 /* ==~~~== Speaker Section ==~~~== */
 /* line 598, /Users/Sam/Documents/projects/ocvr/ocvrDemoDaySite/app/assets/stylesheets/homes.scss.erb */
 .speaker-img-cont, .team-img-cont {
-  height: 325px;
+  height: 350px;
   width: 50%;
   float: left;
 }
