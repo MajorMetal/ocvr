@@ -147,7 +147,7 @@ Sponsor.create([
 	{ name: 'Yourift', rank: 'Media', img: 'YouRift.jpg', site: 'http://yourift.com/', custom_class: 'half margin-sml' },
 	{ name: 'Enter VR', rank: 'Media', img: 'EnterVR.png', site: 'http://entervr.net/', custom_class: 'half' },
 	{ name: 'VR Circle', rank: 'Media', img: 'VRCircle.png', site: 'http://www.vrcircle.com/', custom_class: 'half' },
-	{ name: 'Ultraculture', rank: 'Media', img: 'UltraCulture.jpg', site: 'http://ultraculture.org/', custom_class: 'half' },
+	{ name: 'Ultraculture', rank: 'Media', img: 'UltraCulture.jpg', site: 'http://ultraculture.org/', custom_class: 'half mobile-center' },
 	{ name: 'Road to VR', rank: 'Media', img: 'RoadToVR.png', site: 'http://roadtovr.com/', custom_class: 'margin-sml' },
 	{ name: 'Zap Chain', rank: 'Media', img: 'ZapChain.png', site: 'http://www.zapchain.com/' },
 	{ name: 'VR Live', rank: 'Broadcasting', img: 'VRLive.png', site: 'http://www.vrlive.com/', custom_class: 'lrg' },
