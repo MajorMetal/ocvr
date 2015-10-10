@@ -1,6 +1,6 @@
 <main class='main'>
 	<div class='container clearfix'>
-		<h3 class='section-title'>SoCal VR Team</h3>
+		<h3 class='section-title'>VR Film School Team</h3>
 		<div class='column max-width-sml clearfix'>
 			<% @workers.each do |worker| %>
 				<div class="team-img-cont <%= worker.custom_class %>">
@@ -11,4 +11,5 @@
 			<% end %>
 		</div>
 	</div>
+	<%= render 'partials/map' %>
 </main>

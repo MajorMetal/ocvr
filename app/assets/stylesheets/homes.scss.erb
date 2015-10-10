@@ -162,7 +162,7 @@ input[type=text] {
   border-radius: 5px;
   text-align: center;
   color: #FFF;
-  background: #FF6927;
+  background: #FF0000;
   cursor: pointer;
   @include transition(250ms ease-in-out);
 }
@@ -206,6 +206,7 @@ input[type=text] {
   display: block;
   width: 80%;
   top: 50%;
+  left: -15%;
   margin-left: 5%;
   font-family: 'Montserrat', arial, sans-serif;
   @include transform(translateY(-50%));
@@ -233,7 +234,7 @@ input[type=text] {
 
 	&:hover {
   	font-size: 17px;
-	  border-top: 3px solid #FF6927;
+	  border-top: 3px solid #FF0000;
 	}
 
 	/*&.opposite {
@@ -249,7 +250,7 @@ input[type=text] {
   padding: 6px 8px;
   border-radius: 5px;
   color: #FFF;
-  background: #FF6927;
+  background: #FF0000;
   @include transition(250ms ease-in-out);
 
   &:hover {
@@ -343,7 +344,7 @@ input[type=text] {
   .nav-logo-cont { height: 100px; }
 
   .nav-logo {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -399,7 +400,7 @@ footer {
 }
 
 .contact-info-cont {
-  width: 82px;
+  width: 200px;
   margin: 0 auto;
 }
 
@@ -498,7 +499,15 @@ header { margin-top: 80px; }
 		font-weight: 900;
 	}
 }
-
+.judgeText {
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding-bottom: 15px;
+	text-align:  center justify;
+	font-size: 17px;
+	color: #444;
+}
 #expo-info-home {
 	padding: 100px 0;
 	background: #222;

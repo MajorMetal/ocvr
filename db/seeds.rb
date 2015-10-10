@@ -159,11 +159,11 @@ Worker.create([
 	{ name: 'Dylan Watkins', img: 'DylanWatkins.jpg', bio: 'Organizer' },
 	{ name: 'Christopher Cain', img: 'ChristopherCain.jpg', bio: 'Volunteer Coordinator' },
 	{ name: 'Matthew Terndrup', img: 'MatthewTerndrup.jpg', bio: 'Panels & Teams Coordinator' },
-	{ name: 'Azia Celestino', img: 'AziaCelestino.jpg', bio: 'AV - Coordinator' },
-	{ name: 'Aaron Lane', img: 'AaronLane.jpg', bio: 'Business Development' },
+	# { name: 'Azia Celestino', img: 'AziaCelestino.jpg', bio: 'AV - Coordinator' },
+	# { name: 'Aaron Lane', img: 'AaronLane.jpg', bio: 'Business Development' },
 	{ name: 'Matt Kinney', img: 'MattKinney.jpg', bio: 'Developer Relations' },
-	{ name: 'Brian Levine', img: 'BrianLevine.jpg', bio: 'Conference App Developer', custom_class: 'margin-sml' },
-	{ name: 'Sam Walston', img: 'SamWalston.jpg', bio: 'Web Developer' }
+	# { name: 'Brian Levine', img: 'BrianLevine.jpg', bio: 'Conference App Developer', custom_class: 'margin-sml' },
+	# { name: 'Sam Walston', img: 'SamWalston.jpg', bio: 'Web Developer' }
 ])
 
 
